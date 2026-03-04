@@ -520,11 +520,11 @@ textarea{resize:vertical;min-height:110px}
     <p><span class="tr">Türkiye genelinde açık pozisyonlarımız</span><span class="en">Open positions across Turkey</span></p>
   </div>
   <div class="section">
-    <div class="container">
-      <div id="jobs-yurtici"></div>
-      <div style="text-align:center;margin-top:32px">
-        <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
-      </div>
+    <div class="container" style="text-align:center;padding:60px 20px">
+      <div style="font-size:48px;margin-bottom:20px">📋</div>
+      <h2 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:12px"><span class="tr">Şu An Açık Pozisyon Bulunmuyor</span><span class="en">No Open Positions at This Time</span></h2>
+      <p style="color:var(--gray);max-width:480px;margin:0 auto 32px"><span class="tr">Yurt içi pozisyonlar için henüz aktif bir ilan mevcut değil. Genel başvuru yaparak özgeçmişinizi bizimle paylaşabilirsiniz.</span><span class="en">There are currently no active domestic listings. You can share your CV with us by submitting a general application.</span></p>
+      <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
     </div>
   </div>
 </div>
@@ -536,11 +536,11 @@ textarea{resize:vertical;min-height:110px}
     <p><span class="tr">Uluslararası projelerimiz için açık pozisyonlar</span><span class="en">Open positions for our international projects</span></p>
   </div>
   <div class="section">
-    <div class="container">
-      <div id="jobs-yurtdisi"></div>
-      <div style="text-align:center;margin-top:32px">
-        <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
-      </div>
+    <div class="container" style="text-align:center;padding:60px 20px">
+      <div style="font-size:48px;margin-bottom:20px">🌍</div>
+      <h2 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:12px"><span class="tr">Şu An Açık Pozisyon Bulunmuyor</span><span class="en">No Open Positions at This Time</span></h2>
+      <p style="color:var(--gray);max-width:480px;margin:0 auto 32px"><span class="tr">Yurt dışı pozisyonlar için henüz aktif bir ilan mevcut değil. Genel başvuru yaparak özgeçmişinizi bizimle paylaşabilirsiniz.</span><span class="en">There are currently no active international listings. You can share your CV with us by submitting a general application.</span></p>
+      <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
     </div>
   </div>
 </div>
@@ -925,20 +925,8 @@ textarea{resize:vertical;min-height:110px}
 
 <script>
 // ─── DATA ───────────────────────────────────────────────
-const jobsYurtici = [
-  {tr:'Proje Mühendisi', en:'Project Engineer', loc:'İstanbul', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Proje Mühendisi'},
-  {tr:'Şantiye Şefi', en:'Site Manager', loc:'Ankara', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Şantiye Şefi'},
-  {tr:'İnsan Kaynakları Uzmanı', en:'HR Specialist', loc:'İzmir', dept_tr:'İnsan Kaynakları', dept_en:'Human Resources', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'İnsan Kaynakları Uzmanı'},
-  {tr:'Elektrik Mühendisi', en:'Electrical Engineer', loc:'Kocaeli', dept_tr:'Enerji', dept_en:'Energy', type_tr:'Sözleşmeli', type_en:'Contract', badge:'badge-ct', val:'Elektrik Mühendisi'},
-  {tr:'Makine Mühendisi', en:'Mechanical Engineer', loc:'Bursa', dept_tr:'Üretim', dept_en:'Manufacturing', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Makine Mühendisi'},
-];
-const jobsYurtdisi = [
-  {tr:'Proje Müdürü', en:'Project Manager', loc_tr:'Dubai, BAE', loc_en:'Dubai, UAE', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Sözleşmeli', type_en:'Contract', badge:'badge-ct', val:'Proje Müdürü - Dubai'},
-  {tr:'Şantiye Şefi', en:'Site Manager', loc_tr:'Doha, Katar', loc_en:'Doha, Qatar', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Sözleşmeli', type_en:'Contract', badge:'badge-ct', val:'Şantiye Şefi - Katar'},
-  {tr:'Tıbbi Teknisyen', en:'Medical Technician', loc_tr:'Amsterdam, Hollanda', loc_en:'Amsterdam, Netherlands', dept_tr:'Sağlık', dept_en:'Healthcare', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Tıbbi Teknisyen - Hollanda'},
-  {tr:'Enerji Mühendisi', en:'Energy Engineer', loc_tr:'Berlin, Almanya', loc_en:'Berlin, Germany', dept_tr:'Enerji', dept_en:'Energy', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Enerji Mühendisi - Almanya'},
-  {tr:'Otelcilik Yöneticisi', en:'Hospitality Manager', loc_tr:'Londra, İngiltere', loc_en:'London, United Kingdom', dept_tr:'Turizm', dept_en:'Tourism', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Otelcilik Yöneticisi - Londra'},
-];
+const jobsYurtici = [];
+const jobsYurtdisi = [];
 
 function renderJobs(list, containerId) {
   const c = document.getElementById(containerId);
