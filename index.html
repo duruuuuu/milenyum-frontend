@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Milenyum İnsan Kaynakları - Stratejik işe alım ve iş gücü yönetimi danışmanlığı">
+<title>Milenyum İnsan Kaynakları</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0d2137;--navy-light:#1a3557;--gold:#c9a447;--gold-light:#ddb85a;
+  --white:#fff;--light:#f5f7fa;--gray:#6c757d;--dark:#1a1a2e;
+  --border:#e0e6ed;--success:#28a745;
+  --shadow:0 4px 20px rgba(0,0,0,.08);--shadow-h:0 8px 30px rgba(0,0,0,.15);
+  --tr:all .3s ease;--r:12px;
+}
+body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x:hidden}
+
+/* ── HEADER ── */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,.25)}
+.hdr-in{max-width:1280px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{cursor:pointer;text-decoration:none;display:flex;flex-direction:column}
+.logo-m{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;letter-spacing:.5px}
+.logo-s{font-size:9px;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;font-weight:600}
+.nav{display:flex;align-items:center;gap:2px}
+.nav-item{position:relative}
+.nl{color:rgba(255,255,255,.82);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 12px;border-radius:6px;transition:var(--tr);cursor:pointer;white-space:nowrap;background:none;border:none;font-family:'Inter',sans-serif}
+.nl:hover,.nl.active{color:var(--gold);background:rgba(255,255,255,.08)}
+.drop{position:absolute;top:calc(100% + 6px);left:0;background:#fff;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.15);min-width:190px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:var(--tr);overflow:hidden}
+.nav-item:hover .drop{opacity:1;visibility:visible;transform:translateY(0)}
+.dl{display:block;padding:11px 18px;color:var(--dark);text-decoration:none;font-size:13.5px;transition:var(--tr);cursor:pointer}
+.dl:hover{background:var(--light);color:var(--navy)}
+.lang-btn{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 14px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600;transition:var(--tr);margin-left:10px;font-family:'Inter',sans-serif}
+.lang-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:23px;height:2px;background:#fff;border-radius:2px;transition:var(--tr)}
+
+/* ── PAGES ── */
+.page{display:none;min-height:100vh;padding-top:70px}
+.page.active{display:block}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e4080 100%);padding:90px 24px 100px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,164,71,.1) 0%,transparent 65%);pointer-events:none}
+.hero-c{position:relative;max-width:820px;margin:0 auto}
+.eyebrow{display:inline-block;background:rgba(201,164,71,.15);color:var(--gold);border:1px solid rgba(201,164,71,.35);padding:5px 18px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,62px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:22px}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:17px;color:rgba(255,255,255,.75);max-width:580px;margin:0 auto 36px;line-height:1.85}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;border-radius:8px;font-size:14.5px;font-weight:600;cursor:pointer;transition:var(--tr);text-decoration:none;border:2px solid transparent;font-family:'Inter',sans-serif}
+.btn-primary{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,164,71,.35)}
+.btn-secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn-secondary:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+
+/* ── LAYOUT ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+.section-alt{background:var(--light)}
+.section-dark{background:var(--navy);color:#fff}
+.section-hdr{text-align:center;margin-bottom:56px}
+.s-eye{display:inline-block;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:14px}
+.section-dark .s-title{color:#fff}
+.s-sub{font-size:15.5px;color:var(--gray);max-width:580px;margin:0 auto;line-height:1.85}
+.section-dark .s-sub{color:rgba(255,255,255,.7)}
+
+/* ── PAGE HEADER ── */
+.ph{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:55px 24px;text-align:center}
+.ph h1{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,44px);font-weight:700;color:#fff;margin-bottom:12px}
+.ph p{font-size:15.5px;color:rgba(255,255,255,.72);max-width:580px;margin:0 auto}
+
+/* ── CARDS ── */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.card{background:#fff;border-radius:var(--r);padding:32px;box-shadow:var(--shadow);transition:var(--tr);border:1px solid var(--border)}
+.card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px);border-color:var(--gold)}
+.card-icon{width:54px;height:54px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:22px}
+.card h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.4}
+.card p{font-size:13.5px;color:var(--gray);line-height:1.85}
+
+/* ── STATS ── */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;text-align:center}
+.stat-n{font-family:'Playfair Display',serif;font-size:50px;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:8px}
+.stat-l{font-size:13.5px;color:rgba(255,255,255,.7);font-weight:500}
+
+/* ── SERVICE ITEMS ── */
+.svc-item{background:#fff;border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border-left:4px solid var(--gold);margin-bottom:20px;transition:var(--tr)}
+.svc-item:hover{box-shadow:var(--shadow-h);transform:translateX(4px)}
+.svc-item h3{font-size:19px;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.svc-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:var(--gold);color:var(--navy);border-radius:50%;font-size:13px;font-weight:700;flex-shrink:0}
+.svc-item p{color:var(--gray);line-height:1.9;font-size:14.5px}
+
+/* ── JOBS ── */
+.job-card{background:#fff;border-radius:var(--r);padding:26px 30px;box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--tr);display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:14px}
+.job-card:hover{box-shadow:var(--shadow-h);border-color:var(--gold)}
+.job-info h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.job-meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.jtag{font-size:12.5px;color:var(--gray);display:flex;align-items:center;gap:4px}
+.badge{display:inline-block;padding:3px 11px;border-radius:20px;font-size:11.5px;font-weight:600}
+.badge-ft{background:#e8f5e9;color:#2e7d32}
+.badge-ct{background:#fff3e0;color:#e65100}
+.badge-pt{background:#e3f2fd;color:#1565c0}
+
+/* ── FORM ── */
+.form-wrap{max-width:720px;margin:0 auto;background:#fff;border-radius:var(--r);padding:48px;box-shadow:var(--shadow)}
+.fg{margin-bottom:22px}
+.fg label{display:block;font-size:13.5px;font-weight:600;color:var(--dark);margin-bottom:7px}
+.fg label .req{color:#e53e3e;margin-left:2px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+input,select,textarea{width:100%;padding:11px 15px;border:2px solid var(--border);border-radius:8px;font-size:14.5px;font-family:'Inter',sans-serif;color:var(--dark);transition:var(--tr);outline:none;background:#fff}
+input:focus,select:focus,textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,33,55,.1)}
+textarea{resize:vertical;min-height:110px}
+.file-zone{border:2px dashed var(--border);border-radius:8px;padding:30px;text-align:center;cursor:pointer;transition:var(--tr);position:relative}
+.file-zone:hover,.file-zone.over{border-color:var(--gold);background:rgba(201,164,71,.04)}
+.file-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;border:none;padding:0}
+.file-zone .fz-icon{font-size:36px;margin-bottom:10px}
+.file-zone p{font-size:13.5px;color:var(--gray)}
+.file-zone strong{color:var(--navy)}
+.fname{font-size:12.5px;color:var(--success);margin-top:8px;font-weight:500;display:none}
+.form-submit{margin-top:30px;text-align:center}
+.form-note{font-size:12.5px;color:var(--gray);margin-top:10px}
+.success-msg{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:10px;padding:22px;text-align:center;display:none}
+.success-msg.show{display:block}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about-text h2{font-family:'Playfair Display',serif;font-size:30px;color:var(--navy);margin-bottom:20px}
+.about-text p{color:var(--gray);line-height:1.95;margin-bottom:14px;font-size:14.5px}
+.hbox{background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:var(--r);padding:30px}
+.hbox h3{color:var(--gold);font-size:17px;font-weight:700;margin-bottom:18px}
+.hbox ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.hbox ul li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:rgba(255,255,255,.85);line-height:1.6}
+.hbox ul li::before{content:'▸';color:var(--gold);font-size:15px;flex-shrink:0}
+.styled-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.styled-list li{display:flex;align-items:flex-start;gap:9px;font-size:14.5px;color:var(--gray);line-height:1.75}
+.styled-list li::before{content:'▸';color:var(--gold);font-size:15px;flex-shrink:0}
+.why-card{background:#fff;border-radius:var(--r);padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--gold);transition:var(--tr)}
+.why-card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px)}
+.why-card h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.why-card p{font-size:13.5px;color:var(--gray);line-height:1.85}
+
+/* ── BLOG ── */
+.blog-card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--tr)}
+.blog-card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px)}
+.blog-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:44px}
+.blog-body{padding:22px}
+.blog-date{font-size:11.5px;color:var(--gray);margin-bottom:8px;font-weight:500}
+.blog-card h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.45}
+.blog-card p{font-size:13px;color:var(--gray);line-height:1.75;margin-bottom:14px}
+.read-more{color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-info h2{font-family:'Playfair Display',serif;font-size:30px;color:var(--navy);margin-bottom:20px}
+.contact-info>p{color:var(--gray);line-height:1.85;margin-bottom:28px;font-size:14.5px}
+.c-items{display:flex;flex-direction:column;gap:18px}
+.c-item{display:flex;align-items:flex-start;gap:14px}
+.c-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.c-item-text h4{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.c-item-text p{font-size:13.5px;color:var(--gray);margin:0}
+
+/* ── LEGAL ── */
+.legal-c{max-width:820px;margin:0 auto}
+.legal-c h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);margin:36px 0 14px}
+.legal-c h3{font-size:17px;color:var(--navy);margin:22px 0 10px;font-weight:700}
+.legal-c p{color:var(--gray);line-height:1.95;margin-bottom:14px;font-size:14.5px}
+.legal-c ul{color:var(--gray);padding-left:22px;margin-bottom:14px;line-height:2;font-size:14.5px}
+
+/* ── TABS ── */
+.tabs{display:flex;gap:4px;background:var(--light);padding:4px;border-radius:10px;margin-bottom:30px;flex-wrap:wrap}
+.tab{flex:1;padding:11px 18px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;color:var(--gray);transition:var(--tr);text-align:center;min-width:120px;border:none;background:none;font-family:'Inter',sans-serif}
+.tab.active,.tab:hover{background:#fff;color:var(--navy);box-shadow:var(--shadow)}
+.tab-c{display:none}
+.tab-c.active{display:block}
+
+/* ── FOOTER ── */
+.footer{background:var(--dark);color:#fff;padding:56px 0 22px}
+.footer-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+.footer-brand p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.85;margin-top:14px}
+.footer-col h4{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li span,.footer-col ul li a{color:rgba(255,255,255,.55);font-size:13.5px;text-decoration:none;transition:var(--tr);cursor:pointer}
+.footer-col ul li span:hover,.footer-col ul li a:hover{color:var(--gold)}
+.footer-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-bot p{font-size:12.5px;color:rgba(255,255,255,.38)}
+
+/* ── DIVIDER ── */
+.divider{height:1px;background:var(--border);margin:48px 0}
+
+/* ── LANG ── */
+[data-lang="tr"] .en{display:none !important}
+[data-lang="en"] .tr{display:none !important}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:14px;gap:4px;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:999}
+  .nav.open{display:flex}
+  .ham{display:flex}
+  .drop{position:static;box-shadow:none;background:rgba(255,255,255,.06);border-radius:8px;opacity:1;visibility:visible;transform:none;margin-top:4px}
+  .dl{color:rgba(255,255,255,.75);padding:9px 22px}
+  .dl:hover{background:rgba(255,255,255,.1);color:var(--gold)}
+  .footer-g{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .hero{padding:60px 24px 70px}
+  .section{padding:56px 0}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .job-card{flex-direction:column;align-items:flex-start}
+  .form-wrap{padding:30px 22px}
+  .ph{padding:40px 20px}
+  .svc-item{padding:26px 24px}
+}
+@media(max-width:480px){
+  .footer-g{grid-template-columns:1fr}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-lang="tr">
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="logo" onclick="nav('home')">
+      <img src="MILENYUM1.png" alt="Milenyum İnsan Kaynakları" style="height:44px;width:auto;display:block">
+    </a>
+    <nav class="nav" id="mainNav">
+      <div class="nav-item">
+        <button class="nl" onclick="nav('home')"><span class="tr">Ana Sayfa</span><span class="en">Home</span></button>
+      </div>
+      <div class="nav-item">
+        <button class="nl" onclick="nav('kurumsal')"><span class="tr">Kurumsal</span><span class="en">Corporate</span></button>
+      </div>
+      <div class="nav-item">
+        <button class="nl" onclick="nav('hizmetler')"><span class="tr">Hizmetlerimiz</span><span class="en">Services</span></button>
+      </div>
+      <div class="nav-item">
+        <button class="nl"><span class="tr">İş Arayan ▾</span><span class="en">Job Seekers ▾</span></button>
+        <div class="drop">
+          <span class="dl" onclick="nav('yurtici')"><span class="tr">Yurt İçi Pozisyonlar</span><span class="en">Domestic Positions</span></span>
+          <span class="dl" onclick="nav('yurtdisi')"><span class="tr">Yurt Dışı Pozisyonlar</span><span class="en">International Positions</span></span>
+          <span class="dl" onclick="nav('basvuru')"><span class="tr">Başvuru Formu</span><span class="en">Application Form</span></span>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nl" onclick="nav('isveren')"><span class="tr">İşveren</span><span class="en">Employer</span></button>
+      </div>
+      <div class="nav-item">
+        <button class="nl" onclick="nav('iletisim')"><span class="tr">Bize Ulaşın</span><span class="en">Contact</span></button>
+      </div>
+      <div class="nav-item">
+        <button class="nl" onclick="nav('blog')">Blog</button>
+      </div>
+      <div class="nav-item">
+        <button class="nl" onclick="nav('kvkk')"><span class="tr">KVKK</span><span class="en">Privacy</span></button>
+      </div>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">🌐 EN</button>
+    </nav>
+    <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════ PAGE: HOME ═══════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-c">
+      <div class="eyebrow"><span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span><span class="en">Strategic Human Resources Consulting</span></div>
+      <h1 class="tr">Doğru Yeteneği<br><span>Doğru Yapıyla</span> Buluşturuyoruz</h1>
+      <h1 class="en" style="display:none">Connecting the <span>Right Talent</span><br>with the Right Organization</h1>
+      <p class="tr">15 yılı aşkın uluslararası deneyimle, stratejik işe alım ve iş gücü yönetiminde sürdürülebilir çözümler sunuyoruz.</p>
+      <p class="en" style="display:none">With over 15 years of international experience, we deliver sustainable solutions in strategic recruitment and workforce management.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="nav('hizmetler')"><span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span></button>
+        <button class="btn btn-secondary" onclick="nav('iletisim')"><span class="tr">Bize Ulaşın</span><span class="en">Contact Us</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="section section-dark">
+    <div class="container">
+      <div class="stats-grid">
+        <div><span class="stat-n">15+</span><span class="stat-l"><span class="tr">Yıllık Deneyim</span><span class="en">Years of Experience</span></span></div>
+        <div><span class="stat-n">30+</span><span class="stat-l"><span class="tr">Ülkede Proje</span><span class="en">Countries Covered</span></span></div>
+        <div><span class="stat-n">5K+</span><span class="stat-l"><span class="tr">Başarılı Yerleştirme</span><span class="en">Successful Placements</span></span></div>
+        <div><span class="stat-n">200+</span><span class="stat-l"><span class="tr">Kurumsal İş Ortağı</span><span class="en">Corporate Partners</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services overview -->
+  <div class="section">
+    <div class="container">
+      <div class="section-hdr">
+        <div class="s-eye"><span class="tr">HİZMETLERİMİZ</span><span class="en">OUR SERVICES</span></div>
+        <h2 class="s-title"><span class="tr">Kapsamlı İK Çözümleri</span><span class="en">Comprehensive HR Solutions</span></h2>
+        <p class="s-sub"><span class="tr">Profesyonelden teknik kadrolara, toplu işe alımdan outplacement'a kadar uçtan uca süreç yönetimi.</span><span class="en">End-to-end process management from professional to technical staffing, from bulk recruitment to outplacement.</span></p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="card-icon">🎯</div><h3><span class="tr">Profesyonel İşe Alım</span><span class="en">Professional Recruitment</span></h3><p><span class="tr">Mühendis ve uzman kadrolar için hedef odaklı araştırma ve yetkinlik bazlı değerlendirme.</span><span class="en">Target-driven research and competency-based assessment for engineer and specialist roles.</span></p></div>
+        <div class="card"><div class="card-icon">🔧</div><h3><span class="tr">Teknik Personel Temini</span><span class="en">Technical Staffing</span></h3><p><span class="tr">Yurt içi ve yurt dışı şantiye, fabrika ve endüstriyel projeler için nitelikli teknik personel.</span><span class="en">Qualified technical staff for domestic and international construction sites, factories and industrial projects.</span></p></div>
+        <div class="card"><div class="card-icon">📋</div><h3><span class="tr">Proje Bazlı Toplu İşe Alım</span><span class="en">Project-Based Bulk Hiring</span></h3><p><span class="tr">Büyük ölçekli yatırımlar için kısa sürede yüksek hacimli personel temini.</span><span class="en">High-volume staffing for large-scale investments in a short timeframe.</span></p></div>
+        <div class="card"><div class="card-icon">🌍</div><h3><span class="tr">Global İşçilik Danışmanlığı</span><span class="en">Global Labour Consulting</span></h3><p><span class="tr">Farklı ülkelerdeki işçilik maliyetleri, sosyal güvenlik yükümlülükleri ve vergi yapılarının analizi.</span><span class="en">Analysis of labour costs, social security obligations and tax structures across different countries.</span></p></div>
+        <div class="card"><div class="card-icon">📄</div><h3><span class="tr">Çalışma İzinleri Danışmanlığı</span><span class="en">Work Permit Consulting</span></h3><p><span class="tr">Yurt içi ve yurt dışı projeler için çalışma ve oturum izin süreçlerinin planlanması.</span><span class="en">Planning and execution of work and residence permit processes for domestic and international projects.</span></p></div>
+        <div class="card"><div class="card-icon">🤝</div><h3><span class="tr">Outplacement Hizmeti</span><span class="en">Outplacement Service</span></h3><p><span class="tr">Yeniden yapılanma süreçlerinde işten çıkış operasyonlarını hukuki ve etik çerçevede yönetiyoruz.</span><span class="en">We manage exit operations during restructuring within legal and ethical frameworks.</span></p></div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <button class="btn btn-outline" onclick="nav('hizmetler')"><span class="tr">Tüm Hizmetleri Gör</span><span class="en">View All Services</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Industries -->
+  <div class="section section-alt">
+    <div class="container">
+      <div class="section-hdr">
+        <div class="s-eye"><span class="tr">UZMANLIK ALANLARIMIZ</span><span class="en">OUR SECTORS</span></div>
+        <h2 class="s-title"><span class="tr">Sektörel Uzmanlık</span><span class="en">Sector Expertise</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏗️</div><h3><span class="tr">İnşaat ve Altyapı</span><span class="en">Construction &amp; Infrastructure</span></h3></div>
+        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">⚡</div><h3><span class="tr">Enerji ve Santraller</span><span class="en">Energy &amp; Power Plants</span></h3></div>
+        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏥</div><h3><span class="tr">Sağlık Sektörü</span><span class="en">Healthcare</span></h3></div>
+        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏭</div><h3><span class="tr">Fabrika ve Endüstriyel Üretim</span><span class="en">Manufacturing &amp; Industrial</span></h3></div>
+        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏨</div><h3><span class="tr">Turizm ve Konaklama</span><span class="en">Tourism &amp; Hospitality</span></h3></div>
+        <div class="card" style="text-align:center;background:linear-gradient(135deg,var(--navy),var(--navy-light));border:none"><div class="card-icon" style="margin:0 auto 16px;background:rgba(255,255,255,.15)">🌐</div><h3 style="color:#fff"><span class="tr">Uluslararası Projeler</span><span class="en">International Projects</span></h3></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section section-dark">
+    <div class="container" style="text-align:center">
+      <div class="s-eye"><span class="tr">HEMEN BAŞLAYIN</span><span class="en">GET STARTED</span></div>
+      <h2 class="s-title" style="margin-bottom:16px"><span class="tr">Birlikte Çalışalım</span><span class="en">Let's Work Together</span></h2>
+      <p class="s-sub" style="margin-bottom:36px"><span class="tr">İş gücü ihtiyaçlarınız için bize ulaşın. Uzman ekibimiz sizinle iletişime geçecektir.</span><span class="en">Contact us for your workforce needs. Our expert team will get in touch with you.</span></p>
+      <button class="btn btn-primary" onclick="nav('iletisim')"><span class="tr">Bize Ulaşın →</span><span class="en">Contact Us →</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: KURUMSAL ═══════════════ -->
+<div class="page" id="page-kurumsal">
+  <div class="ph">
+    <h1><span class="tr">Kurumsal</span><span class="en">Corporate</span></h1>
+    <p><span class="tr">Milenyum İnsan Kaynakları hakkında her şey</span><span class="en">Everything about Milenyum Human Resources</span></p>
+  </div>
+
+  <!-- Who we are -->
+  <div class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="s-eye"><span class="tr">BİZ KİMİZ</span><span class="en">WHO WE ARE</span></div>
+          <h2 class="tr">Milenyum İnsan Kaynakları</h2>
+          <h2 class="en" style="display:none">Milenyum Human Resources</h2>
+          <p class="tr">Milenyum İnsan Kaynakları, ulusal ve uluslararası ölçekte faaliyet gösteren, stratejik işe alım ve iş gücü yönetimi alanında uzmanlaşmış bir insan kaynakları danışmanlık şirketidir.</p>
+          <p class="en" style="display:none">Milenyum Human Resources is a human resources consulting firm specializing in strategic recruitment and workforce management, operating at both national and international scale.</p>
+          <p class="tr">İnsanı bir maliyet kalemi ya da finansal unsur olarak değil, kurumların kültürünü, performansını ve gelecekteki yönünü belirleyen temel değer kaynağı olarak konumlandırıyoruz.</p>
+          <p class="en" style="display:none">We position people not as a cost item or financial element, but as the fundamental source of value that determines the culture, performance and future direction of organizations.</p>
+          <p class="tr">Bizim için işe alım, yalnızca bir pozisyonun doldurulması değil, organizasyonel yapıya uzun vadeli katkı sağlayacak doğru değerin doğru yapı ile buluşturulmasıdır.</p>
+          <p class="en" style="display:none">For us, recruitment is not merely filling a position, but connecting the right value with the right structure to make a long-term contribution to the organizational framework.</p>
+          <p class="tr">15 yılı aşkın uluslararası deneyimimizle, teknik uzmanlık gerektiren kritik rollerden yüksek hacimli proje mobilizasyonlarına kadar geniş kapsamlı çözümler sunmaktayız.</p>
+          <p class="en" style="display:none">With over 15 years of international experience, we offer broad-scope solutions ranging from critical roles requiring technical expertise to high-volume project mobilizations.</p>
+        </div>
+        <div>
+          <div class="hbox">
+            <h3><span class="tr">Uzman Olduğumuz Sektörler</span><span class="en">Sectors We Specialize In</span></h3>
+            <ul>
+              <li><span class="tr">İnşaat ve altyapı projeleri</span><span class="en">Construction and infrastructure projects</span></li>
+              <li><span class="tr">Enerji ve santral yatırımları</span><span class="en">Energy and power plant investments</span></li>
+              <li><span class="tr">Sağlık sektörü</span><span class="en">Healthcare sector</span></li>
+              <li><span class="tr">Fabrika ve endüstriyel üretim tesisleri</span><span class="en">Factory and industrial manufacturing facilities</span></li>
+              <li><span class="tr">Turizm ve konaklama sektörü</span><span class="en">Tourism and hospitality sector</span></li>
+            </ul>
+          </div>
+          <div style="margin-top:20px;background:var(--light);border-radius:var(--r);padding:24px">
+            <p style="font-size:14px;color:var(--gray);line-height:1.9" class="tr">Bu sektörlerde yerel ve uluslararası iş gücü dinamiklerine hâkimiyetimizi, sınır ötesi mobilite, kültürel uyum ve mevzuat bilgisi ile bütünleştiriyoruz.</p>
+            <p style="font-size:14px;color:var(--gray);line-height:1.9" class="en" style="display:none">In these sectors, we integrate our command of local and international workforce dynamics with cross-border mobility, cultural adaptation and regulatory knowledge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why us -->
+  <div class="section section-alt">
+    <div class="container">
+      <div class="section-hdr">
+        <div class="s-eye"><span class="tr">NEDEN MİLENYUM</span><span class="en">WHY MILENYUM</span></div>
+        <h2 class="s-title"><span class="tr">Fark Yaratan Değerlerimiz</span><span class="en">Values That Make the Difference</span></h2>
+      </div>
+      <div class="grid-2">
+        <div class="why-card">
+          <h3>🎯 <span class="tr">Stratejik ve Analitik Süreç Modeli</span><span class="en">Strategic & Analytical Process Model</span></h3>
+          <p><span class="tr">Her işe alım süreci, organizasyonel analiz, görev tanımı netliği ve yetkinlik matrisi ile başlatılır. Süreçler planlı, ölçülebilir ve raporlanabilir bir yapı içinde yürütülür.</span><span class="en">Every recruitment process begins with organizational analysis, job definition clarity and a competency matrix. Processes are conducted within a planned, measurable and reportable structure.</span></p>
+        </div>
+        <div class="why-card">
+          <h3>🔍 <span class="tr">Proaktif ve Seçici Yetenek Erişimi</span><span class="en">Proactive & Selective Talent Access</span></h3>
+          <p><span class="tr">İlan temelli pasif yöntemler yerine doğrudan hedefleme ve araştırma metodolojisi kullanırız. Pasif aday pazarına erişim sağlayarak doğrulanmış ve yüksek nitelikli profesyonellere ulaşırız.</span><span class="en">Instead of passive job-posting methods, we use direct targeting and research methodology, reaching into the passive candidate market to access verified, high-calibre professionals.</span></p>
+        </div>
+        <div class="why-card">
+          <h3>📊 <span class="tr">Çok Katmanlı Değerlendirme Disiplini</span><span class="en">Multi-Layer Evaluation Discipline</span></h3>
+          <p><span class="tr">Yetkinlik bazlı mülakatlar, teknik analizler, yabancı dil ölçümleri ve kapsamlı referans kontrolleri ile objektif ve karar destekleyici değerlendirme sunarız.</span><span class="en">We provide objective, decision-supporting evaluations through competency-based interviews, technical analyses, foreign language assessments and comprehensive reference checks.</span></p>
+        </div>
+        <div class="why-card">
+          <h3>📈 <span class="tr">Yerleştirme Sonrası Takip</span><span class="en">Post-Placement Follow-Up</span></h3>
+          <p><span class="tr">Hizmet modelimiz işe alım kararıyla sınırlı değildir. Yerleştirme sonrasında adaptasyon süreci, ilk dönem performans göstergeleri ve organizasyonel uyum değerlendirilir.</span><span class="en">Our service model does not end with the hiring decision. Post-placement adaptation, early-period performance indicators and organizational fit are all evaluated.</span></p>
+        </div>
+        <div class="why-card">
+          <h3>🔒 <span class="tr">Gizlilik ve Kurumsal Sorumluluk</span><span class="en">Confidentiality & Corporate Responsibility</span></h3>
+          <p><span class="tr">Tüm süreçler gizlilik, veri koruma ve profesyonel etik standartlar çerçevesinde yürütülür. Her aşamada iş ortaklarımızı temsil ettiğimiz bilinciyle hareket ederiz.</span><span class="en">All processes are conducted within confidentiality, data protection and professional ethics standards. At every stage we act with the awareness that we represent our business partners.</span></p>
+        </div>
+        <div class="why-card">
+          <h3>⚖️ <span class="tr">Hizmet Felsefemiz</span><span class="en">Our Service Philosophy</span></h3>
+          <p><span class="tr">Hizmet anlayışımız, mevzuata uyum, etik sorumluluk, şeffaflık ve sürdürülebilir değer üretimi ilkeleri üzerine kuruludur. Şeffaf iletişim ve düzenli bilgilendirme temel prensibimizdir.</span><span class="en">Our service philosophy is built on regulatory compliance, ethical responsibility, transparency and sustainable value creation. Transparent communication and regular updates are our fundamental principles.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- International compliance -->
+  <div class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="s-eye"><span class="tr">YASAL UYUM</span><span class="en">LEGAL COMPLIANCE</span></div>
+          <h2><span class="tr">Uluslararası İş Gücü Yönetimi</span><span class="en">International Workforce Management</span></h2>
+          <p class="tr">Uluslararası işe alım ve iş gücü mobilitesi süreçlerinde ilgili ülkelerin yürürlükteki mevzuatına ve uluslararası düzenlemelere tam uyum sağlanır.</p>
+          <p class="en" style="display:none">In international recruitment and workforce mobility processes, full compliance with the applicable legislation of the relevant countries and international regulations is ensured.</p>
+          <p class="tr">Avrupa Birliği ülkeleri, Orta Doğu ve Afrika bölgelerinde yürütülen projelerde sistematik bir çerçeve uygulanır.</p>
+          <p class="en" style="display:none">In projects carried out in European Union countries, the Middle East and Africa, a systematic framework is applied.</p>
+        </div>
+        <div>
+          <ul class="styled-list">
+            <li><span class="tr">Çalışma izinleri ve oturum süreçleri</span><span class="en">Work permits and residence processes</span></li>
+            <li><span class="tr">Büyük ölçekli iş gücü mobilizasyon planlaması</span><span class="en">Large-scale workforce mobilization planning</span></li>
+            <li><span class="tr">Yerel iş hukuku ve sosyal güvenlik yükümlülükleri</span><span class="en">Local labour law and social security obligations</span></li>
+            <li><span class="tr">Sınır ötesi görevlendirme prosedürleri</span><span class="en">Cross-border assignment procedures</span></li>
+            <li><span class="tr">Veri koruma ve gizlilik düzenlemeleri</span><span class="en">Data protection and privacy regulations</span></li>
+            <li><span class="tr">Sınır Ötesi SGK ve İŞKUR Danışmanlığı</span><span class="en">Cross-border SGK and İŞKUR consultancy</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: HİZMETLER ═══════════════ -->
+<div class="page" id="page-hizmetler">
+  <div class="ph">
+    <h1><span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span></h1>
+    <p><span class="tr">Stratejik işe alımdan outplacement'a kapsamlı çözümler</span><span class="en">Comprehensive solutions from strategic recruitment to outplacement</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+
+      <div class="svc-item">
+        <h3><span class="svc-num">1</span><span class="tr">Profesyonel Pozisyonlar için Araştırma ve İşe Alım</span><span class="en">Research & Recruitment for Professional Positions</span></h3>
+        <p><span class="tr">Mühendis ve uzman kadrolar için hedef odaklı araştırma, yetkinlik bazlı değerlendirme ve uçtan uca süreç yönetimi.</span><span class="en">Target-driven research, competency-based evaluation and end-to-end process management for engineer and specialist roles.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">2</span><span class="tr">Teknik Personel için Araştırma ve İşe Alım</span><span class="en">Research & Recruitment for Technical Staff</span></h3>
+        <p><span class="tr">Yurtiçi ve yurtdışı şantiye, fabrika ve endüstriyel projeler için nitelikli teknik personel temini ve mobilizasyon yönetimi.</span><span class="en">Provision of qualified technical personnel and mobilization management for domestic and international construction sites, factories and industrial projects.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">3</span><span class="tr">Proje Bazlı Toplu İşe Alım</span><span class="en">Project-Based Bulk Recruitment</span></h3>
+        <p><span class="tr">Büyük ölçekli yatırımlar için kısa sürede yüksek hacimli personel temini ve organizasyonel planlama.</span><span class="en">High-volume staffing and organizational planning for large-scale investments in a short period.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">4</span><span class="tr">Geçici İK Yönetim Desteği</span><span class="en">Interim HR Management Support</span></h3>
+        <p><span class="tr">Yapılanma sürecindeki kurumlara yurtiçi ve yurtdışı bordro, performans ve organizasyonel yapı desteği.</span><span class="en">Domestic and international payroll, performance and organizational structure support for institutions in the structuring process.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">5</span><span class="tr">Sınır Ötesi SGK ve İŞKUR Danışmanlığı</span><span class="en">Cross-Border SGK & İŞKUR Consultancy</span></h3>
+        <p><span class="tr">Yurtdışı görevlendirmelerde sosyal güvenlik ve yasal bildirim süreçlerinin mevzuata uygun yürütülmesi.</span><span class="en">Execution of social security and legal notification processes in compliance with legislation for overseas assignments.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">6</span><span class="tr">İş Sözleşmeleri ve İK Politikaları Danışmanlığı</span><span class="en">Employment Contracts & HR Policy Consulting</span></h3>
+        <p><span class="tr">Yurt içi ve yurt dışı operasyonlara uygun sözleşme ve politika yapılandırması.</span><span class="en">Contract and policy structuring appropriate for domestic and international operations.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">7</span><span class="tr">Global İşçilik Maliyetleri Danışmanlığı</span><span class="en">Global Labour Costs Consulting</span></h3>
+        <p><span class="tr">Farklı ülkelerdeki işçilik maliyetleri, sosyal güvenlik yükümlülükleri ve vergi yapılarının analizi ile sürdürülebilir maliyet planlaması.</span><span class="en">Analysis of labour costs, social security obligations and tax structures in different countries, and sustainable cost planning.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">8</span><span class="tr">Çalışma İzinleri Danışmanlığı</span><span class="en">Work Permit Consulting</span></h3>
+        <p><span class="tr">Yurt içi ve yurt dışı projeler için çalışma ve oturum izin süreçlerinin planlanması ve yürütülmesi.</span><span class="en">Planning and execution of work and residence permit processes for domestic and international projects.</span></p>
+      </div>
+
+      <div class="svc-item">
+        <h3><span class="svc-num">9</span><span class="tr">Outplacement Hizmeti (İşten Çıkış Süreç Yönetimi)</span><span class="en">Outplacement Service (Exit Process Management)</span></h3>
+        <p class="tr">Yeniden yapılanma, proje kapanışı veya küçülme süreçlerinde işten çıkış operasyonlarını hukuki uyum, etik sorumluluk ve kurumsal itibar çerçevesinde yönetiyoruz.<br><br>
+        Süreç planlaması, yasal yükümlülüklerin koordinasyonu, çalışan iletişimi ve kariyer geçişi desteği ile ayrılık süreçlerini profesyonel ve kontrollü biçimde yapılandırıyoruz.<br><br>
+        Amacımız, kurumun itibarını korurken çalışanların profesyonel geçişini destekleyen dengeli ve sorumlu bir yönetim modeli sunmaktır.</p>
+        <p class="en" style="display:none">We manage exit operations during restructuring, project closure or downsizing processes within the framework of legal compliance, ethical responsibility and corporate reputation.<br><br>
+        We structure separation processes in a professional and controlled manner through process planning, coordination of legal obligations, employee communication and career transition support.<br><br>
+        Our aim is to offer a balanced and responsible management model that supports the professional transition of employees while protecting the institution's reputation.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: YURT İÇİ ═══════════════ -->
+<div class="page" id="page-yurtici">
+  <div class="ph">
+    <h1><span class="tr">Yurt İçi Pozisyonlar</span><span class="en">Domestic Positions</span></h1>
+    <p><span class="tr">Türkiye genelinde açık pozisyonlarımız</span><span class="en">Open positions across Turkey</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div id="jobs-yurtici"></div>
+      <div style="text-align:center;margin-top:32px">
+        <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: YURT DIŞI ═══════════════ -->
+<div class="page" id="page-yurtdisi">
+  <div class="ph">
+    <h1><span class="tr">Yurt Dışı Pozisyonlar</span><span class="en">International Positions</span></h1>
+    <p><span class="tr">Uluslararası projelerimiz için açık pozisyonlar</span><span class="en">Open positions for our international projects</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div id="jobs-yurtdisi"></div>
+      <div style="text-align:center;margin-top:32px">
+        <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: BAŞVURU ═══════════════ -->
+<div class="page" id="page-basvuru">
+  <div class="ph">
+    <h1><span class="tr">Başvuru Formu</span><span class="en">Application Form</span></h1>
+    <p><span class="tr">Özgeçmişinizi gönderin, sizinle iletişime geçelim</span><span class="en">Send your CV and we'll get in touch</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="form-wrap">
+        <div class="success-msg" id="basvuru-success">
+          <div style="font-size:40px;margin-bottom:12px">✅</div>
+          <h3 style="color:var(--navy);margin-bottom:8px"><span class="tr">Başvurunuz Alındı!</span><span class="en">Application Received!</span></h3>
+          <p style="color:var(--gray)"><span class="tr">En kısa sürede sizinle iletişime geçeceğiz.</span><span class="en">We will contact you as soon as possible.</span></p>
+        </div>
+        <!-- ⚠️ Replace YOUR_EMAIL@example.com with your real email address -->
+        <form id="basvuruForm" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Yeni İş Başvurusu - Milenyum İK">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="frow">
+            <div class="fg">
+              <label><span class="tr">Ad</span><span class="en">First Name</span> <span class="req">*</span></label>
+              <input type="text" name="Ad" required data-ph-tr="Adınız" data-ph-en="Your first name" placeholder="Adınız">
+            </div>
+            <div class="fg">
+              <label><span class="tr">Soyad</span><span class="en">Last Name</span> <span class="req">*</span></label>
+              <input type="text" name="Soyad" required data-ph-tr="Soyadınız" data-ph-en="Your last name" placeholder="Soyadınız">
+            </div>
+          </div>
+          <div class="frow">
+            <div class="fg">
+              <label><span class="tr">E-posta</span><span class="en">Email</span> <span class="req">*</span></label>
+              <input type="email" name="Email" required placeholder="ornek@email.com">
+            </div>
+            <div class="fg">
+              <label><span class="tr">Telefon</span><span class="en">Phone</span> <span class="req">*</span></label>
+              <input type="tel" name="Telefon" required placeholder="+90 5__ ___ __ __">
+            </div>
+          </div>
+          <div class="fg">
+            <label><span class="tr">Başvurduğunuz Pozisyon</span><span class="en">Position Applied For</span> <span class="req">*</span></label>
+            <select name="Pozisyon" id="basvuruPozisyon" required>
+              <option value="" data-tr="Pozisyon seçin" data-en="Select a position">Pozisyon seçin</option>
+              <optgroup data-tr="Yurt İçi" data-en="Domestic" label="Yurt İçi">
+                <option value="Proje Mühendisi" data-tr="Proje Mühendisi" data-en="Project Engineer">Proje Mühendisi</option>
+                <option value="Şantiye Şefi" data-tr="Şantiye Şefi" data-en="Site Manager">Şantiye Şefi</option>
+                <option value="İnsan Kaynakları Uzmanı" data-tr="İnsan Kaynakları Uzmanı" data-en="HR Specialist">İnsan Kaynakları Uzmanı</option>
+                <option value="Elektrik Mühendisi" data-tr="Elektrik Mühendisi" data-en="Electrical Engineer">Elektrik Mühendisi</option>
+                <option value="Makine Mühendisi" data-tr="Makine Mühendisi" data-en="Mechanical Engineer">Makine Mühendisi</option>
+              </optgroup>
+              <optgroup data-tr="Yurt Dışı" data-en="International" label="Yurt Dışı">
+                <option value="Proje Müdürü - Dubai" data-tr="Proje Müdürü – Dubai" data-en="Project Manager – Dubai">Proje Müdürü – Dubai</option>
+                <option value="Şantiye Şefi - Katar" data-tr="Şantiye Şefi – Katar" data-en="Site Manager – Qatar">Şantiye Şefi – Katar</option>
+                <option value="Tıbbi Teknisyen - Hollanda" data-tr="Tıbbi Teknisyen – Hollanda" data-en="Medical Technician – Netherlands">Tıbbi Teknisyen – Hollanda</option>
+                <option value="Enerji Mühendisi - Almanya" data-tr="Enerji Mühendisi – Almanya" data-en="Energy Engineer – Germany">Enerji Mühendisi – Almanya</option>
+                <option value="Otelcilik Yöneticisi - Londra" data-tr="Otelcilik Yöneticisi – Londra" data-en="Hospitality Manager – London">Otelcilik Yöneticisi – Londra</option>
+              </optgroup>
+              <option value="Genel Başvuru" data-tr="Genel Başvuru" data-en="General Application">Genel Başvuru</option>
+            </select>
+          </div>
+          <div class="frow">
+            <div class="fg">
+              <label><span class="tr">Mevcut Çalışma Durumu</span><span class="en">Current Employment Status</span></label>
+              <select name="Calisma_Durumu">
+                <option value="Aktif Çalışıyor" data-tr="Aktif çalışıyor" data-en="Currently employed">Aktif çalışıyor</option>
+                <option value="İş Arıyor" data-tr="İş arıyor" data-en="Currently seeking work">İş arıyor</option>
+                <option value="Serbest Çalışıyor" data-tr="Serbest çalışıyor" data-en="Freelancing">Serbest çalışıyor</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label><span class="tr">Yabancı Dil</span><span class="en">Foreign Language</span></label>
+              <input type="text" name="Yabanci_Dil" data-ph-tr="İngilizce – B2, Almanca – A2" data-ph-en="English – B2, German – A2" placeholder="İngilizce – B2, Almanca – A2">
+            </div>
+          </div>
+          <div class="fg">
+            <label><span class="tr">Kısa Tanıtım</span><span class="en">Brief Introduction</span></label>
+            <textarea name="Tanitim" data-ph-tr="Kendinizi kısaca tanıtın..." data-ph-en="Briefly introduce yourself..." placeholder="Kendinizi kısaca tanıtın..."></textarea>
+          </div>
+          <div class="fg">
+            <label><span class="tr">CV (PDF formatında)</span><span class="en">CV (PDF format)</span> <span class="req">*</span></label>
+            <div class="file-zone" id="fileZone">
+              <input type="file" name="CV" accept=".pdf" required id="cvFile" onchange="handleFile(this)">
+              <div class="fz-icon">📎</div>
+              <p><strong><span class="tr">PDF dosyanızı buraya sürükleyin</span><span class="en">Drag your PDF file here</span></strong><br>
+              <span class="tr">veya tıklayarak seçin · Maks. 10 MB</span><span class="en">or click to select · Max 10 MB</span></p>
+              <div class="fname" id="fname"></div>
+            </div>
+          </div>
+          <div class="fg" style="display:flex;align-items:flex-start;gap:10px">
+            <input type="checkbox" name="Kvkk" id="kvkk-check" required style="width:auto;margin-top:3px">
+            <label for="kvkk-check" style="font-weight:400;font-size:13px;color:var(--gray)">
+              <span class="tr"><a href="#" onclick="nav('kvkk')" style="color:var(--navy)">Kişisel Verilerin Korunması</a> hakkındaki aydınlatma metnini okudum ve onaylıyorum.</span>
+              <span class="en">I have read and accept the <a href="#" onclick="nav('kvkk')" style="color:var(--navy)">Personal Data Protection</a> disclosure text.</span>
+            </label>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:15px">
+              <span class="tr">Başvuruyu Gönder →</span><span class="en">Submit Application →</span>
+            </button>
+            <p class="form-note"><span class="tr">Başvurunuz güvenli şekilde iletilecektir. En kısa sürede dönüş yapılacaktır.</span><span class="en">Your application will be transmitted securely. We will respond as soon as possible.</span></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: İŞVEREN ═══════════════ -->
+<div class="page" id="page-isveren">
+  <div class="ph">
+    <h1><span class="tr">İşveren</span><span class="en">Employer</span></h1>
+    <p><span class="tr">İş gücü ihtiyaçlarınız için stratejik çözüm ortağınız</span><span class="en">Your strategic solution partner for workforce needs</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="section-hdr">
+        <div class="s-eye"><span class="tr">NASIL ÇALIŞIRIZ</span><span class="en">HOW WE WORK</span></div>
+        <h2 class="s-title"><span class="tr">Süreç Modelimiz</span><span class="en">Our Process Model</span></h2>
+        <p class="s-sub"><span class="tr">Her proje organizasyonel analiz ile başlar, yerleştirme sonrası takip ile tamamlanır.</span><span class="en">Every project begins with organizational analysis and is completed with post-placement follow-up.</span></p>
+      </div>
+      <div class="grid-2">
+        <div class="why-card"><h3>01 &nbsp;<span class="tr">İhtiyaç Analizi</span><span class="en">Needs Analysis</span></h3><p><span class="tr">Organizasyonel yapı, görev tanımı ve yetkinlik matrisi çerçevesinde ihtiyaç analizi gerçekleştirilir.</span><span class="en">Needs analysis is conducted within the framework of organizational structure, job description and competency matrix.</span></p></div>
+        <div class="why-card"><h3>02 &nbsp;<span class="tr">Araştırma ve Hedefleme</span><span class="en">Research & Targeting</span></h3><p><span class="tr">Pasif aday pazarı dahil kapsamlı araştırma ile uygun profiller belirlenir.</span><span class="en">Suitable profiles are identified through comprehensive research including the passive candidate market.</span></p></div>
+        <div class="why-card"><h3>03 &nbsp;<span class="tr">Değerlendirme</span><span class="en">Evaluation</span></h3><p><span class="tr">Yetkinlik bazlı mülakatlar, teknik testler ve referans kontrolleri uygulanır.</span><span class="en">Competency-based interviews, technical tests and reference checks are applied.</span></p></div>
+        <div class="why-card"><h3>04 &nbsp;<span class="tr">Sunum ve Karar</span><span class="en">Presentation & Decision</span></h3><p><span class="tr">Kısa liste sunulur, müşteri görüşmeleri koordine edilir ve teklif sürecinde destek sağlanır.</span><span class="en">A shortlist is presented, client interviews are coordinated and support is provided during the offer process.</span></p></div>
+        <div class="why-card"><h3>05 &nbsp;<span class="tr">Yerleştirme</span><span class="en">Placement</span></h3><p><span class="tr">İşe başlama süreci takip edilir, mobilizasyon ve adaptasyon desteklenir.</span><span class="en">The onboarding process is monitored, mobilization and adaptation are supported.</span></p></div>
+        <div class="why-card"><h3>06 &nbsp;<span class="tr">Yerleştirme Sonrası Takip</span><span class="en">Post-Placement Follow-Up</span></h3><p><span class="tr">İlk dönem performans, uyum ve organizasyonel entegrasyon değerlendirilir. Uzun vadeli başarı hedeflenir.</span><span class="en">Early-period performance, fit and organizational integration are evaluated. Long-term success is targeted.</span></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-dark" style="text-align:center">
+    <div class="container">
+      <h2 class="s-title"><span class="tr">İş Gücü İhtiyacınız mı Var?</span><span class="en">Do You Have a Workforce Need?</span></h2>
+      <p class="s-sub" style="margin-bottom:32px"><span class="tr">Uzman ekibimiz ihtiyaçlarınızı değerlendirmek için hazır.</span><span class="en">Our expert team is ready to evaluate your needs.</span></p>
+      <button class="btn btn-primary" onclick="nav('iletisim')"><span class="tr">Hemen İletişime Geçin →</span><span class="en">Contact Us Now →</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: İLETİŞİM ═══════════════ -->
+<div class="page" id="page-iletisim">
+  <div class="ph">
+    <h1><span class="tr">Bize Ulaşın</span><span class="en">Contact Us</span></h1>
+    <p><span class="tr">Sorularınız için bizimle iletişime geçin</span><span class="en">Get in touch with us for your questions</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="s-eye"><span class="tr">İLETİŞİM BİLGİLERİ</span><span class="en">CONTACT INFORMATION</span></div>
+          <h2><span class="tr">Sizinle Konuşmayı Bekliyoruz</span><span class="en">We Look Forward to Speaking with You</span></h2>
+          <p><span class="tr">İnsan kaynakları ihtiyaçlarınız veya kariyer fırsatları hakkında sorularınız için ekibimize ulaşın.</span><span class="en">Contact our team for questions about your human resources needs or career opportunities.</span></p>
+          <div class="c-items">
+            <div class="c-item">
+              <div class="c-icon">📍</div>
+              <div class="c-item-text">
+                <h4><span class="tr">Adres</span><span class="en">Address</span></h4>
+                <p><span class="tr">İstanbul, Türkiye</span><span class="en">Istanbul, Turkey</span></p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">📞</div>
+              <div class="c-item-text">
+                <h4><span class="tr">Telefon</span><span class="en">Phone</span></h4>
+                <p>+90 (212) ___ __ __</p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">✉️</div>
+              <div class="c-item-text">
+                <h4>E-posta / Email</h4>
+                <p>info@milenyumik.com</p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">🕐</div>
+              <div class="c-item-text">
+                <h4><span class="tr">Çalışma Saatleri</span><span class="en">Working Hours</span></h4>
+                <p><span class="tr">Pzt–Cum: 09:00–18:00</span><span class="en">Mon–Fri: 09:00–18:00</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form-wrap" style="padding:36px 30px">
+            <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:24px"><span class="tr">Mesaj Gönderin</span><span class="en">Send a Message</span></h3>
+            <div class="success-msg" id="contact-success">
+              <div style="font-size:36px;margin-bottom:10px">✅</div>
+              <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Mesajınız Alındı!</span><span class="en">Message Received!</span></h3>
+              <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
+            </div>
+            <!-- ⚠️ Replace YOUR_EMAIL@example.com with your real email address -->
+            <form id="contactForm" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+              <input type="hidden" name="_subject" value="Web İletişim Formu - Milenyum İK">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="frow">
+                <div class="fg">
+                  <label><span class="tr">Ad Soyad</span><span class="en">Full Name</span> <span class="req">*</span></label>
+                  <input type="text" name="Ad_Soyad" required>
+                </div>
+                <div class="fg">
+                  <label><span class="tr">Şirket</span><span class="en">Company</span></label>
+                  <input type="text" name="Sirket">
+                </div>
+              </div>
+              <div class="fg">
+                <label>E-posta <span class="req">*</span></label>
+                <input type="email" name="Email" required>
+              </div>
+              <div class="fg">
+                <label><span class="tr">Konu</span><span class="en">Subject</span></label>
+                <select name="Konu">
+                  <option value="Işe Alım" data-tr="İşe Alım Talebi" data-en="Recruitment Request">İşe Alım Talebi</option>
+                  <option value="Kariyer" data-tr="Kariyer Fırsatları" data-en="Career Opportunities">Kariyer Fırsatları</option>
+                  <option value="Danışmanlık" data-tr="Danışmanlık Hizmetleri" data-en="Consulting Services">Danışmanlık Hizmetleri</option>
+                  <option value="Diger" data-tr="Diğer" data-en="Other">Diğer</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label><span class="tr">Mesajınız</span><span class="en">Your Message</span> <span class="req">*</span></label>
+                <textarea name="Mesaj" required style="min-height:130px"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
+                <span class="tr">Gönder →</span><span class="en">Send →</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: BLOG ═══════════════ -->
+<div class="page" id="page-blog">
+  <div class="ph">
+    <h1>Blog</h1>
+    <p><span class="tr">İnsan kaynakları, kariyer ve sektör haberleri</span><span class="en">Human resources, career and industry news</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="blog-card">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#0d2137,#1a3557)">🌍</div>
+          <div class="blog-body">
+            <div class="blog-date"><span class="tr">15 Şubat 2025</span><span class="en">15 February 2025</span></div>
+            <h3><span class="tr">Yurt Dışı İşe Alımda Dikkat Edilmesi Gereken 5 Kritik Nokta</span><span class="en">5 Critical Points to Consider in International Recruitment</span></h3>
+            <p><span class="tr">Uluslararası işe alım süreçleri yasal uyum, kültürel uyum ve mobilizasyon planlaması açısından özel dikkat gerektirmektedir...</span><span class="en">International recruitment processes require special attention in terms of legal compliance, cultural fit and mobilization planning...</span></p>
+            <a class="read-more"><span class="tr">Devamını Oku →</span><span class="en">Read More →</span></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#1a3557,#2d4a8a)">📊</div>
+          <div class="blog-body">
+            <div class="blog-date"><span class="tr">28 Ocak 2025</span><span class="en">28 January 2025</span></div>
+            <h3><span class="tr">İnşaat Sektöründe Yetenek Açığı: Çözüm Önerileri</span><span class="en">Talent Gap in the Construction Sector: Solutions</span></h3>
+            <p><span class="tr">Türkiye ve bölge genelinde inşaat sektörünün karşılaştığı yetenek açığı ve stratejik işe alım çözümleri...</span><span class="en">The talent gap facing the construction sector in Turkey and the region, and strategic recruitment solutions...</span></p>
+            <a class="read-more"><span class="tr">Devamını Oku →</span><span class="en">Read More →</span></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#c9a447,#e8c96a)">⚡</div>
+          <div class="blog-body">
+            <div class="blog-date"><span class="tr">10 Ocak 2025</span><span class="en">10 January 2025</span></div>
+            <h3><span class="tr">Enerji Sektöründe Uzman Personel İhtiyacı ve Küresel Eğilimler</span><span class="en">Specialist Staffing Needs and Global Trends in the Energy Sector</span></h3>
+            <p><span class="tr">Yenilenebilir enerji yatırımlarının artmasıyla birlikte sektördeki uzman personel talebi hız kazanmaktadır...</span><span class="en">With the increase in renewable energy investments, the demand for specialist staff in the sector is accelerating...</span></p>
+            <a class="read-more"><span class="tr">Devamını Oku →</span><span class="en">Read More →</span></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#0d2137,#c9a447)">🤝</div>
+          <div class="blog-body">
+            <div class="blog-date"><span class="tr">5 Aralık 2024</span><span class="en">5 December 2024</span></div>
+            <h3><span class="tr">Outplacement: Kurumsal İtibarı Korurken Dönüşüm Yönetimi</span><span class="en">Outplacement: Managing Transition While Protecting Corporate Reputation</span></h3>
+            <p><span class="tr">Yeniden yapılanma süreçlerinde outplacement hizmetinin kurumsal ve bireysel katkısı...</span><span class="en">The corporate and individual contribution of outplacement services during restructuring processes...</span></p>
+            <a class="read-more"><span class="tr">Devamını Oku →</span><span class="en">Read More →</span></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#1a3557,#0d2137)">🏥</div>
+          <div class="blog-body">
+            <div class="blog-date"><span class="tr">18 Kasım 2024</span><span class="en">18 November 2024</span></div>
+            <h3><span class="tr">Sağlık Sektöründe Uluslararası İşe Alım Süreçleri</span><span class="en">International Recruitment Processes in the Healthcare Sector</span></h3>
+            <p><span class="tr">Hollanda, Almanya ve İskandinav ülkelerindeki sağlık kurumları için Türkiye'den uzman temini...</span><span class="en">Providing specialists from Turkey for healthcare institutions in the Netherlands, Germany and Scandinavian countries...</span></p>
+            <a class="read-more"><span class="tr">Devamını Oku →</span><span class="en">Read More →</span></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#2d4a8a,#1a3557)">📋</div>
+          <div class="blog-body">
+            <div class="blog-date"><span class="tr">2 Kasım 2024</span><span class="en">2 November 2024</span></div>
+            <h3><span class="tr">Çalışma İzni Süreçlerinde Sık Yapılan Hatalar</span><span class="en">Common Mistakes in Work Permit Processes</span></h3>
+            <p><span class="tr">Yurt dışı görevlendirmelerde çalışma ve oturum izni süreçlerinde karşılaşılan sorunlar ve çözüm yolları...</span><span class="en">Problems encountered in work and residence permit processes for overseas assignments and their solutions...</span></p>
+            <a class="read-more"><span class="tr">Devamını Oku →</span><span class="en">Read More →</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE: KVKK ═══════════════ -->
+<div class="page" id="page-kvkk">
+  <div class="ph">
+    <h1><span class="tr">Kişisel Verilerin Korunması</span><span class="en">Personal Data Protection</span></h1>
+    <p><span class="tr">KVKK Aydınlatma Metni</span><span class="en">GDPR / KVKK Disclosure Text</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="legal-c">
+        <div class="tr">
+          <h2>1. Veri Sorumlusu</h2>
+          <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, kişisel verileriniz; veri sorumlusu sıfatıyla Milenyum İnsan Kaynakları Danışmanlık ("Şirket") tarafından aşağıda açıklanan kapsamda işlenebilecektir.</p>
+          <h2>2. Kişisel Verilerin İşlenme Amacı</h2>
+          <p>Kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
+          <ul>
+            <li>İşe alım süreçlerinin yürütülmesi</li>
+            <li>Kariyer başvurularının değerlendirilmesi</li>
+            <li>İş sözleşmelerinin kurulması ve ifası</li>
+            <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+            <li>İş gücü analizi ve planlaması</li>
+            <li>Müşteri ve iş ortakları ile iletişim</li>
+          </ul>
+          <h2>3. İşlenen Kişisel Veriler</h2>
+          <p>Kimlik bilgileri (ad, soyad, TC kimlik no), iletişim bilgileri (telefon, e-posta, adres), özgeçmiş bilgileri (eğitim, iş deneyimi, yetkinlikler), yabancı dil bilgisi, referans bilgileri.</p>
+          <h2>4. Kişisel Verilerin Aktarılması</h2>
+          <p>Kişisel verileriniz; işe alım sürecinde ilgili iş ortaklarımıza, kanunen yetkili kamu kurumlarına ve hizmet sağlayıcılara aktarılabilmektedir. Yurt dışına aktarım KVKK'nın 9. maddesi kapsamında gerçekleştirilmektedir.</p>
+          <h2>5. Haklarınız</h2>
+          <p>KVKK'nın 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:</p>
+          <ul>
+            <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+            <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+            <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+            <li>Eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+            <li>Kişisel verilerin silinmesini veya yok edilmesini isteme</li>
+            <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
+          </ul>
+          <h2>6. İletişim</h2>
+          <p>KVKK kapsamındaki taleplerinizi <strong>info@milenyumik.com</strong> adresine iletebilirsiniz.</p>
+          <p style="color:var(--gray);font-size:13px;margin-top:30px"><em>Son güncelleme: Mart 2025</em></p>
+        </div>
+        <div class="en" style="display:none">
+          <h2>1. Data Controller</h2>
+          <p>Pursuant to the Law on Protection of Personal Data No. 6698 ("KVKK"), your personal data may be processed by Milenyum Human Resources Consulting ("Company") as the data controller, within the scope described below.</p>
+          <h2>2. Purpose of Processing Personal Data</h2>
+          <p>Your personal data is processed for the following purposes:</p>
+          <ul>
+            <li>Conducting recruitment processes</li>
+            <li>Evaluating job applications</li>
+            <li>Establishing and performing employment contracts</li>
+            <li>Fulfilling legal obligations</li>
+            <li>Workforce analysis and planning</li>
+            <li>Communication with clients and business partners</li>
+          </ul>
+          <h2>3. Personal Data Processed</h2>
+          <p>Identity information (name, surname, national ID), contact information (phone, email, address), CV information (education, work experience, competencies), foreign language skills, reference information.</p>
+          <h2>4. Transfer of Personal Data</h2>
+          <p>Your personal data may be transferred to our relevant business partners in the recruitment process, to legally authorized public institutions and to service providers. International transfer is carried out within the scope of Article 9 of KVKK.</p>
+          <h2>5. Your Rights</h2>
+          <p>Within the scope of Article 11 of KVKK, you have the following rights:</p>
+          <ul>
+            <li>To learn whether your personal data is being processed</li>
+            <li>To request information about processing if applicable</li>
+            <li>To learn the purpose of processing and whether it is used accordingly</li>
+            <li>To know third parties to whom data is transferred domestically or internationally</li>
+            <li>To request correction of incomplete or incorrect data</li>
+            <li>To request deletion or destruction of personal data</li>
+            <li>To object to a result arising against you through analysis by automated systems</li>
+          </ul>
+          <h2>6. Contact</h2>
+          <p>You may submit your requests under KVKK to <strong>info@milenyumik.com</strong>.</p>
+          <p style="color:var(--gray);font-size:13px;margin-top:30px"><em>Last updated: March 2025</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-g">
+      <div class="footer-brand">
+        <span class="logo-m" style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;display:block;margin-bottom:4px">MİLENYUM</span>
+        <span class="logo-s" style="display:block;margin-bottom:14px">İnsan Kaynakları</span>
+        <p class="tr">Ulusal ve uluslararası ölçekte stratejik işe alım ve iş gücü yönetimi danışmanlığı.</p>
+        <p class="en" style="display:none">Strategic recruitment and workforce management consulting at national and international scale.</p>
+      </div>
+      <div class="footer-col">
+        <h4><span class="tr">Sayfalar</span><span class="en">Pages</span></h4>
+        <ul>
+          <li><span onclick="nav('home')" class="tr">Ana Sayfa</span><span onclick="nav('home')" class="en" style="display:none">Home</span></li>
+          <li><span onclick="nav('kurumsal')" class="tr">Kurumsal</span><span onclick="nav('kurumsal')" class="en" style="display:none">Corporate</span></li>
+          <li><span onclick="nav('hizmetler')" class="tr">Hizmetlerimiz</span><span onclick="nav('hizmetler')" class="en" style="display:none">Services</span></li>
+          <li><span onclick="nav('blog')">Blog</span></li>
+          <li><span onclick="nav('kvkk')" class="tr">KVKK</span><span onclick="nav('kvkk')" class="en" style="display:none">Privacy</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="tr">İş Arayan</span><span class="en">Job Seekers</span></h4>
+        <ul>
+          <li><span onclick="nav('yurtici')" class="tr">Yurt İçi Pozisyonlar</span><span onclick="nav('yurtici')" class="en" style="display:none">Domestic Positions</span></li>
+          <li><span onclick="nav('yurtdisi')" class="tr">Yurt Dışı Pozisyonlar</span><span onclick="nav('yurtdisi')" class="en" style="display:none">International Positions</span></li>
+          <li><span onclick="nav('basvuru')" class="tr">Başvuru Formu</span><span onclick="nav('basvuru')" class="en" style="display:none">Application Form</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="tr">İletişim</span><span class="en">Contact</span></h4>
+        <ul>
+          <li><span>📍 İstanbul, Türkiye</span></li>
+          <li><span>✉️ info@milenyumik.com</span></li>
+          <li><span onclick="nav('iletisim')" class="tr">Bize Ulaşın</span><span onclick="nav('iletisim')" class="en" style="display:none">Contact Us</span></li>
+          <li><span onclick="nav('isveren')" class="tr">İşveren Sayfası</span><span onclick="nav('isveren')" class="en" style="display:none">Employer Page</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <p>© 2025 Milenyum İnsan Kaynakları. <span class="tr">Tüm hakları saklıdır.</span><span class="en">All rights reserved.</span></p>
+      <p><span onclick="nav('kvkk')" style="cursor:pointer;color:rgba(255,255,255,.4)" class="tr">Kişisel Verilerin Korunması</span><span onclick="nav('kvkk')" style="cursor:pointer;color:rgba(255,255,255,.4)" class="en" style="display:none">Privacy Policy</span></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────
+const jobsYurtici = [
+  {tr:'Proje Mühendisi', en:'Project Engineer', loc:'İstanbul', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Proje Mühendisi'},
+  {tr:'Şantiye Şefi', en:'Site Manager', loc:'Ankara', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Şantiye Şefi'},
+  {tr:'İnsan Kaynakları Uzmanı', en:'HR Specialist', loc:'İzmir', dept_tr:'İnsan Kaynakları', dept_en:'Human Resources', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'İnsan Kaynakları Uzmanı'},
+  {tr:'Elektrik Mühendisi', en:'Electrical Engineer', loc:'Kocaeli', dept_tr:'Enerji', dept_en:'Energy', type_tr:'Sözleşmeli', type_en:'Contract', badge:'badge-ct', val:'Elektrik Mühendisi'},
+  {tr:'Makine Mühendisi', en:'Mechanical Engineer', loc:'Bursa', dept_tr:'Üretim', dept_en:'Manufacturing', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Makine Mühendisi'},
+];
+const jobsYurtdisi = [
+  {tr:'Proje Müdürü', en:'Project Manager', loc_tr:'Dubai, BAE', loc_en:'Dubai, UAE', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Sözleşmeli', type_en:'Contract', badge:'badge-ct', val:'Proje Müdürü - Dubai'},
+  {tr:'Şantiye Şefi', en:'Site Manager', loc_tr:'Doha, Katar', loc_en:'Doha, Qatar', dept_tr:'İnşaat', dept_en:'Construction', type_tr:'Sözleşmeli', type_en:'Contract', badge:'badge-ct', val:'Şantiye Şefi - Katar'},
+  {tr:'Tıbbi Teknisyen', en:'Medical Technician', loc_tr:'Amsterdam, Hollanda', loc_en:'Amsterdam, Netherlands', dept_tr:'Sağlık', dept_en:'Healthcare', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Tıbbi Teknisyen - Hollanda'},
+  {tr:'Enerji Mühendisi', en:'Energy Engineer', loc_tr:'Berlin, Almanya', loc_en:'Berlin, Germany', dept_tr:'Enerji', dept_en:'Energy', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Enerji Mühendisi - Almanya'},
+  {tr:'Otelcilik Yöneticisi', en:'Hospitality Manager', loc_tr:'Londra, İngiltere', loc_en:'London, United Kingdom', dept_tr:'Turizm', dept_en:'Tourism', type_tr:'Tam Zamanlı', type_en:'Full-time', badge:'badge-ft', val:'Otelcilik Yöneticisi - Londra'},
+];
+
+function renderJobs(list, containerId) {
+  const c = document.getElementById(containerId);
+  if(!c) return;
+  const isEn = currentLang === 'en';
+  c.innerHTML = list.map(j => {
+    const title = isEn ? j.en : j.tr;
+    const loc = j.loc || (isEn ? j.loc_en : j.loc_tr);
+    const dept = isEn ? j.dept_en : j.dept_tr;
+    const type = isEn ? j.type_en : j.type_tr;
+    const applyLabel = isEn ? 'Apply →' : 'Başvur →';
+    return `
+    <div class="job-card">
+      <div class="job-info">
+        <h3>${title}</h3>
+        <div class="job-meta">
+          <span class="jtag">📍 ${loc}</span>
+          <span class="jtag">🏢 ${dept}</span>
+          <span class="badge ${j.badge}">${type}</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" style="white-space:nowrap;padding:10px 22px;font-size:13.5px"
+        onclick="applyFor('${j.val}')">${applyLabel}</button>
+    </div>`;
+  }).join('');
+}
+
+// ─── LANGUAGE ────────────────────────────────────────────
+let currentLang = 'tr';
+
+function toggleLang() {
+  currentLang = currentLang === 'tr' ? 'en' : 'tr';
+  applyLang();
+}
+
+function applyLang() {
+  const isEn = currentLang === 'en';
+  document.body.dataset.lang = currentLang;
+  document.getElementById('langBtn').textContent = isEn ? '🌐 TR' : '🌐 EN';
+  document.documentElement.lang = currentLang;
+  // Update <option> text
+  document.querySelectorAll('option[data-tr]').forEach(el => {
+    el.textContent = isEn ? el.dataset.en : el.dataset.tr;
+  });
+  // Update <optgroup> labels
+  document.querySelectorAll('optgroup[data-tr]').forEach(el => {
+    el.label = isEn ? el.dataset.en : el.dataset.tr;
+  });
+  // Update input/textarea placeholders
+  document.querySelectorAll('[data-ph-tr]').forEach(el => {
+    el.placeholder = isEn ? el.dataset.phEn : el.dataset.phTr;
+  });
+  // Re-render jobs so titles, locations, dept are in correct language
+  renderJobs(jobsYurtici,'jobs-yurtici');
+  renderJobs(jobsYurtdisi,'jobs-yurtdisi');
+}
+
+// ─── NAVIGATION ──────────────────────────────────────────
+let currentPage = 'home';
+
+function nav(pageId) {
+  // hide all
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  // show target
+  const target = document.getElementById('page-' + pageId);
+  if(target) {
+    target.classList.add('active');
+    currentPage = pageId;
+  }
+  // scroll top
+  window.scrollTo({top:0,behavior:'smooth'});
+  // close mobile menu
+  document.getElementById('mainNav').classList.remove('open');
+  // render jobs if needed
+  if(pageId === 'yurtici') renderJobs(jobsYurtici,'jobs-yurtici');
+  if(pageId === 'yurtdisi') renderJobs(jobsYurtdisi,'jobs-yurtdisi');
+  // update nav active states
+  document.querySelectorAll('.nl').forEach(l => l.classList.remove('active'));
+}
+
+function applyFor(positionTitle) {
+  nav('basvuru');
+  setTimeout(() => {
+    const sel = document.getElementById('basvuruPozisyon');
+    if(sel) {
+      for(let i=0;i<sel.options.length;i++){
+        if(sel.options[i].value === positionTitle || sel.options[i].text.includes(positionTitle.split('/')[0].trim())){
+          sel.selectedIndex = i;
+          break;
+        }
+      }
+    }
+  }, 100);
+}
+
+// ─── HAMBURGER ───────────────────────────────────────────
+function toggleMenu() {
+  document.getElementById('mainNav').classList.toggle('open');
+}
+
+// ─── FILE UPLOAD ─────────────────────────────────────────
+function handleFile(input) {
+  const fname = document.getElementById('fname');
+  if(input.files && input.files[0]) {
+    const f = input.files[0];
+    if(f.type !== 'application/pdf'){
+      alert(currentLang==='tr' ? 'Lütfen yalnızca PDF dosyası yükleyin.' : 'Please upload a PDF file only.');
+      input.value = '';
+      fname.style.display = 'none';
+      return;
+    }
+    if(f.size > 10*1024*1024){
+      alert(currentLang==='tr' ? 'Dosya boyutu 10 MB\'ı geçemez.' : 'File size cannot exceed 10 MB.');
+      input.value = '';
+      fname.style.display = 'none';
+      return;
+    }
+    fname.textContent = '✓ ' + f.name;
+    fname.style.display = 'block';
+  }
+}
+
+// drag-and-drop visuals
+document.addEventListener('DOMContentLoaded', () => {
+  // Strip legacy inline display:none from .en elements — CSS handles visibility now
+  document.querySelectorAll('.en').forEach(el => el.style.removeProperty('display'));
+
+  const zone = document.getElementById('fileZone');
+  if(zone){
+    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('over'); });
+    zone.addEventListener('dragleave', () => zone.classList.remove('over'));
+    zone.addEventListener('drop', () => zone.classList.remove('over'));
+  }
+
+  // Init jobs on first load (in case user navigates to those pages)
+  renderJobs(jobsYurtici,'jobs-yurtici');
+  renderJobs(jobsYurtdisi,'jobs-yurtdisi');
+});
+</script>
+</body>
+</html>
