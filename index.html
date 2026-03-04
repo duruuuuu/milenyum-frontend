@@ -242,7 +242,6 @@ textarea{resize:vertical;min-height:110px}
         <div class="drop">
           <span class="dl" onclick="nav('yurtici')"><span class="tr">Yurt İçi Pozisyonlar</span><span class="en">Domestic Positions</span></span>
           <span class="dl" onclick="nav('yurtdisi')"><span class="tr">Yurt Dışı Pozisyonlar</span><span class="en">International Positions</span></span>
-          <span class="dl" onclick="nav('basvuru')"><span class="tr">Başvuru Formu</span><span class="en">Application Form</span></span>
         </div>
       </div>
       <div class="nav-item">
@@ -524,7 +523,6 @@ textarea{resize:vertical;min-height:110px}
       <div style="font-size:48px;margin-bottom:20px">📋</div>
       <h2 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:12px"><span class="tr">Şu An Açık Pozisyon Bulunmuyor</span><span class="en">No Open Positions at This Time</span></h2>
       <p style="color:var(--gray);max-width:480px;margin:0 auto 32px"><span class="tr">Yurt içi pozisyonlar için henüz aktif bir ilan mevcut değil. Genel başvuru yaparak özgeçmişinizi bizimle paylaşabilirsiniz.</span><span class="en">There are currently no active domestic listings. You can share your CV with us by submitting a general application.</span></p>
-      <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
     </div>
   </div>
 </div>
@@ -540,115 +538,6 @@ textarea{resize:vertical;min-height:110px}
       <div style="font-size:48px;margin-bottom:20px">🌍</div>
       <h2 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:12px"><span class="tr">Şu An Açık Pozisyon Bulunmuyor</span><span class="en">No Open Positions at This Time</span></h2>
       <p style="color:var(--gray);max-width:480px;margin:0 auto 32px"><span class="tr">Yurt dışı pozisyonlar için henüz aktif bir ilan mevcut değil. Genel başvuru yaparak özgeçmişinizi bizimle paylaşabilirsiniz.</span><span class="en">There are currently no active international listings. You can share your CV with us by submitting a general application.</span></p>
-      <button class="btn btn-primary" onclick="nav('basvuru')"><span class="tr">Genel Başvuru Yap →</span><span class="en">Submit General Application →</span></button>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════ PAGE: BAŞVURU ═══════════════ -->
-<div class="page" id="page-basvuru">
-  <div class="ph">
-    <h1><span class="tr">Başvuru Formu</span><span class="en">Application Form</span></h1>
-    <p><span class="tr">Özgeçmişinizi gönderin, sizinle iletişime geçelim</span><span class="en">Send your CV and we'll get in touch</span></p>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="form-wrap">
-        <div class="success-msg" id="basvuru-success">
-          <div style="font-size:40px;margin-bottom:12px">✅</div>
-          <h3 style="color:var(--navy);margin-bottom:8px"><span class="tr">Başvurunuz Alındı!</span><span class="en">Application Received!</span></h3>
-          <p style="color:var(--gray)"><span class="tr">En kısa sürede sizinle iletişime geçeceğiz.</span><span class="en">We will contact you as soon as possible.</span></p>
-        </div>
-        <!-- ⚠️ Replace YOUR_EMAIL@example.com with your real email address -->
-        <form id="basvuruForm" action="https://formsubmit.co/mahmut.derindag@outlook.com method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_subject" value="Yeni İş Başvurusu - Milenyum İK">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-
-          <div class="frow">
-            <div class="fg">
-              <label><span class="tr">Ad</span><span class="en">First Name</span> <span class="req">*</span></label>
-              <input type="text" name="Ad" required data-ph-tr="Adınız" data-ph-en="Your first name" placeholder="Adınız">
-            </div>
-            <div class="fg">
-              <label><span class="tr">Soyad</span><span class="en">Last Name</span> <span class="req">*</span></label>
-              <input type="text" name="Soyad" required data-ph-tr="Soyadınız" data-ph-en="Your last name" placeholder="Soyadınız">
-            </div>
-          </div>
-          <div class="frow">
-            <div class="fg">
-              <label><span class="tr">E-posta</span><span class="en">Email</span> <span class="req">*</span></label>
-              <input type="email" name="Email" required placeholder="ornek@email.com">
-            </div>
-            <div class="fg">
-              <label><span class="tr">Telefon</span><span class="en">Phone</span> <span class="req">*</span></label>
-              <input type="tel" name="Telefon" required placeholder="+90 5__ ___ __ __">
-            </div>
-          </div>
-          <div class="fg">
-            <label><span class="tr">Başvurduğunuz Pozisyon</span><span class="en">Position Applied For</span> <span class="req">*</span></label>
-            <select name="Pozisyon" id="basvuruPozisyon" required>
-              <option value="" data-tr="Pozisyon seçin" data-en="Select a position">Pozisyon seçin</option>
-              <optgroup data-tr="Yurt İçi" data-en="Domestic" label="Yurt İçi">
-                <option value="Proje Mühendisi" data-tr="Proje Mühendisi" data-en="Project Engineer">Proje Mühendisi</option>
-                <option value="Şantiye Şefi" data-tr="Şantiye Şefi" data-en="Site Manager">Şantiye Şefi</option>
-                <option value="İnsan Kaynakları Uzmanı" data-tr="İnsan Kaynakları Uzmanı" data-en="HR Specialist">İnsan Kaynakları Uzmanı</option>
-                <option value="Elektrik Mühendisi" data-tr="Elektrik Mühendisi" data-en="Electrical Engineer">Elektrik Mühendisi</option>
-                <option value="Makine Mühendisi" data-tr="Makine Mühendisi" data-en="Mechanical Engineer">Makine Mühendisi</option>
-              </optgroup>
-              <optgroup data-tr="Yurt Dışı" data-en="International" label="Yurt Dışı">
-                <option value="Proje Müdürü - Dubai" data-tr="Proje Müdürü – Dubai" data-en="Project Manager – Dubai">Proje Müdürü – Dubai</option>
-                <option value="Şantiye Şefi - Katar" data-tr="Şantiye Şefi – Katar" data-en="Site Manager – Qatar">Şantiye Şefi – Katar</option>
-                <option value="Tıbbi Teknisyen - Hollanda" data-tr="Tıbbi Teknisyen – Hollanda" data-en="Medical Technician – Netherlands">Tıbbi Teknisyen – Hollanda</option>
-                <option value="Enerji Mühendisi - Almanya" data-tr="Enerji Mühendisi – Almanya" data-en="Energy Engineer – Germany">Enerji Mühendisi – Almanya</option>
-                <option value="Otelcilik Yöneticisi - Londra" data-tr="Otelcilik Yöneticisi – Londra" data-en="Hospitality Manager – London">Otelcilik Yöneticisi – Londra</option>
-              </optgroup>
-              <option value="Genel Başvuru" data-tr="Genel Başvuru" data-en="General Application">Genel Başvuru</option>
-            </select>
-          </div>
-          <div class="frow">
-            <div class="fg">
-              <label><span class="tr">Mevcut Çalışma Durumu</span><span class="en">Current Employment Status</span></label>
-              <select name="Calisma_Durumu">
-                <option value="Aktif Çalışıyor" data-tr="Aktif çalışıyor" data-en="Currently employed">Aktif çalışıyor</option>
-                <option value="İş Arıyor" data-tr="İş arıyor" data-en="Currently seeking work">İş arıyor</option>
-                <option value="Serbest Çalışıyor" data-tr="Serbest çalışıyor" data-en="Freelancing">Serbest çalışıyor</option>
-              </select>
-            </div>
-            <div class="fg">
-              <label><span class="tr">Yabancı Dil</span><span class="en">Foreign Language</span></label>
-              <input type="text" name="Yabanci_Dil" data-ph-tr="İngilizce – B2, Almanca – A2" data-ph-en="English – B2, German – A2" placeholder="İngilizce – B2, Almanca – A2">
-            </div>
-          </div>
-          <div class="fg">
-            <label><span class="tr">Kısa Tanıtım</span><span class="en">Brief Introduction</span></label>
-            <textarea name="Tanitim" data-ph-tr="Kendinizi kısaca tanıtın..." data-ph-en="Briefly introduce yourself..." placeholder="Kendinizi kısaca tanıtın..."></textarea>
-          </div>
-          <div class="fg">
-            <label><span class="tr">CV (PDF formatında)</span><span class="en">CV (PDF format)</span> <span class="req">*</span></label>
-            <div class="file-zone" id="fileZone">
-              <input type="file" name="CV" accept=".pdf" required id="cvFile" onchange="handleFile(this)">
-              <div class="fz-icon">📎</div>
-              <p><strong><span class="tr">PDF dosyanızı buraya sürükleyin</span><span class="en">Drag your PDF file here</span></strong><br>
-              <span class="tr">veya tıklayarak seçin · Maks. 10 MB</span><span class="en">or click to select · Max 10 MB</span></p>
-              <div class="fname" id="fname"></div>
-            </div>
-          </div>
-          <div class="fg" style="display:flex;align-items:flex-start;gap:10px">
-            <input type="checkbox" name="Kvkk" id="kvkk-check" required style="width:auto;margin-top:3px">
-            <label for="kvkk-check" style="font-weight:400;font-size:13px;color:var(--gray)">
-              <span class="tr"><a href="#" onclick="nav('kvkk')" style="color:var(--navy)">Kişisel Verilerin Korunması</a> hakkındaki aydınlatma metnini okudum ve onaylıyorum.</span>
-              <span class="en">I have read and accept the <a href="#" onclick="nav('kvkk')" style="color:var(--navy)">Personal Data Protection</a> disclosure text.</span>
-            </label>
-          </div>
-          <div class="form-submit">
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:15px">
-              <span class="tr">Başvuruyu Gönder →</span><span class="en">Submit Application →</span>
-            </button>
-            <p class="form-note"><span class="tr">Başvurunuz güvenli şekilde iletilecektir. En kısa sürede dönüş yapılacaktır.</span><span class="en">Your application will be transmitted securely. We will respond as soon as possible.</span></p>
-          </div>
-        </form>
-      </div>
     </div>
   </div>
 </div>
@@ -903,7 +792,6 @@ textarea{resize:vertical;min-height:110px}
         <ul>
           <li><span onclick="nav('yurtici')" class="tr">Yurt İçi Pozisyonlar</span><span onclick="nav('yurtici')" class="en" style="display:none">Domestic Positions</span></li>
           <li><span onclick="nav('yurtdisi')" class="tr">Yurt Dışı Pozisyonlar</span><span onclick="nav('yurtdisi')" class="en" style="display:none">International Positions</span></li>
-          <li><span onclick="nav('basvuru')" class="tr">Başvuru Formu</span><span onclick="nav('basvuru')" class="en" style="display:none">Application Form</span></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1007,20 +895,6 @@ function nav(pageId) {
   document.querySelectorAll('.nl').forEach(l => l.classList.remove('active'));
 }
 
-function applyFor(positionTitle) {
-  nav('basvuru');
-  setTimeout(() => {
-    const sel = document.getElementById('basvuruPozisyon');
-    if(sel) {
-      for(let i=0;i<sel.options.length;i++){
-        if(sel.options[i].value === positionTitle || sel.options[i].text.includes(positionTitle.split('/')[0].trim())){
-          sel.selectedIndex = i;
-          break;
-        }
-      }
-    }
-  }, 100);
-}
 
 // ─── HAMBURGER ───────────────────────────────────────────
 function toggleMenu() {
