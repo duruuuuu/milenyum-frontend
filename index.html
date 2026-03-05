@@ -89,11 +89,6 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 .card h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.4}
 .card p{font-size:13.5px;color:var(--gray);line-height:1.85}
 
-/* ── STATS ── */
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;text-align:center}
-.stat-n{font-family:'Playfair Display',serif;font-size:50px;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:8px}
-.stat-l{font-size:13.5px;color:rgba(255,255,255,.7);font-weight:500}
-
 /* ── SERVICE ITEMS ── */
 .svc-item{background:#fff;border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border-left:4px solid var(--gold);margin-bottom:20px;transition:var(--tr)}
 .svc-item:hover{box-shadow:var(--shadow-h);transform:translateX(4px)}
@@ -275,18 +270,6 @@ textarea{resize:vertical;min-height:110px}
       <div class="hero-btns">
         <button class="btn btn-primary" onclick="nav('hizmetler')"><span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span></button>
         <button class="btn btn-secondary" onclick="nav('iletisim')"><span class="tr">Bize Ulaşın</span><span class="en">Contact Us</span></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Stats -->
-  <div class="section section-dark">
-    <div class="container">
-      <div class="stats-grid">
-        <div><span class="stat-n">15+</span><span class="stat-l"><span class="tr">Yıllık Deneyim</span><span class="en">Years of Experience</span></span></div>
-        <div><span class="stat-n">30+</span><span class="stat-l"><span class="tr">Ülkede Proje</span><span class="en">Countries Covered</span></span></div>
-        <div><span class="stat-n">5K+</span><span class="stat-l"><span class="tr">Başarılı Yerleştirme</span><span class="en">Successful Placements</span></span></div>
-        <div><span class="stat-n">200+</span><span class="stat-l"><span class="tr">Kurumsal İş Ortağı</span><span class="en">Corporate Partners</span></span></div>
       </div>
     </div>
   </div>
@@ -556,7 +539,7 @@ textarea{resize:vertical;min-height:110px}
           <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Mesajınız Alındı!</span><span class="en">Message Received!</span></h3>
           <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
         </div>
-        <form id="isverenForm" action="https://formsubmit.co/PLACEHOLDER" method="POST">
+        <form id="isverenForm" action="https://formsubmit.co/info@milenyumik.com" method="POST">
           <input type="hidden" name="_subject" value="Web İletişim Formu (İşveren) - Milenyum İK">
           <input type="hidden" name="_captcha" value="false">
           <div class="frow">
@@ -576,7 +559,6 @@ textarea{resize:vertical;min-height:110px}
           <div class="fg">
             <label><span class="tr">Konu</span><span class="en">Subject</span></label>
             <select name="Konu">
-              <option value="Işe Alım" data-tr="İşe Alım Talebi" data-en="Recruitment Request">İşe Alım Talebi</option>
               <option value="Kariyer" data-tr="Kariyer Fırsatları" data-en="Career Opportunities">Kariyer Fırsatları</option>
               <option value="Danışmanlık" data-tr="Danışmanlık Hizmetleri" data-en="Consulting Services">Danışmanlık Hizmetleri</option>
               <option value="Diger" data-tr="Diğer" data-en="Other">Diğer</option>
@@ -648,7 +630,7 @@ textarea{resize:vertical;min-height:110px}
               <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
             </div>
             <!-- ⚠️ Replace YOUR_EMAIL@example.com with your real email address -->
-            <form id="contactForm" action="https://formsubmit.co/PLACEHOLDER" method="POST">
+            <form id="contactForm" action="https://formsubmit.co/info@milenyumik.com" method="POST">
               <input type="hidden" name="_subject" value="Web İletişim Formu - Milenyum İK">
               <input type="hidden" name="_captcha" value="false">
               <div class="frow">
