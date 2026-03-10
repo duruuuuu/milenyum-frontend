@@ -202,7 +202,8 @@ textarea{resize:vertical;min-height:110px}
   .nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:12px;gap:4px;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:999;max-height:calc(100vh - 70px);overflow-y:auto}
   .nav.open{display:flex}
   .ham{display:flex}
-  .drop{position:static;box-shadow:none;background:rgba(255,255,255,.06);border-radius:8px;opacity:1;visibility:visible;transform:none;margin-top:4px}
+  .drop{position:static;box-shadow:none;background:rgba(255,255,255,.06);border-radius:8px;opacity:1;visibility:visible;transform:none;margin-top:4px;display:none;max-height:400px;overflow-y:auto}
+  .nav-item.drop-open .drop{display:block}
   .dl{color:rgba(255,255,255,.75);padding:9px 22px;border-bottom:1px solid rgba(255,255,255,.08)}
   .dl:last-child{border-bottom:none}
   .dl:hover{background:rgba(255,255,255,.1);color:var(--gold)}
@@ -257,7 +258,7 @@ textarea{resize:vertical;min-height:110px}
       </div>
       <!-- KURUMSAL dropdown -->
       <div class="nav-item">
-        <button class="nl">
+        <button class="nl" onclick="toggleDrop(this)">
           <span class="tr">KURUMSAL ▾</span><span class="en">CORPORATE ▾</span>
         </button>
         <div class="drop">
@@ -370,7 +371,7 @@ textarea{resize:vertical;min-height:110px}
         </div>
         <div class="card" onclick="navTab('kurumsal','tab-hizmetler')">
           <div class="card-icon">📄</div>
-          <h3><span class="tr">Türkiye Kaynaklı Görevlendirme</span><span class="en">Turkey-Based Assignment Consulting</span></h3>
+          <h3><span class="tr">Türkiye Kaynaklı Görevlendirme</span><span class="en">Türikye-Based Assignment Consulting</span></h3>
           <p><span class="tr">SGK, İŞKUR ve ilgili mevzuat kapsamında yurt dışı görevlendirme süreçlerinin yönetimi.</span><span class="en">Management of overseas assignment processes under SGK, İŞKUR and related regulations.</span></p>
         </div>
         <div class="card" onclick="nav('analizler')">
@@ -514,7 +515,7 @@ textarea{resize:vertical;min-height:110px}
             <p class="tr">Milenyum İnsan Kaynakları ekibi, profesyonel kariyerleri boyunca Avrupa, Orta Doğu, Afrika ve Asya'da yürütülen birçok uluslararası projede görev almıştır. Bu projelerde iş gücü planlaması, teknik personel temini, çalışma izinleri ve göç süreçlerinin yönetimi, büyük ölçekli iş gücü mobilitesi ve iş gücü maliyet analizleri gibi alanlarda kapsamlı deneyim kazanılmıştır.</p>
             <p class="en">The Milenyum Human Resources team has been involved in numerous international projects across Europe, the Middle East, Africa and Asia throughout their professional careers. Extensive experience has been gained in areas including workforce planning, technical personnel sourcing, management of work permits and immigration processes, large-scale workforce mobility and labour cost analyses.</p>
             <p class="tr">Avrupa'da Belçika, Bulgaristan, Macaristan, Hollanda, Polonya, Romanya ve Türkiye'de; Asya'da Rusya, Tayvan ve Özbekistan'da; Afrika'da Mısır, Etiyopya, Libya ve Tanzanya'da; Orta Doğu'da ise Suudi Arabistan, Birleşik Arap Emirlikleri, Katar ve Bahreyn'de edinilen deneyimler, farklı iş gücü piyasalarının dinamiklerini çok boyutlu şekilde analiz edebilmemize olanak sağlamaktadır.</p>
-            <p class="en">Experience gained in Belgium, Bulgaria, Hungary, the Netherlands, Poland, Romania and Turkey in Europe; Russia, Taiwan and Uzbekistan in Asia; Egypt, Ethiopia, Libya and Tanzania in Africa; and Saudi Arabia, the United Arab Emirates, Qatar and Bahrain in the Middle East enables us to analyse the dynamics of diverse labour markets from a multi-dimensional perspective.</p>
+            <p class="en">Experience gained in Belgium, Bulgaria, Hungary, the Netherlands, Poland, Romania and Türkiye in Europe; Russia, Taiwan and Uzbekistan in Asia; Egypt, Ethiopia, Libya and Tanzania in Africa; and Saudi Arabia, the United Arab Emirates, Qatar and Bahrain in the Middle East enables us to analyse the dynamics of diverse labour markets from a multi-dimensional perspective.</p>
           </div>
         </details>
 
@@ -571,12 +572,12 @@ textarea{resize:vertical;min-height:110px}
         </details>
 
         <details class="acc">
-          <summary><span class="tr">Türkiye Kaynaklı Uluslararası İş Gücü Görevlendirme Danışmanlığı</span><span class="en">Turkey-Based International Workforce Assignment Consulting</span></summary>
+          <summary><span class="tr">Türkiye Kaynaklı Uluslararası İş Gücü Görevlendirme Danışmanlığı</span><span class="en">Türkiye-Based International Workforce Assignment Consulting</span></summary>
           <div class="acc-body">
             <p class="tr">Türkiye'den yurt dışındaki projelere gönderilen çalışanların görevlendirme süreçleri, SGK, İŞKUR ve ilgili sosyal güvenlik mevzuatı kapsamında özel düzenlemeler içermektedir.</p>
-            <p class="en">The assignment processes for employees sent from Turkey to overseas projects involve specific regulatory requirements under SGK, İŞKUR and related social security legislation.</p>
+            <p class="en">The assignment processes for employees sent from Türkiye to overseas projects involve specific regulatory requirements under SGK, İŞKUR and related social security legislation.</p>
             <p class="tr">Milenyum İnsan Kaynakları, Türkiye merkezli şirketlerin yurt dışı projelerinde görev alacak personelin görevlendirme süreçlerinin mevzuata uygun şekilde yapılandırılmasına destek olmaktadır. Bu kapsamda SGK bildirimleri, yurt dışı görevlendirme süreçleri, İŞKUR yükümlülükleri ve sosyal güvenlik düzenlemeleri gibi idari süreçlere yönelik danışmanlık hizmetleri sunulmaktadır.</p>
-            <p class="en">Milenyum Human Resources supports Turkey-based companies in structuring the assignment processes of personnel deployed to overseas projects in a compliant manner. This encompasses consulting services for administrative processes including SGK notifications, overseas assignment procedures, İŞKUR obligations and social security regulations.</p>
+            <p class="en">Milenyum Human Resources supports Türkiye-based companies in structuring the assignment processes of personnel deployed to overseas projects in a compliant manner. This encompasses consulting services for administrative processes including SGK notifications, overseas assignment procedures, İŞKUR obligations and social security regulations.</p>
           </div>
         </details>
 
@@ -722,7 +723,7 @@ textarea{resize:vertical;min-height:110px}
           </div>
           <div class="why-card">
             <h3><span class="tr">SGK ve İŞKUR Süreçleri</span><span class="en">SGK and İŞKUR Processes</span></h3>
-            <p><span class="tr">Türkiye'den yurt dışına görevlendirilen personele ilişkin SGK bildirimleri, İŞKUR izin ve bildirim süreçlerinin yönetimi.</span><span class="en">Management of SGK notifications and İŞKUR permit and notification processes for personnel assigned abroad from Turkey.</span></p>
+            <p><span class="tr">Türkiye'den yurt dışına görevlendirilen personele ilişkin SGK bildirimleri, İŞKUR izin ve bildirim süreçlerinin yönetimi.</span><span class="en">Management of SGK notifications and İŞKUR permit and notification processes for personnel assigned abroad from Türkiye.</span></p>
           </div>
           <div class="why-card">
             <h3><span class="tr">Ülkeler Arası İş Gücü Maliyet Analizi</span><span class="en">Cross-Country Labour Cost Analysis</span></h3>
@@ -758,7 +759,7 @@ textarea{resize:vertical;min-height:110px}
         <!-- Left: intro text + stats -->
         <div class="about-text">
           <div class="s-eye" style="display:inline-block;margin-bottom:12px"><span class="tr">İŞVERENLER</span><span class="en">EMPLOYERS</span></div>
-          <h2><span class="tr">Birlikte Çalışalım</span><span class="en">Let's Work Together</span></h2>
+          <h2><span class="tr">Çözüm Ortağınız Olalım</span><span class="en">Let's Work Together</span></h2>
           <p class="tr">Uluslararası projelerde doğru insan kaynağının planlanması, teknik işe alım süreçlerinin yönetilmesi ve iş gücü mobilitesinin mevzuata uygun şekilde yürütülmesi şirketler için kritik bir yönetim alanıdır.</p>
           <p class="en">The planning of the right human resources for international projects, the management of technical recruitment processes and the regulatory-compliant execution of workforce mobility represent a critical management domain for companies.</p>
           <p class="tr">Milenyum İnsan Kaynakları, uluslararası faaliyet gösteren organizasyonlara iş gücü planlama, teknik işe alım ve uluslararası mobilizasyon süreçlerinde danışmanlık hizmetleri sunmaktadır.</p>
@@ -958,7 +959,7 @@ textarea{resize:vertical;min-height:110px}
         <p class="en">The Global Workforce Analysis and Strategy Platform developed by Milenyum HR is a research and consulting infrastructure providing analyses and strategic assessments of international labour markets. The studies prepared within the platform aim to support companies in making more informed, data-driven decisions in their workforce planning, recruitment and mobilisation processes.</p>
 
         <p class="tr">Platform kapsamında yapılan analizler; uluslararası iş gücü piyasaları, çalışma izin sistemleri, göç politikaları, iş gücü maliyetleri ve mobilizasyon modelleri gibi birçok konuyu kapsamaktadır. Ayrıca Türkiye'den yurt dışına gönderilen çalışanlara ilişkin SGK yükümlülükleri, İŞKUR bildirim süreçleri ve uluslararası görevlendirme modelleri de analiz çalışmalarının önemli bir parçasını oluşturmaktadır.</p>
-        <p class="en">The analyses cover numerous topics including international labour markets, work permit systems, migration policies, labour costs and mobilisation models. SGK obligations related to workers sent abroad from Turkey, İŞKUR notification processes and international assignment models also form an important part of the analytical work.</p>
+        <p class="en">The analyses cover numerous topics including international labour markets, work permit systems, migration policies, labour costs and mobilisation models. SGK obligations related to workers sent abroad from Türkiye, İŞKUR notification processes and international assignment models also form an important part of the analytical work.</p>
       </div>
 
       <details class="acc">
@@ -987,7 +988,7 @@ textarea{resize:vertical;min-height:110px}
             <li>Workforce mobilisation models in international projects</li>
             <li>Strategic assessments of sector-level workforce needs</li>
             <li>Industrial and employment relations structures in different countries</li>
-            <li>SGK processes related to workers sent abroad from Turkey</li>
+            <li>SGK processes related to workers sent abroad from Türkiye</li>
             <li>İŞKUR notification and permit processes in overseas projects</li>
           </ul>
         </div>
@@ -1012,7 +1013,7 @@ textarea{resize:vertical;min-height:110px}
             <li>Developing international recruitment strategies</li>
             <li>Comparing labour costs across different countries</li>
             <li>Developing project-based workforce mobilisation strategies</li>
-            <li>Assessing regulatory processes relating to workers to be sent abroad from Turkey</li>
+            <li>Assessing regulatory processes relating to workers to be sent abroad from Türkiye</li>
           </ul>
         </div>
       </details>
@@ -1878,7 +1879,14 @@ function showTab(tabId) {
 
 /* ── Mobile hamburger ─────────────────────────── */
 function toggleMenu() {
-  document.getElementById('mainNav').classList.toggle('open');
+  const nav = document.getElementById('mainNav');
+  nav.classList.toggle('open');
+  nav.querySelectorAll('.nav-item.drop-open').forEach(el => el.classList.remove('drop-open'));
+}
+
+function toggleDrop(btn) {
+  if (window.innerWidth > 960) return;
+  btn.closest('.nav-item').classList.toggle('drop-open');
 }
 
 /* ── File upload ──────────────────────────────── */
