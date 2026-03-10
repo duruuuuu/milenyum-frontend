@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Milenyum İnsan Kaynakları - Stratejik işe alım ve iş gücü yönetimi danışmanlığı">
+<meta name="description" content="Milenyum İnsan Kaynakları - Uluslararası projeler için stratejik iş gücü çözümleri">
 <title>Milenyum İnsan Kaynakları</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +22,15 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 /* ── HEADER ── */
 .hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,.25)}
 .hdr-in{max-width:1280px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{cursor:pointer;text-decoration:none;display:flex;flex-direction:column}
-.logo-m{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;letter-spacing:.5px}
-.logo-s{font-size:9px;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;font-weight:600}
+.logo{cursor:pointer;text-decoration:none;display:flex;align-items:center}
 .nav{display:flex;align-items:center;gap:2px}
 .nav-item{position:relative}
-.nl{color:rgba(255,255,255,.82);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 12px;border-radius:6px;transition:var(--tr);cursor:pointer;white-space:nowrap;background:none;border:none;font-family:'Inter',sans-serif}
+.nl{color:rgba(255,255,255,.82);text-decoration:none;font-size:13px;font-weight:500;padding:8px 11px;border-radius:6px;transition:var(--tr);cursor:pointer;white-space:nowrap;background:none;border:none;font-family:'Inter',sans-serif;letter-spacing:.2px}
 .nl:hover,.nl.active{color:var(--gold);background:rgba(255,255,255,.08)}
-.drop{position:absolute;top:calc(100% + 6px);left:0;background:#fff;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.15);min-width:190px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:var(--tr);overflow:hidden}
+.drop{position:absolute;top:calc(100% + 6px);left:0;background:#fff;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.15);min-width:220px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:var(--tr);overflow:hidden;z-index:999}
 .nav-item:hover .drop{opacity:1;visibility:visible;transform:translateY(0)}
-.dl{display:block;padding:11px 18px;color:var(--dark);text-decoration:none;font-size:13.5px;transition:var(--tr);cursor:pointer}
+.dl{display:block;padding:11px 18px;color:var(--dark);text-decoration:none;font-size:13px;transition:var(--tr);cursor:pointer;border-bottom:1px solid var(--border)}
+.dl:last-child{border-bottom:none}
 .dl:hover{background:var(--light);color:var(--navy)}
 .lang-btn{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 14px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600;transition:var(--tr);margin-left:10px;font-family:'Inter',sans-serif}
 .lang-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
@@ -45,12 +44,12 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 /* ── HERO ── */
 .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e4080 100%);padding:90px 24px 100px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,164,71,.1) 0%,transparent 65%);pointer-events:none}
-.hero-c{position:relative;max-width:820px;margin:0 auto}
+.hero-c{position:relative;max-width:860px;margin:0 auto}
 .eyebrow{display:inline-block;background:rgba(201,164,71,.15);color:var(--gold);border:1px solid rgba(201,164,71,.35);padding:5px 18px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,62px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:22px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,56px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:22px}
 .hero h1 span{color:var(--gold)}
-.hero p{font-size:17px;color:rgba(255,255,255,.75);max-width:580px;margin:0 auto 36px;line-height:1.85}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero p{font-size:16px;color:rgba(255,255,255,.78);max-width:720px;margin:0 auto 16px;line-height:1.9}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
 
 /* ── BUTTONS ── */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;border-radius:8px;font-size:14.5px;font-weight:600;cursor:pointer;transition:var(--tr);text-decoration:none;border:2px solid transparent;font-family:'Inter',sans-serif}
@@ -62,50 +61,39 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 .btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
 .btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-sm{padding:9px 20px;font-size:13px}
 
 /* ── LAYOUT ── */
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-.section{padding:80px 0}
+.section{padding:100px 0}
 .section-alt{background:var(--light)}
 .section-dark{background:var(--navy);color:#fff}
 .section-hdr{text-align:center;margin-bottom:56px}
 .s-eye{display:inline-block;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
 .s-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:14px}
 .section-dark .s-title{color:#fff}
-.s-sub{font-size:15.5px;color:var(--gray);max-width:580px;margin:0 auto;line-height:1.85}
+.s-sub{font-size:15.5px;color:var(--gray);max-width:640px;margin:0 auto;line-height:1.9}
 .section-dark .s-sub{color:rgba(255,255,255,.7)}
 
 /* ── PAGE HEADER ── */
 .ph{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:55px 24px;text-align:center}
 .ph h1{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,44px);font-weight:700;color:#fff;margin-bottom:12px}
-.ph p{font-size:15.5px;color:rgba(255,255,255,.72);max-width:580px;margin:0 auto}
+.ph p{font-size:15.5px;color:rgba(255,255,255,.72);max-width:640px;margin:0 auto}
 
 /* ── CARDS ── */
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
-.card{background:#fff;border-radius:var(--r);padding:32px;box-shadow:var(--shadow);transition:var(--tr);border:1px solid var(--border)}
+.card{background:#fff;border-radius:var(--r);padding:32px;box-shadow:var(--shadow);transition:var(--tr);border:1px solid var(--border);cursor:pointer}
 .card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px);border-color:var(--gold)}
 .card-icon{width:54px;height:54px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:22px}
 .card h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.4}
 .card p{font-size:13.5px;color:var(--gray);line-height:1.85}
 
-/* ── SERVICE ITEMS ── */
-.svc-item{background:#fff;border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border-left:4px solid var(--gold);margin-bottom:20px;transition:var(--tr)}
-.svc-item:hover{box-shadow:var(--shadow-h);transform:translateX(4px)}
-.svc-item h3{font-size:19px;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:12px}
-.svc-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:var(--gold);color:var(--navy);border-radius:50%;font-size:13px;font-weight:700;flex-shrink:0}
-.svc-item p{color:var(--gray);line-height:1.9;font-size:14.5px}
-
-/* ── JOBS ── */
-.job-card{background:#fff;border-radius:var(--r);padding:26px 30px;box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--tr);display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:14px}
-.job-card:hover{box-shadow:var(--shadow-h);border-color:var(--gold)}
-.job-info h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:8px}
-.job-meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.jtag{font-size:12.5px;color:var(--gray);display:flex;align-items:center;gap:4px}
-.badge{display:inline-block;padding:3px 11px;border-radius:20px;font-size:11.5px;font-weight:600}
-.badge-ft{background:#e8f5e9;color:#2e7d32}
-.badge-ct{background:#fff3e0;color:#e65100}
-.badge-pt{background:#e3f2fd;color:#1565c0}
+/* ── WHY CARDS ── */
+.why-card{background:#fff;border-radius:var(--r);padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--gold);transition:var(--tr)}
+.why-card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px)}
+.why-card h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.why-card p{font-size:13.5px;color:var(--gray);line-height:1.85}
 
 /* ── FORM ── */
 .form-wrap{max-width:720px;margin:0 auto;background:#fff;border-radius:var(--r);padding:48px;box-shadow:var(--shadow)}
@@ -123,12 +111,10 @@ textarea{resize:vertical;min-height:110px}
 .file-zone p{font-size:13.5px;color:var(--gray)}
 .file-zone strong{color:var(--navy)}
 .fname{font-size:12.5px;color:var(--success);margin-top:8px;font-weight:500;display:none}
-.form-submit{margin-top:30px;text-align:center}
-.form-note{font-size:12.5px;color:var(--gray);margin-top:10px}
 .success-msg{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:10px;padding:22px;text-align:center;display:none}
 .success-msg.show{display:block}
 
-/* ── ABOUT ── */
+/* ── ABOUT / CONTACT GRIDS ── */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .about-text h2{font-family:'Playfair Display',serif;font-size:30px;color:var(--navy);margin-bottom:20px}
 .about-text p{color:var(--gray);line-height:1.95;margin-bottom:14px;font-size:14.5px}
@@ -137,16 +123,6 @@ textarea{resize:vertical;min-height:110px}
 .hbox ul{list-style:none;display:flex;flex-direction:column;gap:11px}
 .hbox ul li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:rgba(255,255,255,.85);line-height:1.6}
 .hbox ul li::before{content:'▸';color:var(--gold);font-size:15px;flex-shrink:0}
-.styled-list{list-style:none;display:flex;flex-direction:column;gap:10px}
-.styled-list li{display:flex;align-items:flex-start;gap:9px;font-size:14.5px;color:var(--gray);line-height:1.75}
-.styled-list li::before{content:'▸';color:var(--gold);font-size:15px;flex-shrink:0}
-.why-card{background:#fff;border-radius:var(--r);padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--gold);transition:var(--tr)}
-.why-card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px)}
-.why-card h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:10px}
-.why-card p{font-size:13.5px;color:var(--gray);line-height:1.85}
-
-
-/* ── CONTACT ── */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .contact-info h2{font-family:'Playfair Display',serif;font-size:30px;color:var(--navy);margin-bottom:20px}
 .contact-info>p{color:var(--gray);line-height:1.85;margin-bottom:28px;font-size:14.5px}
@@ -158,95 +134,162 @@ textarea{resize:vertical;min-height:110px}
 
 /* ── LEGAL ── */
 .legal-c{max-width:820px;margin:0 auto}
-.legal-c h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);margin:36px 0 14px}
-.legal-c h3{font-size:17px;color:var(--navy);margin:22px 0 10px;font-weight:700}
+.legal-c h2{font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin:36px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.legal-c h3{font-size:16px;color:var(--navy);margin:20px 0 8px;font-weight:700}
 .legal-c p{color:var(--gray);line-height:1.95;margin-bottom:14px;font-size:14.5px}
 .legal-c ul{color:var(--gray);padding-left:22px;margin-bottom:14px;line-height:2;font-size:14.5px}
+.legal-c li{margin-bottom:4px}
 
 /* ── TABS ── */
-.tabs{display:flex;gap:4px;background:var(--light);padding:4px;border-radius:10px;margin-bottom:30px;flex-wrap:wrap}
-.tab{flex:1;padding:11px 18px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;color:var(--gray);transition:var(--tr);text-align:center;min-width:120px;border:none;background:none;font-family:'Inter',sans-serif}
+.tabs{display:flex;gap:4px;background:var(--light);padding:4px;border-radius:10px;margin-bottom:36px;flex-wrap:wrap}
+.tab{flex:1;padding:11px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;color:var(--gray);transition:var(--tr);text-align:center;min-width:90px;border:none;background:none;font-family:'Inter',sans-serif;white-space:nowrap}
 .tab.active,.tab:hover{background:#fff;color:var(--navy);box-shadow:var(--shadow)}
 .tab-c{display:none}
 .tab-c.active{display:block}
 
+/* ── ACCORDION ── */
+.acc{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:12px;background:#fff}
+.acc summary{padding:20px 24px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;transition:background .2s}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:'＋';font-size:18px;color:var(--gold);flex-shrink:0;margin-left:12px;font-weight:400}
+.acc[open]>summary::after{content:'－'}
+.acc[open]>summary{background:var(--light)}
+.acc summary:hover{background:var(--light)}
+.acc-body{padding:4px 24px 24px;font-size:14.5px;color:var(--gray);line-height:1.9}
+.acc-body p{margin-bottom:12px}
+.acc-body ul{padding-left:20px;margin-bottom:12px}
+.acc-body li{margin-bottom:6px}
+.acc-body .btn{margin-top:8px}
+
+/* ── STATS BAR ── */
+.stats-bar{background:var(--navy);padding:28px 24px}
+.stats-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:60px;flex-wrap:wrap}
+.stat-item{text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);display:block}
+.stat-label{font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.3px;margin-top:2px;display:block}
+
+/* ── INTRO TEXT ── */
+.intro-text{max-width:820px;margin:0 auto 40px}
+.intro-text p{color:var(--gray);line-height:1.95;margin-bottom:16px;font-size:15px}
+
 /* ── FOOTER ── */
-.footer{background:var(--dark);color:#fff;padding:56px 0 22px}
-.footer-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+.footer{background:var(--dark);color:#fff;padding:56px 0 0}
+.footer-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
 .footer-brand p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.85;margin-top:14px}
-.footer-col h4{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+.footer-col h4{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .footer-col ul li span,.footer-col ul li a{color:rgba(255,255,255,.55);font-size:13.5px;text-decoration:none;transition:var(--tr);cursor:pointer}
 .footer-col ul li span:hover,.footer-col ul li a:hover{color:var(--gold)}
-.footer-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.footer-bot p{font-size:12.5px;color:rgba(255,255,255,.38)}
-
-/* ── DIVIDER ── */
-.divider{height:1px;background:var(--border);margin:48px 0}
+.footer-legal{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 14px}
+.footer-legal .fl{font-size:12px;color:rgba(255,255,255,.45);cursor:pointer;transition:var(--tr);white-space:nowrap}
+.footer-legal .fl:hover{color:var(--gold)}
+.footer-legal .sep{color:rgba(255,255,255,.2);font-size:11px;line-height:1}
+.footer-bot{border-top:1px solid rgba(255,255,255,.08);padding:16px 0 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-bot p{font-size:12px;color:rgba(255,255,255,.35)}
+.li-link{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.45);text-decoration:none;font-size:13px;transition:var(--tr)}
+.li-link:hover{color:var(--gold)}
+.li-link svg{width:17px;height:17px;fill:currentColor;flex-shrink:0}
 
 /* ── LANG ── */
 [data-lang="tr"] .en{display:none !important}
 [data-lang="en"] .tr{display:none !important}
 
+/* ── DIVIDER ── */
+.divider{height:1px;background:var(--border);margin:48px 0}
+
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
-  .nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:14px;gap:4px;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:999}
+  .nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:12px;gap:4px;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:999;max-height:calc(100vh - 70px);overflow-y:auto}
   .nav.open{display:flex}
   .ham{display:flex}
   .drop{position:static;box-shadow:none;background:rgba(255,255,255,.06);border-radius:8px;opacity:1;visibility:visible;transform:none;margin-top:4px}
-  .dl{color:rgba(255,255,255,.75);padding:9px 22px}
+  .dl{color:rgba(255,255,255,.75);padding:9px 22px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .dl:last-child{border-bottom:none}
   .dl:hover{background:rgba(255,255,255,.1);color:var(--gold)}
   .footer-g{grid-template-columns:1fr 1fr}
+  .stats-inner{gap:28px}
 }
 @media(max-width:768px){
   .hero{padding:60px 24px 70px}
-  .section{padding:56px 0}
+  .section{padding:60px 0}
   .about-grid,.contact-grid{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}
-  .job-card{flex-direction:column;align-items:flex-start}
   .form-wrap{padding:30px 22px}
   .ph{padding:40px 20px}
-  .svc-item{padding:26px 24px}
 }
 @media(max-width:480px){
   .footer-g{grid-template-columns:1fr}
   .grid-3,.grid-2{grid-template-columns:1fr}
+  .stats-inner{gap:16px}
+  .stat-num{font-size:26px}
+  .tabs{gap:2px}
+  .tab{font-size:11px;padding:9px 8px;min-width:60px}
 }
 </style>
 </head>
 <body data-lang="tr">
 
-<!-- ═══════════════ HEADER ═══════════════ -->
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
 <header class="hdr">
   <div class="hdr-in">
-    <a class="logo" onclick="nav('home')">
+    <a class="logo" onclick="nav('home')" style="cursor:pointer">
       <img src="MILENYUM1.png" alt="Milenyum İnsan Kaynakları" style="height:44px;width:auto;display:block">
     </a>
     <nav class="nav" id="mainNav">
+      <!-- ANA SAYFA -->
       <div class="nav-item">
-        <button class="nl" onclick="nav('home')"><span class="tr">Ana Sayfa</span><span class="en">Home</span></button>
+        <button class="nl" onclick="nav('home')">
+          <span class="tr">ANA SAYFA</span><span class="en">HOME</span>
+        </button>
       </div>
+      <!-- KURUMSAL dropdown -->
       <div class="nav-item">
-        <button class="nl" onclick="nav('kurumsal')"><span class="tr">Kurumsal</span><span class="en">Corporate</span></button>
-      </div>
-      <div class="nav-item">
-        <button class="nl" onclick="nav('hizmetler')"><span class="tr">Hizmetlerimiz</span><span class="en">Services</span></button>
-      </div>
-      <div class="nav-item">
-        <button class="nl"><span class="tr">İş Arayan ▾</span><span class="en">Job Seekers ▾</span></button>
+        <button class="nl">
+          <span class="tr">KURUMSAL ▾</span><span class="en">CORPORATE ▾</span>
+        </button>
         <div class="drop">
-          <span class="dl" onclick="nav('yurtici')"><span class="tr">Yurt İçi Pozisyonlar</span><span class="en">Domestic Positions</span></span>
-          <span class="dl" onclick="nav('yurtdisi')"><span class="tr">Yurt Dışı Pozisyonlar</span><span class="en">International Positions</span></span>
+          <span class="dl" onclick="navTab('kurumsal','tab-hakkinda')">
+            <span class="tr">Milenyum İK Hakkında</span><span class="en">About Milenyum HR</span>
+          </span>
+          <span class="dl" onclick="navTab('kurumsal','tab-neden')">
+            <span class="tr">Neden Milenyum İK</span><span class="en">Why Milenyum HR</span>
+          </span>
+          <span class="dl" onclick="navTab('kurumsal','tab-hizmetler')">
+            <span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span>
+          </span>
+          <span class="dl" onclick="navTab('kurumsal','tab-sektorler')">
+            <span class="tr">Sektörler</span><span class="en">Sectors</span>
+          </span>
+          <span class="dl" onclick="navTab('kurumsal','tab-uluslararasi')">
+            <span class="tr">Uluslararası İş Gücü</span><span class="en">International Workforce</span>
+          </span>
         </div>
       </div>
+      <!-- İŞVERENLER -->
       <div class="nav-item">
-        <button class="nl" onclick="nav('isveren')"><span class="tr">İşveren</span><span class="en">Employer</span></button>
+        <button class="nl" onclick="nav('isverenler')">
+          <span class="tr">İŞVERENLER</span><span class="en">EMPLOYERS</span>
+        </button>
       </div>
+      <!-- İŞ ARAYANLAR -->
       <div class="nav-item">
-        <button class="nl" onclick="nav('iletisim')"><span class="tr">Bize Ulaşın</span><span class="en">Contact</span></button>
+        <button class="nl" onclick="nav('isarayanlar')">
+          <span class="tr">İŞ ARAYANLAR</span><span class="en">JOB SEEKERS</span>
+        </button>
       </div>
+      <!-- ANALİZLER -->
       <div class="nav-item">
-        <button class="nl" onclick="nav('kvkk')"><span class="tr">KVKK</span><span class="en">Privacy</span></button>
+        <button class="nl" onclick="nav('analizler')">
+          <span class="tr">ANALİZLER</span><span class="en">ANALYSES</span>
+        </button>
+      </div>
+      <!-- İLETİŞİM -->
+      <div class="nav-item">
+        <button class="nl" onclick="nav('iletisim')">
+          <span class="tr">İLETİŞİM</span><span class="en">CONTACT</span>
+        </button>
       </div>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">🌐 EN</button>
     </nav>
@@ -256,60 +299,79 @@ textarea{resize:vertical;min-height:110px}
   </div>
 </header>
 
-<!-- ═══════════════ PAGE: HOME ═══════════════ -->
+<!-- ══════════════════════════════════════
+     PAGE: ANA SAYFA
+══════════════════════════════════════ -->
 <div class="page active" id="page-home">
 
   <!-- Hero -->
   <div class="hero">
     <div class="hero-c">
-      <div class="eyebrow"><span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span><span class="en">Strategic Human Resources Consulting</span></div>
-      <h1 class="tr">Doğru Yeteneği<br><span>Doğru Yapıyla</span> Buluşturuyoruz</h1>
-      <h1 class="en" style="display:none">Connecting the <span>Right Talent</span><br>with the Right Organization</h1>
-      <p class="tr">15 yılı aşkın uluslararası deneyimle, stratejik işe alım ve iş gücü yönetiminde sürdürülebilir çözümler sunuyoruz.</p>
-      <p class="en" style="display:none">With over 15 years of international experience, we deliver sustainable solutions in strategic recruitment and workforce management.</p>
+      <div class="eyebrow">
+        <span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span>
+        <span class="en">Strategic Human Resources Consulting</span>
+      </div>
+      <h1 class="tr">Uluslararası Projeler İçin<br><span>Stratejik İş Gücü Çözümleri</span></h1>
+      <h1 class="en">Strategic Workforce Solutions<br><span>for International Projects</span></h1>
+      <p class="tr">Milenyum İnsan Kaynakları, uluslararası faaliyet gösteren şirketlere stratejik iş gücü planlama, teknik işe alım ve uluslararası iş gücü mobilitesi alanlarında danışmanlık hizmetleri sunar. Aynı zamanda küresel iş gücü piyasalarına ilişkin veri temelli analizler ve stratejik değerlendirmeler üretir.</p>
+      <p class="en">Milenyum Human Resources provides strategic workforce planning, technical recruitment and international workforce mobility consulting to globally operating companies. It also produces data-driven analyses and strategic assessments of global labour markets.</p>
+      <p class="tr">Uluslararası projelerde görev almak isteyen nitelikli adayların, mesleki deneyimleri ve yetkinlikleri ile uyumlu kariyer fırsatlarına erişmesine destek olur.</p>
+      <p class="en">It supports qualified candidates seeking roles in international projects to access career opportunities aligned with their professional experience and competencies.</p>
+      <p class="tr">Milenyum İnsan Kaynakları, insan kaynağını yalnızca operasyonel bir ihtiyaç olarak değil, maliyet yönetimi, regülasyonlara uyum ve sürdürülebilir operasyonel performansın temel unsurlarından biri olarak ele almaktadır.</p>
+      <p class="en">Milenyum Human Resources treats human capital not merely as an operational necessity, but as a core element of cost management, regulatory compliance and sustainable operational performance.</p>
       <div class="hero-btns">
-        <button class="btn btn-primary" onclick="nav('hizmetler')"><span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span></button>
-        <button class="btn btn-secondary" onclick="nav('iletisim')"><span class="tr">Bize Ulaşın</span><span class="en">Contact Us</span></button>
+        <button class="btn btn-primary" onclick="nav('kurumsal')">
+          <span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span>
+        </button>
+        <button class="btn btn-secondary" onclick="nav('iletisim')">
+          <span class="tr">Bize Ulaşın</span><span class="en">Contact Us</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- Services overview -->
+  <!-- HİZMET ALANLARIMIZ -->
   <div class="section">
     <div class="container">
       <div class="section-hdr">
-        <div class="s-eye"><span class="tr">HİZMETLERİMİZ</span><span class="en">OUR SERVICES</span></div>
-        <h2 class="s-title"><span class="tr">Kapsamlı İK Çözümleri</span><span class="en">Comprehensive HR Solutions</span></h2>
-        <p class="s-sub"><span class="tr">Profesyonelden teknik kadrolara, toplu işe alımdan outplacement'a kadar uçtan uca süreç yönetimi.</span><span class="en">End-to-end process management from professional to technical staffing, from bulk recruitment to outplacement.</span></p>
+        <div class="s-eye"><span class="tr">HİZMET ALANLARIMIZ</span><span class="en">OUR SERVICE AREAS</span></div>
+        <h2 class="s-title"><span class="tr">Stratejik İş Gücü Çözümleri</span><span class="en">Strategic Workforce Solutions</span></h2>
+        <p class="s-sub">
+          <span class="tr">Uluslararası projelerin operasyonel ihtiyaçları doğrultusunda yapılandırılmış danışmanlık hizmetleri.</span>
+          <span class="en">Consulting services structured around the operational requirements of international projects.</span>
+        </p>
       </div>
       <div class="grid-3">
-        <div class="card"><div class="card-icon">🎯</div><h3><span class="tr">Profesyonel İşe Alım</span><span class="en">Professional Recruitment</span></h3><p><span class="tr">Mühendis ve uzman kadrolar için hedef odaklı araştırma ve yetkinlik bazlı değerlendirme.</span><span class="en">Target-driven research and competency-based assessment for engineer and specialist roles.</span></p></div>
-        <div class="card"><div class="card-icon">🔧</div><h3><span class="tr">Teknik Personel Temini</span><span class="en">Technical Staffing</span></h3><p><span class="tr">Yurt içi ve yurt dışı şantiye, fabrika ve endüstriyel projeler için nitelikli teknik personel.</span><span class="en">Qualified technical staff for domestic and international construction sites, factories and industrial projects.</span></p></div>
-        <div class="card"><div class="card-icon">📋</div><h3><span class="tr">Proje Bazlı Toplu İşe Alım</span><span class="en">Project-Based Bulk Hiring</span></h3><p><span class="tr">Büyük ölçekli yatırımlar için kısa sürede yüksek hacimli personel temini.</span><span class="en">High-volume staffing for large-scale investments in a short timeframe.</span></p></div>
-        <div class="card"><div class="card-icon">🌍</div><h3><span class="tr">Global İşçilik Danışmanlığı</span><span class="en">Global Labour Consulting</span></h3><p><span class="tr">Farklı ülkelerdeki işçilik maliyetleri, sosyal güvenlik yükümlülükleri ve vergi yapılarının analizi.</span><span class="en">Analysis of labour costs, social security obligations and tax structures across different countries.</span></p></div>
-        <div class="card"><div class="card-icon">📄</div><h3><span class="tr">Çalışma İzinleri Danışmanlığı</span><span class="en">Work Permit Consulting</span></h3><p><span class="tr">Yurt içi ve yurt dışı projeler için çalışma ve oturum izin süreçlerinin planlanması.</span><span class="en">Planning and execution of work and residence permit processes for domestic and international projects.</span></p></div>
-        <div class="card"><div class="card-icon">🤝</div><h3><span class="tr">Outplacement Hizmeti</span><span class="en">Outplacement Service</span></h3><p><span class="tr">Yeniden yapılanma süreçlerinde işten çıkış operasyonlarını hukuki ve etik çerçevede yönetiyoruz.</span><span class="en">We manage exit operations during restructuring within legal and ethical frameworks.</span></p></div>
-      </div>
-      <div style="text-align:center;margin-top:40px">
-        <button class="btn btn-outline" onclick="nav('hizmetler')"><span class="tr">Tüm Hizmetleri Gör</span><span class="en">View All Services</span></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Industries -->
-  <div class="section section-alt">
-    <div class="container">
-      <div class="section-hdr">
-        <div class="s-eye"><span class="tr">UZMANLIK ALANLARIMIZ</span><span class="en">OUR SECTORS</span></div>
-        <h2 class="s-title"><span class="tr">Sektörel Uzmanlık</span><span class="en">Sector Expertise</span></h2>
-      </div>
-      <div class="grid-3">
-        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏗️</div><h3><span class="tr">İnşaat ve Altyapı</span><span class="en">Construction &amp; Infrastructure</span></h3></div>
-        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">⚡</div><h3><span class="tr">Enerji ve Santraller</span><span class="en">Energy &amp; Power Plants</span></h3></div>
-        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏥</div><h3><span class="tr">Sağlık Sektörü</span><span class="en">Healthcare</span></h3></div>
-        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏭</div><h3><span class="tr">Fabrika ve Endüstriyel Üretim</span><span class="en">Manufacturing &amp; Industrial</span></h3></div>
-        <div class="card" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px">🏨</div><h3><span class="tr">Turizm ve Konaklama</span><span class="en">Tourism &amp; Hospitality</span></h3></div>
-        <div class="card" style="text-align:center;background:linear-gradient(135deg,var(--navy),var(--navy-light));border:none"><div class="card-icon" style="margin:0 auto 16px;background:rgba(255,255,255,.15)">🌐</div><h3 style="color:#fff"><span class="tr">Uluslararası Projeler</span><span class="en">International Projects</span></h3></div>
+        <div class="card" onclick="navTab('kurumsal','tab-hizmetler')">
+          <div class="card-icon">🎯</div>
+          <h3><span class="tr">İş Gücü Stratejisi</span><span class="en">Workforce Strategy</span></h3>
+          <p><span class="tr">Proje bazlı iş gücü planlama, organizasyon tasarımı ve maliyet yapılarının stratejik analizi.</span><span class="en">Project-based workforce planning, organisational design and strategic analysis of cost structures.</span></p>
+        </div>
+        <div class="card" onclick="navTab('kurumsal','tab-hizmetler')">
+          <div class="card-icon">🔧</div>
+          <h3><span class="tr">Teknik İşe Alım</span><span class="en">Technical Recruitment</span></h3>
+          <p><span class="tr">Uluslararası projelerde ihtiyaç duyulan teknik ve operasyonel personelin belirlenmesi ve temini.</span><span class="en">Identifying and sourcing the technical and operational personnel required for international projects.</span></p>
+        </div>
+        <div class="card" onclick="navTab('kurumsal','tab-hizmetler')">
+          <div class="card-icon">🌍</div>
+          <h3><span class="tr">Uluslararası İş Gücü Mobilitesi</span><span class="en">International Workforce Mobility</span></h3>
+          <p><span class="tr">Çalışma izinleri, göç mevzuatı ve sosyal güvenlik düzenlemeleri kapsamında mobilizasyon yönetimi.</span><span class="en">Mobilisation management covering work permits, immigration law and social security regulations.</span></p>
+        </div>
+        <div class="card" onclick="navTab('kurumsal','tab-hizmetler')">
+          <div class="card-icon">📄</div>
+          <h3><span class="tr">Türkiye Kaynaklı Görevlendirme</span><span class="en">Turkey-Based Assignment Consulting</span></h3>
+          <p><span class="tr">SGK, İŞKUR ve ilgili mevzuat kapsamında yurt dışı görevlendirme süreçlerinin yönetimi.</span><span class="en">Management of overseas assignment processes under SGK, İŞKUR and related regulations.</span></p>
+        </div>
+        <div class="card" onclick="nav('analizler')">
+          <div class="card-icon">📊</div>
+          <h3><span class="tr">Küresel İş Gücü Analizi</span><span class="en">Global Workforce Analysis</span></h3>
+          <p><span class="tr">Ülke bazlı iş gücü maliyetleri, regülasyon ortamı ve mobilizasyon imkânlarının karşılaştırmalı analizi.</span><span class="en">Comparative analysis of country-level labour costs, regulatory environments and mobilisation opportunities.</span></p>
+        </div>
+        <div class="card" onclick="navTab('kurumsal','tab-sektorler')">
+          <div class="card-icon">🏗️</div>
+          <h3><span class="tr">Sektörel Uzmanlık</span><span class="en">Sector Expertise</span></h3>
+          <p><span class="tr">Enerji, altyapı, sanayi, sağlık ve turizm sektörlerine yönelik özelleştirilmiş iş gücü çözümleri.</span><span class="en">Tailored workforce solutions for the energy, infrastructure, manufacturing, healthcare and tourism sectors.</span></p>
+        </div>
       </div>
     </div>
   </div>
@@ -318,298 +380,789 @@ textarea{resize:vertical;min-height:110px}
   <div class="section section-dark">
     <div class="container" style="text-align:center">
       <div class="s-eye"><span class="tr">HEMEN BAŞLAYIN</span><span class="en">GET STARTED</span></div>
-      <h2 class="s-title" style="margin-bottom:16px"><span class="tr">Birlikte Çalışalım</span><span class="en">Let's Work Together</span></h2>
-      <p class="s-sub" style="margin-bottom:36px"><span class="tr">İş gücü ihtiyaçlarınız için bize ulaşın. Uzman ekibimiz sizinle iletişime geçecektir.</span><span class="en">Contact us for your workforce needs. Our expert team will get in touch with you.</span></p>
-      <button class="btn btn-primary" onclick="nav('iletisim')"><span class="tr">Bize Ulaşın →</span><span class="en">Contact Us →</span></button>
+      <h2 class="s-title" style="margin-bottom:16px">
+        <span class="tr">Birlikte Çalışalım</span><span class="en">Let's Work Together</span>
+      </h2>
+      <p class="s-sub" style="margin-bottom:36px">
+        <span class="tr">Uluslararası projeleriniz için iş gücü ihtiyaçlarınızı birlikte değerlendirelim.</span>
+        <span class="en">Let us assess your workforce requirements for your international projects together.</span>
+      </p>
+      <button class="btn btn-primary" onclick="nav('iletisim')">
+        <span class="tr">Bize Ulaşın →</span><span class="en">Contact Us →</span>
+      </button>
     </div>
   </div>
-</div>
 
-<!-- ═══════════════ PAGE: KURUMSAL ═══════════════ -->
+</div><!-- /page-home -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE: KURUMSAL
+══════════════════════════════════════ -->
 <div class="page" id="page-kurumsal">
   <div class="ph">
     <h1><span class="tr">Kurumsal</span><span class="en">Corporate</span></h1>
-    <p><span class="tr">Milenyum İnsan Kaynakları hakkında her şey</span><span class="en">Everything about Milenyum Human Resources</span></p>
+    <p><span class="tr">Milenyum İnsan Kaynakları hakkında</span><span class="en">About Milenyum Human Resources</span></p>
   </div>
 
-  <!-- Who we are -->
+  <div class="section">
+    <div class="container">
+
+      <!-- Tab bar -->
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('tab-hakkinda')" id="btn-tab-hakkinda">
+          <span class="tr">Hakkında</span><span class="en">About</span>
+        </button>
+        <button class="tab" onclick="showTab('tab-neden')" id="btn-tab-neden">
+          <span class="tr">Neden Milenyum İK</span><span class="en">Why Milenyum HR</span>
+        </button>
+        <button class="tab" onclick="showTab('tab-hizmetler')" id="btn-tab-hizmetler">
+          <span class="tr">Hizmetlerimiz</span><span class="en">Services</span>
+        </button>
+        <button class="tab" onclick="showTab('tab-sektorler')" id="btn-tab-sektorler">
+          <span class="tr">Sektörler</span><span class="en">Sectors</span>
+        </button>
+        <button class="tab" onclick="showTab('tab-uluslararasi')" id="btn-tab-uluslararasi">
+          <span class="tr">Uluslararası İş Gücü</span><span class="en">Intl. Workforce</span>
+        </button>
+      </div>
+
+      <!-- ─── TAB: MİLENYUM İK HAKKINDA ─── -->
+      <div class="tab-c active" id="tab-hakkinda">
+        <div class="intro-text">
+          <p class="tr">Küreselleşen iş dünyasında başarı yalnızca teknik kapasite ve finansal kaynaklarla değil, doğru planlanmış ve etkin şekilde yönetilen insan kaynağı ile mümkündür. Küresel iş gücü piyasaları, göç politikaları ve regülasyon ortamı hızla değişirken; farklı coğrafyalarda ihtiyaç duyulan teknik ve operasyonel yetkinliklere sahip insan kaynağına erişim şirketler için stratejik bir yönetim konusu haline gelmiştir.</p>
+          <p class="en">In today's globalised business environment, success depends not only on technical capacity and financial resources, but on a well-planned and effectively managed workforce. As global labour markets, migration policies and the regulatory landscape evolve rapidly, accessing talent with the right technical and operational competencies across different geographies has become a strategic management priority for organisations.</p>
+
+          <p class="tr">Milenyum İnsan Kaynakları, uluslararası faaliyet gösteren organizasyonlara stratejik iş gücü planlama, teknik işe alım ve küresel iş gücü mobilitesi alanlarında danışmanlık hizmetleri sunan bir insan kaynakları ve iş gücü yönetimi şirketidir.</p>
+          <p class="en">Milenyum Human Resources is a human resources and workforce management company that provides strategic workforce planning, technical recruitment and global workforce mobility consulting services to internationally operating organisations.</p>
+
+          <p class="tr">Uluslararası operasyonlarda insan kaynağı yönetimi yalnızca işe alım süreçlerinin yürütülmesinden ibaret değildir. İş gücü planlaması; teknik gereksinimler, proje takvimleri, maliyet yapıları, regülasyonlar ve mobilizasyon süreçlerinin birlikte değerlendirilmesini gerektirir.</p>
+          <p class="en">Workforce management in international operations extends far beyond the execution of recruitment processes. Workforce planning requires the simultaneous consideration of technical requirements, project timelines, cost structures, regulatory frameworks and mobilisation processes.</p>
+
+          <p class="tr">Milenyum İnsan Kaynakları, insan kaynağını yalnızca bir istihdam fonksiyonu olarak değil; operasyonel verimlilik, sürdürülebilir performans ve rekabet gücü açısından stratejik bir unsur olarak ele almaktadır. Bu yaklaşım doğrultusunda şirketimiz, organizasyonlara yalnızca iş gücü temini sunan bir hizmet sağlayıcı değil; insan kaynağı stratejilerini operasyonel hedeflerle uyumlu hale getiren bir çözüm ortağı olarak konumlanmaktadır.</p>
+          <p class="en">Milenyum Human Resources regards human capital not merely as an employment function, but as a strategic element in terms of operational efficiency, sustainable performance and competitive strength. In line with this approach, our company is positioned not as a simple staffing provider, but as a strategic partner that aligns human resources strategies with operational objectives.</p>
+        </div>
+
+      </div><!-- /tab-hakkinda -->
+
+      <!-- ─── TAB: NEDEN MİLENYUM İK ─── -->
+      <div class="tab-c" id="tab-neden">
+        <div class="section-hdr" style="margin-bottom:30px">
+          <div class="s-eye"><span class="tr">NEDEN MİLENYUM İK</span><span class="en">WHY MILENYUM HR</span></div>
+          <h2 class="s-title"><span class="tr">Küresel Projeler İçin Stratejik İnsan Kaynağı Çözümleri</span><span class="en">Strategic Workforce Solutions for Global Projects</span></h2>
+        </div>
+        <div class="intro-text">
+          <p class="tr">Uluslararası projelerde doğru insan kaynağına erişim, operasyonel başarı ve maliyet yönetimi açısından kritik bir rol oynamaktadır. Küresel iş gücü piyasalarının hızla değiştiği günümüzde, farklı ülkelerdeki iş gücü dinamiklerini doğru analiz etmek şirketler için önemli bir stratejik avantaj sağlamaktadır.</p>
+          <p class="en">Access to the right human resources in international projects plays a critical role in operational success and cost management. In today's rapidly evolving global labour markets, the ability to accurately analyse workforce dynamics across different countries provides companies with a significant strategic advantage.</p>
+          <p class="tr">Milenyum İnsan Kaynakları, insan kaynağını yalnızca bir işe alım süreci olarak değil; operasyonel verimlilik, maliyet yönetimi ve proje sürdürülebilirliği ile doğrudan bağlantılı stratejik bir unsur olarak ele alan çözümler sunmaktadır.</p>
+          <p class="en">Milenyum Human Resources offers solutions that treat human capital not merely as a recruitment process, but as a strategic element directly linked to operational efficiency, cost management and project sustainability.</p>
+        </div>
+
+        <details class="acc">
+          <summary><span class="tr">Stratejik Yaklaşımımız — Uluslararası İş Gücü Piyasalarının Analizi</span><span class="en">Our Strategic Approach — Analysis of International Labour Markets</span></summary>
+          <div class="acc-body">
+            <p class="tr">Milenyum İnsan Kaynakları, uluslararası iş gücü piyasalarını yalnızca personel temini perspektifiyle değil; maliyet yapıları, teknik yetkinlik seviyeleri, regülasyon ortamı ve mobilizasyon imkânlarını birlikte değerlendirerek analiz etmektedir. Bu sayede organizasyonlar farklı ülkelerdeki iş gücü dinamiklerini daha doğru değerlendirebilmekte ve uluslararası operasyonlarını daha sağlam temeller üzerine planlayabilmektedir.</p>
+            <p class="en">Milenyum Human Resources analyses international labour markets not merely from a staffing perspective, but by simultaneously evaluating cost structures, technical competency levels, regulatory environments and mobilisation opportunities. This enables organisations to more accurately assess workforce dynamics in different countries and plan their international operations on stronger foundations.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Regülasyonlara Uyumlu İş Gücü Modelleri</span><span class="en">Regulatory-Compliant Workforce Models</span></summary>
+          <div class="acc-body">
+            <p class="tr">Uluslararası projelerde çalışan mobilitesi; çalışma izinleri, göç mevzuatı ve sosyal güvenlik düzenlemeleri gibi birçok hukuki süreci içermektedir. Milenyum İnsan Kaynakları, farklı ülkelerin mevzuat yapılarını dikkate alarak bu süreçlerin mevzuata uyumlu ve sürdürülebilir şekilde yönetilmesine destek olmaktadır.</p>
+            <p class="en">Employee mobility in international projects involves numerous legal processes including work permits, immigration law and social security regulations. Milenyum Human Resources supports the compliant and sustainable management of these processes by taking into account the regulatory frameworks of different countries.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Proje Odaklı İş Gücü Planlaması</span><span class="en">Project-Focused Workforce Planning</span></summary>
+          <div class="acc-body">
+            <p class="tr">Her uluslararası proje farklı teknik gereksinimler ve operasyonel dinamikler içerir. Milenyum İnsan Kaynakları, iş gücü planlamasını proje takvimleri, teknik uzmanlık ihtiyaçları ve operasyonel gereksinimlerle uyumlu şekilde kurgulayarak organizasyonların doğru zamanda doğru yetkinliklere sahip insan kaynağına erişimini desteklemektedir.</p>
+            <p class="en">Every international project involves distinct technical requirements and operational dynamics. Milenyum Human Resources structures workforce planning in alignment with project timelines, technical expertise requirements and operational needs, supporting organisations in accessing the right competencies at the right time.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Veri Temelli İnsan Kaynağı Stratejileri</span><span class="en">Data-Driven Human Resources Strategies</span></summary>
+          <div class="acc-body">
+            <p class="tr">İş gücü stratejileri yalnızca operasyonel deneyime değil, veri temelli analizlere de dayanmalıdır. Milenyum İnsan Kaynakları, küresel iş gücü piyasalarına ilişkin maliyet analizleri, regülasyon değerlendirmeleri ve mobilizasyon verilerini kullanarak organizasyonların insan kaynağı stratejilerini daha öngörülebilir temeller üzerine inşa etmelerine katkı sağlamaktadır.</p>
+            <p class="en">Workforce strategies must be grounded not only in operational experience but also in data-driven analysis. Milenyum Human Resources uses cost analyses, regulatory assessments and mobilisation data related to global labour markets to help organisations build their human resources strategies on more predictable foundations.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Uluslararası Deneyim</span><span class="en">International Experience</span></summary>
+          <div class="acc-body">
+            <p class="tr">Milenyum İnsan Kaynakları ekibi, profesyonel kariyerleri boyunca Avrupa, Orta Doğu, Afrika ve Asya'da yürütülen birçok uluslararası projede görev almıştır. Bu projelerde iş gücü planlaması, teknik personel temini, çalışma izinleri ve göç süreçlerinin yönetimi, büyük ölçekli iş gücü mobilitesi ve iş gücü maliyet analizleri gibi alanlarda kapsamlı deneyim kazanılmıştır.</p>
+            <p class="en">The Milenyum Human Resources team has been involved in numerous international projects across Europe, the Middle East, Africa and Asia throughout their professional careers. Extensive experience has been gained in areas including workforce planning, technical personnel sourcing, management of work permits and immigration processes, large-scale workforce mobility and labour cost analyses.</p>
+            <p class="tr">Avrupa'da Belçika, Bulgaristan, Macaristan, Hollanda, Polonya, Romanya ve Türkiye'de; Asya'da Rusya, Tayvan ve Özbekistan'da; Afrika'da Mısır, Etiyopya, Libya ve Tanzanya'da; Orta Doğu'da ise Suudi Arabistan, Birleşik Arap Emirlikleri, Katar ve Bahreyn'de edinilen deneyimler, farklı iş gücü piyasalarının dinamiklerini çok boyutlu şekilde analiz edebilmemize olanak sağlamaktadır.</p>
+            <p class="en">Experience gained in Belgium, Bulgaria, Hungary, the Netherlands, Poland, Romania and Turkey in Europe; Russia, Taiwan and Uzbekistan in Asia; Egypt, Ethiopia, Libya and Tanzania in Africa; and Saudi Arabia, the United Arab Emirates, Qatar and Bahrain in the Middle East enables us to analyse the dynamics of diverse labour markets from a multi-dimensional perspective.</p>
+          </div>
+        </details>
+
+
+      </div><!-- /tab-neden -->
+
+      <!-- ─── TAB: HİZMETLERİMİZ ─── -->
+      <div class="tab-c" id="tab-hizmetler">
+        <div class="section-hdr" style="margin-bottom:30px">
+          <div class="s-eye"><span class="tr">HİZMETLERİMİZ</span><span class="en">OUR SERVICES</span></div>
+          <h2 class="s-title"><span class="tr">Danışmanlık Hizmetlerimiz</span><span class="en">Our Consulting Services</span></h2>
+        </div>
+        <div class="intro-text">
+          <p class="tr">Milenyum İnsan Kaynakları, uluslararası faaliyet gösteren organizasyonlara stratejik iş gücü planlama, teknik işe alım, uluslararası iş gücü mobilitesi ve iş gücü piyasası analizleri alanlarında danışmanlık hizmetleri sunmaktadır.</p>
+          <p class="en">Milenyum Human Resources provides consulting services to internationally operating organisations in strategic workforce planning, technical recruitment, international workforce mobility and labour market analysis.</p>
+          <p class="tr">Hizmetlerimiz, uluslararası projelerin operasyonel ihtiyaçları, regülasyon ortamı ve küresel iş gücü piyasalarının dinamikleri dikkate alınarak yapılandırılmaktadır.</p>
+          <p class="en">Our services are structured with consideration of the operational requirements of international projects, the regulatory environment and the dynamics of global labour markets.</p>
+        </div>
+
+        <details class="acc">
+          <summary><span class="tr">İş Gücü Stratejisi</span><span class="en">Workforce Strategy</span></summary>
+          <div class="acc-body">
+            <p class="tr">Uluslararası projelerde insan kaynağı planlaması yalnızca personel sayısının belirlenmesiyle sınırlı değildir. İş gücü planlaması; proje organizasyonu, teknik gereksinimler, operasyonel ihtiyaçlar, mobilizasyon süreçleri ve maliyet yapılarının birlikte değerlendirilmesini gerektirir.</p>
+            <p class="en">Workforce planning in international projects is not limited to determining headcount. It requires the simultaneous evaluation of project organisation, technical requirements, operational needs, mobilisation processes and cost structures.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, şirketlerin proje bazlı iş gücü planlama süreçlerini analiz ederek doğru yetkinliklere sahip insan kaynağı yapısının oluşturulmasına katkı sağlamaktadır. Bu sayede iş gücü stratejileri proje yönetim süreçleri ile uyumlu şekilde planlanabilmektedir.</p>
+            <p class="en">Milenyum Human Resources analyses companies' project-based workforce planning processes and contributes to building a workforce structure with the right competencies, ensuring that workforce strategies are aligned with project management processes.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Teknik İşe Alım ve Personel Temini</span><span class="en">Technical Recruitment and Personnel Sourcing</span></summary>
+          <div class="acc-body">
+            <p class="tr">Uluslararası projelerde doğru teknik ve operasyonel personelin belirlenmesi proje başarısı açısından kritik öneme sahiptir.</p>
+            <p class="en">Identifying the right technical and operational personnel for international projects is of critical importance to project success.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, şirketlerin ihtiyaç duyduğu teknik uzmanlık seviyesine sahip adayların belirlenmesi, değerlendirilmesi ve işe alım süreçlerinin yönetilmesi konularında destek sunmaktadır. Bu süreçte adayların teknik yeterlilikleri, proje deneyimleri ve saha operasyonlarına uygunlukları birlikte değerlendirilmektedir.</p>
+            <p class="en">Milenyum Human Resources provides support in identifying, assessing and managing the recruitment of candidates with the required level of technical expertise. In this process, candidates' technical qualifications, project experience and suitability for field operations are evaluated holistically.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Uluslararası İş Gücü Mobilitesi</span><span class="en">International Workforce Mobility</span></summary>
+          <div class="acc-body">
+            <p class="tr">Uluslararası projelerde çalışan mobilitesi; çalışma izinleri, göç mevzuatı ve sosyal güvenlik düzenlemeleri gibi birçok hukuki ve idari süreci içermektedir.</p>
+            <p class="en">Employee mobility in international projects involves numerous legal and administrative processes including work permits, immigration law and social security regulations.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, farklı ülkelerdeki çalışma izin sistemlerini ve regülasyon ortamlarını dikkate alarak iş gücü mobilizasyon süreçlerinin planlı ve mevzuata uyumlu şekilde yürütülmesine destek olmaktadır.</p>
+            <p class="en">Milenyum Human Resources supports the planned and compliant execution of workforce mobilisation processes by taking into account the work permit systems and regulatory environments of different countries.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Türkiye Kaynaklı Uluslararası İş Gücü Görevlendirme Danışmanlığı</span><span class="en">Turkey-Based International Workforce Assignment Consulting</span></summary>
+          <div class="acc-body">
+            <p class="tr">Türkiye'den yurt dışındaki projelere gönderilen çalışanların görevlendirme süreçleri, SGK, İŞKUR ve ilgili sosyal güvenlik mevzuatı kapsamında özel düzenlemeler içermektedir.</p>
+            <p class="en">The assignment processes for employees sent from Turkey to overseas projects involve specific regulatory requirements under SGK, İŞKUR and related social security legislation.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, Türkiye merkezli şirketlerin yurt dışı projelerinde görev alacak personelin görevlendirme süreçlerinin mevzuata uygun şekilde yapılandırılmasına destek olmaktadır. Bu kapsamda SGK bildirimleri, yurt dışı görevlendirme süreçleri, İŞKUR yükümlülükleri ve sosyal güvenlik düzenlemeleri gibi idari süreçlere yönelik danışmanlık hizmetleri sunulmaktadır.</p>
+            <p class="en">Milenyum Human Resources supports Turkey-based companies in structuring the assignment processes of personnel deployed to overseas projects in a compliant manner. This encompasses consulting services for administrative processes including SGK notifications, overseas assignment procedures, İŞKUR obligations and social security regulations.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Küresel İş Gücü Analizi</span><span class="en">Global Workforce Analysis</span></summary>
+          <div class="acc-body">
+            <p class="tr">Küresel iş gücü piyasaları, göç politikaları, çalışma izin sistemleri ve iş gücü maliyetleri şirketlerin yatırım kararlarını ve operasyonel stratejilerini doğrudan etkilemektedir.</p>
+            <p class="en">Global labour markets, migration policies, work permit systems and labour costs directly influence companies' investment decisions and operational strategies.</p>
+            <p class="tr">Milenyum İnsan Kaynakları tarafından hazırlanan analiz çalışmaları; farklı ülkelerdeki iş gücü maliyetleri, teknik yetkinlik seviyeleri, regülasyon ortamı ve mobilizasyon imkânlarını karşılaştırmalı bir perspektifle değerlendirmektedir. Bu analizler, şirketlerin uluslararası projelerini daha sağlam veri temelleri üzerine planlamalarına katkı sağlamaktadır.</p>
+            <p class="en">The analytical studies prepared by Milenyum Human Resources assess labour costs, technical competency levels, regulatory environments and mobilisation opportunities in different countries from a comparative perspective. These analyses help companies plan their international projects on stronger data-driven foundations.</p>
+          </div>
+        </details>
+
+
+      </div><!-- /tab-hizmetler -->
+
+      <!-- ─── TAB: SEKTÖRLER ─── -->
+      <div class="tab-c" id="tab-sektorler">
+        <div class="section-hdr" style="margin-bottom:30px">
+          <div class="s-eye"><span class="tr">SEKTÖRLER</span><span class="en">SECTORS</span></div>
+          <h2 class="s-title"><span class="tr">Sektörel Uzmanlık Alanlarımız</span><span class="en">Our Areas of Sector Expertise</span></h2>
+        </div>
+        <div class="intro-text">
+          <p class="tr">Milenyum İnsan Kaynakları, farklı sektörlerde faaliyet gösteren organizasyonlara uluslararası projelerin gerektirdiği teknik ve operasyonel insan kaynağının planlanması, temini ve mobilitesi alanlarında danışmanlık hizmetleri sunmaktadır.</p>
+          <p class="en">Milenyum Human Resources provides consulting services to organisations operating across different sectors in the planning, sourcing and mobility of the technical and operational human resources required by international projects.</p>
+          <p class="tr">Her sektörün operasyonel dinamikleri, teknik gereksinimleri ve iş gücü yapısı farklılık gösterdiğinden, insan kaynağı stratejileri sektörün ihtiyaçlarına uygun şekilde yapılandırılmaktadır.</p>
+          <p class="en">Since the operational dynamics, technical requirements and workforce structures of each sector differ, human resources strategies are tailored to the specific needs of the relevant sector.</p>
+        </div>
+
+        <details class="acc">
+          <summary><span class="tr">Enerji</span><span class="en">Energy</span></summary>
+          <div class="acc-body">
+            <p class="tr">Enerji projeleri yüksek teknik uzmanlık gerektiren ve çok disiplinli mühendislik ekiplerinin koordinasyon içinde çalışmasını gerektiren büyük ölçekli yatırımlardır. Elektrik üretim tesisleri, yenilenebilir enerji projeleri, petrol ve gaz yatırımları ile enerji altyapı projelerinde iş gücü planlaması yalnızca personel temini ile sınırlı değildir.</p>
+            <p class="en">Energy projects are large-scale investments requiring high technical expertise and the coordinated work of multidisciplinary engineering teams. In power generation facilities, renewable energy projects, oil and gas investments and energy infrastructure projects, workforce planning extends far beyond simple personnel sourcing.</p>
+            <p class="tr">Bu projelerde iş gücü organizasyonu; mühendislik disiplinleri, saha operasyonları, proje takvimleri ve mobilizasyon süreçleri ile doğrudan bağlantılıdır.</p>
+            <p class="en">In these projects, workforce organisation is directly linked to engineering disciplines, field operations, project timelines and mobilisation processes.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, enerji sektöründe faaliyet gösteren şirketlere teknik personel temini, proje bazlı iş gücü planlaması ve uluslararası iş gücü mobilitesi alanlarında danışmanlık hizmetleri sunmaktadır.</p>
+            <p class="en">Milenyum Human Resources provides consulting services to companies in the energy sector in technical personnel sourcing, project-based workforce planning and international workforce mobility.</p>
+            <div>
+              <button class="btn btn-gold btn-sm" onclick="navSector('enerji')">
+                <span class="tr">İletişim →</span><span class="en">Contact →</span>
+              </button>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Altyapı ve İnşaat</span><span class="en">Infrastructure and Construction</span></summary>
+          <div class="acc-body">
+            <p class="tr">Altyapı ve inşaat projeleri yüksek hacimli iş gücü organizasyonu gerektiren ve farklı teknik disiplinlerin eşzamanlı çalıştığı operasyonlardır. Bu tür projelerde iş gücü planlaması, saha operasyonları, proje takvimi ve teknik uzmanlık ihtiyaçlarının birlikte değerlendirilmesini gerektirir.</p>
+            <p class="en">Infrastructure and construction projects are operations requiring high-volume workforce organisation with multiple technical disciplines working simultaneously. Workforce planning in such projects requires the joint evaluation of field operations, project timelines and technical expertise requirements.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, altyapı ve inşaat sektöründe faaliyet gösteren organizasyonlara teknik ve operasyonel personel temini ile proje bazlı iş gücü planlama süreçlerinde danışmanlık hizmetleri sunmaktadır.</p>
+            <p class="en">Milenyum Human Resources provides consulting services to organisations in the infrastructure and construction sector in technical and operational personnel sourcing and project-based workforce planning.</p>
+            <div>
+              <button class="btn btn-gold btn-sm" onclick="navSector('altyapi')">
+                <span class="tr">İletişim →</span><span class="en">Contact →</span>
+              </button>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Sanayi ve Üretim</span><span class="en">Manufacturing and Industry</span></summary>
+          <div class="acc-body">
+            <p class="tr">Sanayi tesislerinde operasyonel süreklilik ve üretim verimliliği doğru planlanmış bir iş gücü yapısına bağlıdır. Üretim süreçlerinde görev alan teknik personelin yetkinlik seviyesi ve iş gücü organizasyonu, işletmelerin rekabet gücü açısından önemli bir rol oynamaktadır.</p>
+            <p class="en">Operational continuity and production efficiency in industrial facilities depend on a well-planned workforce structure. The competency level of technical personnel and the organisation of the workforce play an important role in the competitive strength of businesses.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, üretim tesisleri ve sanayi işletmeleri için teknik personel temini, iş gücü planlaması ve operasyonel verimliliği destekleyen insan kaynağı çözümleri sunmaktadır.</p>
+            <p class="en">Milenyum Human Resources provides technical personnel sourcing, workforce planning and human resources solutions supporting operational efficiency for manufacturing facilities and industrial businesses.</p>
+            <div>
+              <button class="btn btn-gold btn-sm" onclick="navSector('sanayi')">
+                <span class="tr">İletişim →</span><span class="en">Contact →</span>
+              </button>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Sağlık</span><span class="en">Healthcare</span></summary>
+          <div class="acc-body">
+            <p class="tr">Sağlık sektöründe nitelikli insan kaynağına olan ihtiyaç uluslararası ölçekte giderek artmaktadır. Sağlık profesyonellerinin uluslararası mobilitesi, sağlık kurumlarının insan kaynağı planlamasında önemli bir unsur haline gelmiştir.</p>
+            <p class="en">The demand for qualified human resources in the healthcare sector is growing on an international scale. The international mobility of healthcare professionals has become an important element in the human resources planning of healthcare institutions.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, sağlık kurumları için uluslararası personel mobilitesi ve işe alım süreçlerinin planlanması ve yönetilmesi konularında danışmanlık hizmetleri sunmaktadır.</p>
+            <p class="en">Milenyum Human Resources provides consulting services to healthcare institutions in the planning and management of international personnel mobility and recruitment processes.</p>
+            <div>
+              <button class="btn btn-gold btn-sm" onclick="navSector('saglik')">
+                <span class="tr">İletişim →</span><span class="en">Contact →</span>
+              </button>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="tr">Turizm ve Konaklama</span><span class="en">Tourism and Hospitality</span></summary>
+          <div class="acc-body">
+            <p class="tr">Turizm ve konaklama sektöründe operasyonel süreçlerin sürdürülebilirliği büyük ölçüde doğru planlanmış insan kaynağı yapısına bağlıdır. Özellikle yüksek hacimli operasyonel personel temini ve vardiya organizasyonu bu sektörün önemli insan kaynakları ihtiyaçları arasında yer almaktadır.</p>
+            <p class="en">The sustainability of operational processes in the tourism and hospitality sector largely depends on a well-planned human resources structure. High-volume operational personnel sourcing and shift organisation are among the key human resources needs of this sector.</p>
+            <p class="tr">Milenyum İnsan Kaynakları, turizm ve konaklama sektöründe faaliyet gösteren işletmelere iş gücü planlama, operasyonel personel temini ve işe alım süreçlerinin yönetimi alanlarında destek sağlamaktadır.</p>
+            <p class="en">Milenyum Human Resources provides support to businesses in the tourism and hospitality sector in workforce planning, operational personnel sourcing and management of recruitment processes.</p>
+            <div>
+              <button class="btn btn-gold btn-sm" onclick="navSector('turizm')">
+                <span class="tr">İletişim →</span><span class="en">Contact →</span>
+              </button>
+            </div>
+          </div>
+        </details>
+
+      </div><!-- /tab-sektorler -->
+
+      <!-- ─── TAB: ULUSLARARASI İŞ GÜCÜ ─── -->
+      <div class="tab-c" id="tab-uluslararasi">
+        <div class="section-hdr" style="margin-bottom:30px">
+          <div class="s-eye"><span class="tr">ULUSLARARASI İŞ GÜCÜ</span><span class="en">INTERNATIONAL WORKFORCE</span></div>
+          <h2 class="s-title"><span class="tr">Küresel İş Gücü Mobilitesi</span><span class="en">Global Workforce Mobility</span></h2>
+        </div>
+        <div class="intro-text">
+          <p class="tr">Uluslararası projelerde iş gücü yönetimi; farklı ülkelerin mevzuat yapıları, çalışma izin sistemleri, sosyal güvenlik düzenlemeleri ve göç politikaları gibi çok sayıda değişkenin birlikte değerlendirilmesini gerektiren karmaşık bir süreçtir.</p>
+          <p class="en">Workforce management in international projects is a complex process requiring the simultaneous evaluation of numerous variables including the regulatory frameworks of different countries, work permit systems, social security regulations and migration policies.</p>
+          <p class="tr">Milenyum İnsan Kaynakları, farklı coğrafyalarda edinilen sahaya dayalı deneyimlerini küresel iş gücü piyasalarına ilişkin analitik değerlendirmeleri ile birleştirerek uluslararası projelerde etkin ve mevzuata uyumlu iş gücü mobilitesi çözümleri sunmaktadır.</p>
+          <p class="en">Milenyum Human Resources combines field-based experience gained across different geographies with analytical assessments of global labour markets to deliver effective and regulatory-compliant workforce mobility solutions for international projects.</p>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:40px">
+          <div class="why-card">
+            <h3><span class="tr">Çalışma İzinleri ve Göç Süreçleri</span><span class="en">Work Permits and Immigration Processes</span></h3>
+            <p><span class="tr">Farklı ülkelerin çalışma izni sistemleri ve göç mevzuatı kapsamında mobilizasyon süreçlerinin planlanması ve yürütülmesi.</span><span class="en">Planning and execution of mobilisation processes within the work permit systems and immigration legislation of different countries.</span></p>
+          </div>
+          <div class="why-card">
+            <h3><span class="tr">Sosyal Güvenlik Koordinasyonu</span><span class="en">Social Security Coordination</span></h3>
+            <p><span class="tr">Uluslararası sosyal güvenlik sözleşmeleri ve ikili anlaşmalar kapsamında çalışan haklarının ve yükümlülüklerinin yönetimi.</span><span class="en">Management of employee rights and obligations under international social security agreements and bilateral conventions.</span></p>
+          </div>
+          <div class="why-card">
+            <h3><span class="tr">SGK ve İŞKUR Süreçleri</span><span class="en">SGK and İŞKUR Processes</span></h3>
+            <p><span class="tr">Türkiye'den yurt dışına görevlendirilen personele ilişkin SGK bildirimleri, İŞKUR izin ve bildirim süreçlerinin yönetimi.</span><span class="en">Management of SGK notifications and İŞKUR permit and notification processes for personnel assigned abroad from Turkey.</span></p>
+          </div>
+          <div class="why-card">
+            <h3><span class="tr">Ülkeler Arası İş Gücü Maliyet Analizi</span><span class="en">Cross-Country Labour Cost Analysis</span></h3>
+            <p><span class="tr">Farklı ülkelerdeki işçilik maliyetleri, sosyal güvenlik yükleri ve vergi yapılarının karşılaştırmalı analizi.</span><span class="en">Comparative analysis of labour costs, social security burdens and tax structures across different countries.</span></p>
+          </div>
+        </div>
+
+      </div><!-- /tab-uluslararasi -->
+
+    </div>
+  </div>
+</div><!-- /page-kurumsal -->
+
+<!-- ══════════════════════════════════════
+     PAGE: İŞVERENLER
+══════════════════════════════════════ -->
+<div class="page" id="page-isverenler">
+  <div class="ph">
+    <h1><span class="tr">İşverenler</span><span class="en">Employers</span></h1>
+    <p><span class="tr">Uluslararası projeleriniz için stratejik iş gücü çözümleri</span><span class="en">Strategic workforce solutions for your international projects</span></p>
+  </div>
+
   <div class="section">
     <div class="container">
       <div class="about-grid">
+        <!-- Left: intro text + stats -->
         <div class="about-text">
-          <div class="s-eye"><span class="tr">BİZ KİMİZ</span><span class="en">WHO WE ARE</span></div>
-          <h2 class="tr">Milenyum İnsan Kaynakları</h2>
-          <h2 class="en" style="display:none">Milenyum Human Resources</h2>
-          <p class="tr">Milenyum İnsan Kaynakları, ulusal ve uluslararası ölçekte faaliyet gösteren, stratejik işe alım ve iş gücü yönetimi alanında uzmanlaşmış bir insan kaynakları danışmanlık şirketidir.</p>
-          <p class="en" style="display:none">Milenyum Human Resources is a human resources consulting firm specializing in strategic recruitment and workforce management, operating at both national and international scale.</p>
-          <p class="tr">İnsanı bir maliyet kalemi ya da finansal unsur olarak değil, kurumların kültürünü, performansını ve gelecekteki yönünü belirleyen temel değer kaynağı olarak konumlandırıyoruz.</p>
-          <p class="en" style="display:none">We position people not as a cost item or financial element, but as the fundamental source of value that determines the culture, performance and future direction of organizations.</p>
-          <p class="tr">Bizim için işe alım, yalnızca bir pozisyonun doldurulması değil, organizasyonel yapıya uzun vadeli katkı sağlayacak doğru değerin doğru yapı ile buluşturulmasıdır.</p>
-          <p class="en" style="display:none">For us, recruitment is not merely filling a position, but connecting the right value with the right structure to make a long-term contribution to the organizational framework.</p>
-          <p class="tr">15 yılı aşkın uluslararası deneyimimizle, teknik uzmanlık gerektiren kritik rollerden yüksek hacimli proje mobilizasyonlarına kadar geniş kapsamlı çözümler sunmaktayız.</p>
-          <p class="en" style="display:none">With over 15 years of international experience, we offer broad-scope solutions ranging from critical roles requiring technical expertise to high-volume project mobilizations.</p>
-        </div>
+          <div class="s-eye" style="display:inline-block;margin-bottom:12px"><span class="tr">İŞVERENLER</span><span class="en">EMPLOYERS</span></div>
+          <h2><span class="tr">Birlikte Çalışalım</span><span class="en">Let's Work Together</span></h2>
+          <p class="tr">Uluslararası projelerde doğru insan kaynağının planlanması, teknik işe alım süreçlerinin yönetilmesi ve iş gücü mobilitesinin mevzuata uygun şekilde yürütülmesi şirketler için kritik bir yönetim alanıdır.</p>
+          <p class="en">The planning of the right human resources for international projects, the management of technical recruitment processes and the regulatory-compliant execution of workforce mobility represent a critical management domain for companies.</p>
+          <p class="tr">Milenyum İnsan Kaynakları, uluslararası faaliyet gösteren organizasyonlara iş gücü planlama, teknik işe alım ve uluslararası mobilizasyon süreçlerinde danışmanlık hizmetleri sunmaktadır.</p>
+          <p class="en">Milenyum Human Resources provides consulting services to internationally operating organisations in workforce planning, technical recruitment and international mobilisation processes.</p>
+
+        <!-- Right: employer form -->
         <div>
-          <div class="hbox">
-            <h3><span class="tr">Uzman Olduğumuz Sektörler</span><span class="en">Sectors We Specialize In</span></h3>
+          <div class="form-wrap" style="padding:36px 30px">
+            <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:24px">
+              <span class="tr">Talep Formu</span><span class="en">Request Form</span>
+            </h3>
+            <div class="success-msg" id="isveren-success">
+              <div style="font-size:36px;margin-bottom:10px">✅</div>
+              <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Talebiniz Alındı!</span><span class="en">Request Received!</span></h3>
+              <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
+            </div>
+            <form id="isverenForm" action="https://formsubmit.co/info@milenyumik.com" method="POST">
+              <input type="hidden" name="_subject" value="İşveren Talep Formu - Milenyum İK">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="frow">
+                <div class="fg">
+                  <label><span class="tr">Ad Soyad</span><span class="en">Full Name</span> <span class="req">*</span></label>
+                  <input type="text" name="Ad_Soyad" required>
+                </div>
+                <div class="fg">
+                  <label><span class="tr">Şirket</span><span class="en">Company</span> <span class="req">*</span></label>
+                  <input type="text" name="Sirket" required>
+                </div>
+              </div>
+              <div class="fg">
+                <label>E-posta <span class="req">*</span></label>
+                <input type="email" name="Email" required>
+              </div>
+              <div class="fg">
+                <label><span class="tr">Sektör</span><span class="en">Sector</span></label>
+                <select name="Sektor" id="sektorSelect">
+                  <option value="" data-tr="Sektör Seçiniz" data-en="Select Sector">Sektör Seçiniz</option>
+                  <option value="Enerji" data-tr="Enerji" data-en="Energy">Enerji</option>
+                  <option value="Altyapi_Insaat" data-tr="Altyapı ve İnşaat" data-en="Infrastructure and Construction">Altyapı ve İnşaat</option>
+                  <option value="Sanayi_Uretim" data-tr="Sanayi ve Üretim" data-en="Manufacturing and Industry">Sanayi ve Üretim</option>
+                  <option value="Saglik" data-tr="Sağlık" data-en="Healthcare">Sağlık</option>
+                  <option value="Turizm_Konaklama" data-tr="Turizm ve Konaklama" data-en="Tourism and Hospitality">Turizm ve Konaklama</option>
+                  <option value="Diger" data-tr="Diğer" data-en="Other">Diğer</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label><span class="tr">Mesajınız</span><span class="en">Your Message</span> <span class="req">*</span></label>
+                <textarea name="Mesaj" required style="min-height:130px"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
+                <span class="tr">Gönder →</span><span class="en">Send →</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-isverenler -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE: İŞ ARAYANLAR
+══════════════════════════════════════ -->
+<div class="page" id="page-isarayanlar">
+  <div class="ph">
+    <h1><span class="tr">İş Arayanlar</span><span class="en">Job Seekers</span></h1>
+    <p><span class="tr">Kariyer fırsatları için başvurunuzu iletin</span><span class="en">Submit your application for career opportunities</span></p>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left: intro -->
+        <div class="about-text">
+          <div class="s-eye" style="display:inline-block;margin-bottom:12px"><span class="tr">İŞ ARAYANLAR</span><span class="en">JOB SEEKERS</span></div>
+          <h2><span class="tr">Kariyer Fırsatları</span><span class="en">Career Opportunities</span></h2>
+          <p class="tr">Mesleki deneyimleri ve yetkinlikleri doğrultusunda yeni kariyer fırsatları arayan adaylar başvurularını iletebilir.</p>
+          <p class="en">Candidates seeking new career opportunities in line with their professional experience and competencies may submit their applications.</p>
+          <p class="tr">Milenyum İnsan Kaynakları, farklı sektörlerde faaliyet gösteren şirketlerin ihtiyaçları doğrultusunda aday değerlendirme süreçlerini yürütmekte ve uygun pozisyonlar için aday yönlendirmeleri gerçekleştirmektedir.</p>
+          <p class="en">Milenyum Human Resources conducts candidate evaluation processes in line with the requirements of companies operating across different sectors, and makes candidate referrals for suitable positions.</p>
+          <div class="hbox" style="margin-top:28px">
+            <h3><span class="tr">Değerlendirme Sürecimiz</span><span class="en">Our Evaluation Process</span></h3>
             <ul>
-              <li><span class="tr">İnşaat ve altyapı projeleri</span><span class="en">Construction and infrastructure projects</span></li>
-              <li><span class="tr">Enerji ve santral yatırımları</span><span class="en">Energy and power plant investments</span></li>
-              <li><span class="tr">Sağlık sektörü</span><span class="en">Healthcare sector</span></li>
-              <li><span class="tr">Fabrika ve endüstriyel üretim tesisleri</span><span class="en">Factory and industrial manufacturing facilities</span></li>
-              <li><span class="tr">Turizm ve konaklama sektörü</span><span class="en">Tourism and hospitality sector</span></li>
+              <li><span class="tr">Başvurunuz ve CV'niz incelenir</span><span class="en">Your application and CV are reviewed</span></li>
+              <li><span class="tr">Mesleki yetkinlikleriniz değerlendirilir</span><span class="en">Your professional competencies are assessed</span></li>
+              <li><span class="tr">Uygun pozisyonlar için bilgilendirilirsiniz</span><span class="en">You are notified of suitable positions</span></li>
+              <li><span class="tr">Uluslararası proje fırsatlarına yönlendirilirsiniz</span><span class="en">You are directed to international project opportunities</span></li>
             </ul>
           </div>
-          <div style="margin-top:20px;background:var(--light);border-radius:var(--r);padding:24px">
-            <p style="font-size:14px;color:var(--gray);line-height:1.9" class="tr">Bu sektörlerde yerel ve uluslararası iş gücü dinamiklerine hâkimiyetimizi, sınır ötesi mobilite, kültürel uyum ve mevzuat bilgisi ile bütünleştiriyoruz.</p>
-            <p style="font-size:14px;color:var(--gray);line-height:1.9" class="en" style="display:none">In these sectors, we integrate our command of local and international workforce dynamics with cross-border mobility, cultural adaptation and regulatory knowledge.</p>
+        </div>
+
+        <!-- Right: CV form -->
+        <div>
+          <div class="form-wrap" style="padding:36px 30px">
+            <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:24px">
+              <span class="tr">Başvuru Formu</span><span class="en">Application Form</span>
+            </h3>
+            <div class="success-msg" id="cv-success">
+              <div style="font-size:36px;margin-bottom:10px">✅</div>
+              <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Başvurunuz Alındı!</span><span class="en">Application Received!</span></h3>
+              <p style="color:var(--gray)">
+                <span class="tr">Başvurunuz incelenecek ve uygun pozisyonlar için sizinle iletişime geçilecektir.</span>
+                <span class="en">Your application will be reviewed and you will be contacted for suitable positions.</span>
+              </p>
+            </div>
+            <form id="cvForm" action="https://formsubmit.co/info@milenyumik.com" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="_subject" value="İş Başvurusu - Milenyum İK">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="frow">
+                <div class="fg">
+                  <label><span class="tr">Ad</span><span class="en">First Name</span> <span class="req">*</span></label>
+                  <input type="text" name="Ad" required>
+                </div>
+                <div class="fg">
+                  <label><span class="tr">Soyad</span><span class="en">Last Name</span> <span class="req">*</span></label>
+                  <input type="text" name="Soyad" required>
+                </div>
+              </div>
+              <div class="fg">
+                <label>E-posta <span class="req">*</span></label>
+                <input type="email" name="Email" required>
+              </div>
+              <div class="fg">
+                <label><span class="tr">Telefon</span><span class="en">Phone</span></label>
+                <input type="tel" name="Telefon">
+              </div>
+              <div class="fg">
+                <label><span class="tr">Uzmanlık Alanı / Meslek</span><span class="en">Area of Expertise / Profession</span> <span class="req">*</span></label>
+                <input type="text" name="Uzmanlik_Alani" required>
+              </div>
+              <div class="fg">
+                <label><span class="tr">Toplam Deneyim (yıl)</span><span class="en">Total Experience (years)</span></label>
+                <input type="text" name="Deneyim">
+              </div>
+              <div class="fg">
+                <label><span class="tr">CV (PDF, maks. 10 MB)</span><span class="en">CV (PDF, max. 10 MB)</span> <span class="req">*</span></label>
+                <div class="file-zone" id="fileZone">
+                  <div class="fz-icon">📄</div>
+                  <p><strong><span class="tr">CV'nizi buraya sürükleyin veya tıklayın</span><span class="en">Drag your CV here or click to upload</span></strong></p>
+                  <p><span class="tr">Yalnızca PDF formatı</span><span class="en">PDF format only</span></p>
+                  <input type="file" name="CV" accept=".pdf" onchange="handleFile(this)" required>
+                </div>
+                <div class="fname" id="fname"></div>
+              </div>
+              <div class="fg">
+                <label><span class="tr">Ek Bilgi</span><span class="en">Additional Information</span></label>
+                <textarea name="Ek_Bilgi" style="min-height:90px"></textarea>
+              </div>
+              <div style="background:var(--light);border-radius:8px;padding:14px;margin-bottom:20px;font-size:12.5px;color:var(--gray);line-height:1.8">
+                <span class="tr">Başvuruyu göndererek </span><span class="en">By submitting you confirm you have read the </span>
+                <span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">
+                  <span class="tr">KVKK Aydınlatma Metni</span><span class="en">KVKK Privacy Notice</span>
+                </span>
+                <span class="tr">'ni okuduğunuzu beyan etmiş olursunuz.</span><span class="en">.</span>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
+                <span class="tr">Başvuruyu Gönder →</span><span class="en">Submit Application →</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div><!-- /page-isarayanlar -->
 
-  <!-- Why us -->
-  <div class="section section-alt">
-    <div class="container">
-      <div class="section-hdr">
-        <div class="s-eye"><span class="tr">NEDEN MİLENYUM</span><span class="en">WHY MILENYUM</span></div>
-        <h2 class="s-title"><span class="tr">Fark Yaratan Değerlerimiz</span><span class="en">Values That Make the Difference</span></h2>
-      </div>
-      <div class="grid-2">
-        <div class="why-card">
-          <h3>🎯 <span class="tr">Stratejik ve Analitik Süreç Modeli</span><span class="en">Strategic & Analytical Process Model</span></h3>
-          <p><span class="tr">Her işe alım süreci, organizasyonel analiz, görev tanımı netliği ve yetkinlik matrisi ile başlatılır. Süreçler planlı, ölçülebilir ve raporlanabilir bir yapı içinde yürütülür.</span><span class="en">Every recruitment process begins with organizational analysis, job definition clarity and a competency matrix. Processes are conducted within a planned, measurable and reportable structure.</span></p>
-        </div>
-        <div class="why-card">
-          <h3>🔍 <span class="tr">Proaktif ve Seçici Yetenek Erişimi</span><span class="en">Proactive & Selective Talent Access</span></h3>
-          <p><span class="tr">İlan temelli pasif yöntemler yerine doğrudan hedefleme ve araştırma metodolojisi kullanırız. Pasif aday pazarına erişim sağlayarak doğrulanmış ve yüksek nitelikli profesyonellere ulaşırız.</span><span class="en">Instead of passive job-posting methods, we use direct targeting and research methodology, reaching into the passive candidate market to access verified, high-calibre professionals.</span></p>
-        </div>
-        <div class="why-card">
-          <h3>📊 <span class="tr">Çok Katmanlı Değerlendirme Disiplini</span><span class="en">Multi-Layer Evaluation Discipline</span></h3>
-          <p><span class="tr">Yetkinlik bazlı mülakatlar, teknik analizler, yabancı dil ölçümleri ve kapsamlı referans kontrolleri ile objektif ve karar destekleyici değerlendirme sunarız.</span><span class="en">We provide objective, decision-supporting evaluations through competency-based interviews, technical analyses, foreign language assessments and comprehensive reference checks.</span></p>
-        </div>
-        <div class="why-card">
-          <h3>📈 <span class="tr">Yerleştirme Sonrası Takip</span><span class="en">Post-Placement Follow-Up</span></h3>
-          <p><span class="tr">Hizmet modelimiz işe alım kararıyla sınırlı değildir. Yerleştirme sonrasında adaptasyon süreci, ilk dönem performans göstergeleri ve organizasyonel uyum değerlendirilir.</span><span class="en">Our service model does not end with the hiring decision. Post-placement adaptation, early-period performance indicators and organizational fit are all evaluated.</span></p>
-        </div>
-        <div class="why-card">
-          <h3>🔒 <span class="tr">Gizlilik ve Kurumsal Sorumluluk</span><span class="en">Confidentiality & Corporate Responsibility</span></h3>
-          <p><span class="tr">Tüm süreçler gizlilik, veri koruma ve profesyonel etik standartlar çerçevesinde yürütülür. Her aşamada iş ortaklarımızı temsil ettiğimiz bilinciyle hareket ederiz.</span><span class="en">All processes are conducted within confidentiality, data protection and professional ethics standards. At every stage we act with the awareness that we represent our business partners.</span></p>
-        </div>
-        <div class="why-card">
-          <h3>⚖️ <span class="tr">Hizmet Felsefemiz</span><span class="en">Our Service Philosophy</span></h3>
-          <p><span class="tr">Hizmet anlayışımız, mevzuata uyum, etik sorumluluk, şeffaflık ve sürdürülebilir değer üretimi ilkeleri üzerine kuruludur. Şeffaf iletişim ve düzenli bilgilendirme temel prensibimizdir.</span><span class="en">Our service philosophy is built on regulatory compliance, ethical responsibility, transparency and sustainable value creation. Transparent communication and regular updates are our fundamental principles.</span></p>
-        </div>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════
+     PAGE: ANALİZLER
+══════════════════════════════════════ -->
+<div class="page" id="page-analizler">
+  <div class="ph">
+    <h1><span class="tr">Analizler</span><span class="en">Analyses</span></h1>
+    <p><span class="tr">Milenyum İK Küresel İş Gücü Analiz ve Strateji Platformu</span><span class="en">Milenyum HR Global Workforce Analysis and Strategy Platform</span></p>
   </div>
 
-  <!-- International compliance -->
   <div class="section">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <div class="s-eye"><span class="tr">YASAL UYUM</span><span class="en">LEGAL COMPLIANCE</span></div>
-          <h2><span class="tr">Uluslararası İş Gücü Yönetimi</span><span class="en">International Workforce Management</span></h2>
-          <p class="tr">Uluslararası işe alım ve iş gücü mobilitesi süreçlerinde ilgili ülkelerin yürürlükteki mevzuatına ve uluslararası düzenlemelere tam uyum sağlanır.</p>
-          <p class="en" style="display:none">In international recruitment and workforce mobility processes, full compliance with the applicable legislation of the relevant countries and international regulations is ensured.</p>
-          <p class="tr">Avrupa Birliği ülkeleri, Orta Doğu ve Afrika bölgelerinde yürütülen projelerde sistematik bir çerçeve uygulanır.</p>
-          <p class="en" style="display:none">In projects carried out in European Union countries, the Middle East and Africa, a systematic framework is applied.</p>
-        </div>
-        <div>
-          <ul class="styled-list">
-            <li><span class="tr">Çalışma izinleri ve oturum süreçleri</span><span class="en">Work permits and residence processes</span></li>
-            <li><span class="tr">Büyük ölçekli iş gücü mobilizasyon planlaması</span><span class="en">Large-scale workforce mobilization planning</span></li>
-            <li><span class="tr">Yerel iş hukuku ve sosyal güvenlik yükümlülükleri</span><span class="en">Local labour law and social security obligations</span></li>
-            <li><span class="tr">Sınır ötesi görevlendirme prosedürleri</span><span class="en">Cross-border assignment procedures</span></li>
-            <li><span class="tr">Veri koruma ve gizlilik düzenlemeleri</span><span class="en">Data protection and privacy regulations</span></li>
-            <li><span class="tr">Sınır Ötesi SGK ve İŞKUR Danışmanlığı</span><span class="en">Cross-border SGK and İŞKUR consultancy</span></li>
+      <div class="section-hdr" style="margin-bottom:40px">
+        <div class="s-eye"><span class="tr">MİLENYUM İK</span><span class="en">MILENYUM HR</span></div>
+        <h2 class="s-title"><span class="tr">Küresel İş Gücü Analiz ve Strateji Platformu</span><span class="en">Global Workforce Analysis and Strategy Platform</span></h2>
+      </div>
+
+      <div class="intro-text">
+        <p class="tr">Uluslararası yatırımlar ve büyük ölçekli projeler yalnızca teknik ve finansal planlama değil, aynı zamanda doğru iş gücü stratejisinin oluşturulmasını gerektirir. Küresel iş gücü piyasaları; demografik değişimler, göç politikaları, ekonomik dalgalanmalar ve sektör bazlı iş gücü taleplerinin farklılaşması nedeniyle sürekli olarak yeniden şekillenmektedir.</p>
+        <p class="en">International investments and large-scale projects require not only technical and financial planning, but also the formulation of the right workforce strategy. Global labour markets are continuously reshaping due to demographic shifts, migration policies, economic fluctuations and diverging sector-level workforce demands.</p>
+
+        <p class="tr">Bu dinamik ortamda uluslararası faaliyet gösteren şirketler için doğru iş gücü kaynaklarını belirlemek, uygun işe alım modellerini geliştirmek ve sürdürülebilir iş gücü stratejileri oluşturmak kritik bir yönetim alanı haline gelmiştir.</p>
+        <p class="en">In this dynamic environment, identifying the right workforce sources, developing appropriate recruitment models and establishing sustainable workforce strategies has become a critical management domain for internationally operating companies.</p>
+
+        <p class="tr">Milenyum İK tarafından geliştirilen Küresel İş Gücü Analiz ve Strateji Platformu, uluslararası iş gücü piyasalarına ilişkin analizler ve stratejik değerlendirmeler sunan bir araştırma ve danışmanlık altyapısıdır. Platform kapsamında hazırlanan çalışmalar, şirketlerin iş gücü planlama, işe alım ve mobilizasyon süreçlerinde daha bilinçli ve veri temelli kararlar almasına katkı sağlamayı amaçlamaktadır.</p>
+        <p class="en">The Global Workforce Analysis and Strategy Platform developed by Milenyum HR is a research and consulting infrastructure providing analyses and strategic assessments of international labour markets. The studies prepared within the platform aim to support companies in making more informed, data-driven decisions in their workforce planning, recruitment and mobilisation processes.</p>
+
+        <p class="tr">Platform kapsamında yapılan analizler; uluslararası iş gücü piyasaları, çalışma izin sistemleri, göç politikaları, iş gücü maliyetleri ve mobilizasyon modelleri gibi birçok konuyu kapsamaktadır. Ayrıca Türkiye'den yurt dışına gönderilen çalışanlara ilişkin SGK yükümlülükleri, İŞKUR bildirim süreçleri ve uluslararası görevlendirme modelleri de analiz çalışmalarının önemli bir parçasını oluşturmaktadır.</p>
+        <p class="en">The analyses cover numerous topics including international labour markets, work permit systems, migration policies, labour costs and mobilisation models. SGK obligations related to workers sent abroad from Turkey, İŞKUR notification processes and international assignment models also form an important part of the analytical work.</p>
+      </div>
+
+      <details class="acc">
+        <summary><span class="tr">Platform Ne Sunar</span><span class="en">What the Platform Offers</span></summary>
+        <div class="acc-body">
+          <p class="tr">Küresel İş Gücü Analiz ve Strateji Platformu, uluslararası iş gücü piyasalarına ilişkin çok boyutlu analizler ve karşılaştırmalı değerlendirmeler sunmaktadır.</p>
+          <p class="en">The Global Workforce Analysis and Strategy Platform provides multi-dimensional analyses and comparative assessments of international labour markets.</p>
+          <p class="tr"><strong>Platform kapsamında ele alınan başlıca analiz alanları:</strong></p>
+          <p class="en"><strong>The main analysis areas covered by the platform:</strong></p>
+          <ul class="tr">
+            <li>Ülke bazlı iş gücü piyasası analizleri</li>
+            <li>Uluslararası işe alım ve iş gücü temin stratejileri</li>
+            <li>Çalışma izin sistemleri ve göç mevzuatı değerlendirmeleri</li>
+            <li>Ülkeler arası iş gücü maliyet karşılaştırmaları</li>
+            <li>Uluslararası projelerde iş gücü mobilizasyon modelleri</li>
+            <li>Sektörel iş gücü ihtiyaçlarına yönelik stratejik değerlendirmeler</li>
+            <li>Farklı ülkelerdeki endüstriyel ilişkiler ve çalışma ilişkileri yapıları</li>
+            <li>Türkiye'den yurt dışına gönderilen çalışanlara ilişkin SGK süreçleri</li>
+            <li>Yurt dışı projelerde İŞKUR bildirim ve izin süreçleri</li>
+          </ul>
+          <ul class="en">
+            <li>Country-level labour market analyses</li>
+            <li>International recruitment and workforce sourcing strategies</li>
+            <li>Work permit systems and immigration law assessments</li>
+            <li>Cross-country labour cost comparisons</li>
+            <li>Workforce mobilisation models in international projects</li>
+            <li>Strategic assessments of sector-level workforce needs</li>
+            <li>Industrial and employment relations structures in different countries</li>
+            <li>SGK processes related to workers sent abroad from Turkey</li>
+            <li>İŞKUR notification and permit processes in overseas projects</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </details>
 
-<!-- ═══════════════ PAGE: HİZMETLER ═══════════════ -->
-<div class="page" id="page-hizmetler">
-  <div class="ph">
-    <h1><span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span></h1>
-    <p><span class="tr">Stratejik işe alımdan outplacement'a kapsamlı çözümler</span><span class="en">Comprehensive solutions from strategic recruitment to outplacement</span></p>
-  </div>
-  <div class="section">
-    <div class="container">
-
-      <div class="svc-item">
-        <h3><span class="svc-num">1</span><span class="tr">Profesyonel Pozisyonlar için Araştırma ve İşe Alım</span><span class="en">Research & Recruitment for Professional Positions</span></h3>
-        <p><span class="tr">Mühendis ve uzman kadrolar için hedef odaklı araştırma, yetkinlik bazlı değerlendirme ve uçtan uca süreç yönetimi.</span><span class="en">Target-driven research, competency-based evaluation and end-to-end process management for engineer and specialist roles.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">2</span><span class="tr">Teknik Personel için Araştırma ve İşe Alım</span><span class="en">Research & Recruitment for Technical Staff</span></h3>
-        <p><span class="tr">Yurtiçi ve yurtdışı şantiye, fabrika ve endüstriyel projeler için nitelikli teknik personel temini ve mobilizasyon yönetimi.</span><span class="en">Provision of qualified technical personnel and mobilization management for domestic and international construction sites, factories and industrial projects.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">3</span><span class="tr">Proje Bazlı Toplu İşe Alım</span><span class="en">Project-Based Bulk Recruitment</span></h3>
-        <p><span class="tr">Büyük ölçekli yatırımlar için kısa sürede yüksek hacimli personel temini ve organizasyonel planlama.</span><span class="en">High-volume staffing and organizational planning for large-scale investments in a short period.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">4</span><span class="tr">Geçici İK Yönetim Desteği</span><span class="en">Interim HR Management Support</span></h3>
-        <p><span class="tr">Yapılanma sürecindeki kurumlara yurtiçi ve yurtdışı bordro, performans ve organizasyonel yapı desteği.</span><span class="en">Domestic and international payroll, performance and organizational structure support for institutions in the structuring process.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">5</span><span class="tr">Sınır Ötesi SGK ve İŞKUR Danışmanlığı</span><span class="en">Cross-Border SGK & İŞKUR Consultancy</span></h3>
-        <p><span class="tr">Yurtdışı görevlendirmelerde sosyal güvenlik ve yasal bildirim süreçlerinin mevzuata uygun yürütülmesi.</span><span class="en">Execution of social security and legal notification processes in compliance with legislation for overseas assignments.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">6</span><span class="tr">İş Sözleşmeleri ve İK Politikaları Danışmanlığı</span><span class="en">Employment Contracts & HR Policy Consulting</span></h3>
-        <p><span class="tr">Yurt içi ve yurt dışı operasyonlara uygun sözleşme ve politika yapılandırması.</span><span class="en">Contract and policy structuring appropriate for domestic and international operations.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">7</span><span class="tr">Global İşçilik Maliyetleri Danışmanlığı</span><span class="en">Global Labour Costs Consulting</span></h3>
-        <p><span class="tr">Farklı ülkelerdeki işçilik maliyetleri, sosyal güvenlik yükümlülükleri ve vergi yapılarının analizi ile sürdürülebilir maliyet planlaması.</span><span class="en">Analysis of labour costs, social security obligations and tax structures in different countries, and sustainable cost planning.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">8</span><span class="tr">Çalışma İzinleri Danışmanlığı</span><span class="en">Work Permit Consulting</span></h3>
-        <p><span class="tr">Yurt içi ve yurt dışı projeler için çalışma ve oturum izin süreçlerinin planlanması ve yürütülmesi.</span><span class="en">Planning and execution of work and residence permit processes for domestic and international projects.</span></p>
-      </div>
-
-      <div class="svc-item">
-        <h3><span class="svc-num">9</span><span class="tr">Outplacement Hizmeti (İşten Çıkış Süreç Yönetimi)</span><span class="en">Outplacement Service (Exit Process Management)</span></h3>
-        <p class="tr">Yeniden yapılanma, proje kapanışı veya küçülme süreçlerinde işten çıkış operasyonlarını hukuki uyum, etik sorumluluk ve kurumsal itibar çerçevesinde yönetiyoruz.<br><br>
-        Süreç planlaması, yasal yükümlülüklerin koordinasyonu, çalışan iletişimi ve kariyer geçişi desteği ile ayrılık süreçlerini profesyonel ve kontrollü biçimde yapılandırıyoruz.<br><br>
-        Amacımız, kurumun itibarını korurken çalışanların profesyonel geçişini destekleyen dengeli ve sorumlu bir yönetim modeli sunmaktır.</p>
-        <p class="en" style="display:none">We manage exit operations during restructuring, project closure or downsizing processes within the framework of legal compliance, ethical responsibility and corporate reputation.<br><br>
-        We structure separation processes in a professional and controlled manner through process planning, coordination of legal obligations, employee communication and career transition support.<br><br>
-        Our aim is to offer a balanced and responsible management model that supports the professional transition of employees while protecting the institution's reputation.</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════ PAGE: YURT İÇİ ═══════════════ -->
-<div class="page" id="page-yurtici">
-  <div class="ph">
-    <h1><span class="tr">Yurt İçi Pozisyonlar</span><span class="en">Domestic Positions</span></h1>
-    <p><span class="tr">Türkiye genelinde açık pozisyonlarımız</span><span class="en">Open positions across Turkey</span></p>
-  </div>
-  <div class="section">
-    <div class="container" style="text-align:center;padding:60px 20px">
-      <div style="font-size:48px;margin-bottom:20px">📋</div>
-      <h2 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:12px"><span class="tr">Şu An Açık Pozisyon Bulunmuyor</span><span class="en">No Open Positions at This Time</span></h2>
-      <p style="color:var(--gray);max-width:480px;margin:0 auto 32px"><span class="tr">Yurt içi pozisyonlar için henüz aktif bir ilan mevcut değil. Genel başvuru yaparak özgeçmişinizi bizimle paylaşabilirsiniz.</span><span class="en">There are currently no active domestic listings. You can share your CV with us by submitting a general application.</span></p>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════ PAGE: YURT DIŞI ═══════════════ -->
-<div class="page" id="page-yurtdisi">
-  <div class="ph">
-    <h1><span class="tr">Yurt Dışı Pozisyonlar</span><span class="en">International Positions</span></h1>
-    <p><span class="tr">Uluslararası projelerimiz için açık pozisyonlar</span><span class="en">Open positions for our international projects</span></p>
-  </div>
-  <div class="section">
-    <div class="container" style="text-align:center;padding:60px 20px">
-      <div style="font-size:48px;margin-bottom:20px">🌍</div>
-      <h2 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:12px"><span class="tr">Şu An Açık Pozisyon Bulunmuyor</span><span class="en">No Open Positions at This Time</span></h2>
-      <p style="color:var(--gray);max-width:480px;margin:0 auto 32px"><span class="tr">Yurt dışı pozisyonlar için henüz aktif bir ilan mevcut değil. Genel başvuru yaparak özgeçmişinizi bizimle paylaşabilirsiniz.</span><span class="en">There are currently no active international listings. You can share your CV with us by submitting a general application.</span></p>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════ PAGE: İŞVEREN ═══════════════ -->
-<div class="page" id="page-isveren">
-  <div class="ph">
-    <h1><span class="tr">Bizimle İletişime Geçin</span><span class="en">Get in Touch</span></h1>
-  </div>
-  <div class="section">
-    <div class="container" style="max-width:640px">
-      <div class="form-wrap" style="padding:36px 30px">
-        <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:24px"><span class="tr">Mesaj Gönderin</span><span class="en">Send a Message</span></h3>
-        <div class="success-msg" id="isveren-success">
-          <div style="font-size:36px;margin-bottom:10px">✅</div>
-          <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Mesajınız Alındı!</span><span class="en">Message Received!</span></h3>
-          <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
+      <details class="acc">
+        <summary><span class="tr">Nasıl Kullanılır</span><span class="en">How It Is Used</span></summary>
+        <div class="acc-body">
+          <p class="tr">Platform kapsamında hazırlanan çalışmalar özellikle uluslararası faaliyet yürüten şirketlerin stratejik karar süreçlerini desteklemek amacıyla kullanılmaktadır.</p>
+          <p class="en">The studies prepared within the platform are used specifically to support the strategic decision-making processes of internationally operating companies.</p>
+          <p class="tr"><strong>Analizler özellikle şu alanlarda önemli içgörüler sunmaktadır:</strong></p>
+          <p class="en"><strong>The analyses offer important insights particularly in the following areas:</strong></p>
+          <ul class="tr">
+            <li>Yeni yatırım yapılacak ülkelerde iş gücü piyasasının değerlendirilmesi</li>
+            <li>Uluslararası işe alım stratejilerinin oluşturulması</li>
+            <li>Farklı ülkelerdeki iş gücü maliyetlerinin karşılaştırılması</li>
+            <li>Proje bazlı iş gücü mobilizasyon stratejilerinin geliştirilmesi</li>
+            <li>Türkiye'den yurt dışına gönderilecek çalışanlara ilişkin mevzuat süreçlerinin değerlendirilmesi</li>
+          </ul>
+          <ul class="en">
+            <li>Assessing the labour market in countries targeted for new investment</li>
+            <li>Developing international recruitment strategies</li>
+            <li>Comparing labour costs across different countries</li>
+            <li>Developing project-based workforce mobilisation strategies</li>
+            <li>Assessing regulatory processes relating to workers to be sent abroad from Turkey</li>
+          </ul>
         </div>
-        <form id="isverenForm" action="https://formsubmit.co/info@milenyumik.com" method="POST">
-          <input type="hidden" name="_subject" value="Web İletişim Formu (İşveren) - Milenyum İK">
-          <input type="hidden" name="_captcha" value="false">
-          <div class="frow">
+      </details>
+
+      <details class="acc">
+        <summary><span class="tr">Kimler İçin</span><span class="en">Who It Is For</span></summary>
+        <div class="acc-body">
+          <p class="tr">Küresel İş Gücü Analiz ve Strateji Platformu kapsamında sunulan analizler özellikle aşağıdaki kurum ve kuruluşlar için değerli bilgiler sağlamaktadır:</p>
+          <p class="en">The analyses provided within the platform offer valuable insights particularly for the following institutions and organisations:</p>
+          <ul class="tr">
+            <li>Uluslararası yatırımcılar</li>
+            <li>Mühendislik, tedarik ve inşaat projeleri yürüten şirketler</li>
+            <li>Enerji ve altyapı projelerinde faaliyet gösteren yükleniciler</li>
+            <li>Uluslararası üretim ve sanayi şirketleri</li>
+            <li>Turizm ve konaklama sektöründe faaliyet gösteren işletmeler</li>
+            <li>Sağlık sektörü yatırımcıları ve sağlık kuruluşları</li>
+            <li>Yurt dışı projelerde çalışan görevlendiren Türk şirketleri</li>
+            <li>İnsan kaynakları ve uluslararası çalışan görevlendirme yöneticileri</li>
+          </ul>
+          <ul class="en">
+            <li>International investors</li>
+            <li>Companies conducting engineering, procurement and construction projects</li>
+            <li>Contractors operating in energy and infrastructure projects</li>
+            <li>International manufacturing and industrial companies</li>
+            <li>Businesses in the tourism and hospitality sector</li>
+            <li>Healthcare sector investors and healthcare institutions</li>
+            <li>Turkish companies assigning employees to overseas projects</li>
+            <li>Human resources and international employee assignment managers</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="tr">Araştırma ve Uzmanlık Alanlarımız</span><span class="en">Our Research and Expertise Areas</span></summary>
+        <div class="acc-body">
+          <p class="tr">Platform bünyesinde gerçekleştirilen araştırmalar özellikle aşağıdaki alanlara odaklanmaktadır:</p>
+          <p class="en">Research conducted within the platform focuses particularly on the following areas:</p>
+          <ul class="tr">
+            <li>Küresel iş gücü mobilitesi ve uluslararası işe alım modelleri</li>
+            <li>Avrupa ve Orta Avrupa çalışma izin sistemleri</li>
+            <li>Uluslararası projelerde iş gücü mobilitesi</li>
+            <li>Ülkeler arası iş gücü maliyet karşılaştırmaları</li>
+            <li>Enerji ve altyapı projelerinde iş gücü planlaması</li>
+            <li>Turizm ve konaklama sektöründe iş gücü yönetimi</li>
+            <li>Sağlık sektöründe uluslararası personel mobilitesi</li>
+            <li>Endüstriyel ilişkiler ve çalışma ilişkileri yapıları</li>
+            <li>Yurt dışı projelerde Türk çalışanlara ilişkin SGK ve İŞKUR süreçleri</li>
+          </ul>
+          <ul class="en">
+            <li>Global workforce mobility and international recruitment models</li>
+            <li>European and Central European work permit systems</li>
+            <li>Workforce mobility in international projects</li>
+            <li>Cross-country labour cost comparisons</li>
+            <li>Workforce planning in energy and infrastructure projects</li>
+            <li>Workforce management in the tourism and hospitality sector</li>
+            <li>International personnel mobility in the healthcare sector</li>
+            <li>Industrial and employment relations structures</li>
+            <li>SGK and İŞKUR processes for Turkish workers in overseas projects</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="tr">Analiz Metodolojisi</span><span class="en">Analysis Methodology</span></summary>
+        <div class="acc-body">
+          <p class="tr">Milenyum İK tarafından hazırlanan iş gücü analizleri farklı veri kaynaklarının birlikte değerlendirilmesiyle oluşturulmaktadır.</p>
+          <p class="en">The workforce analyses prepared by Milenyum HR are formed through the joint evaluation of different data sources.</p>
+          <p class="tr"><strong>Analiz süreçlerinde başlıca şu unsurlar dikkate alınmaktadır:</strong></p>
+          <p class="en"><strong>The following key elements are taken into account in the analysis process:</strong></p>
+          <ul class="tr">
+            <li>Uluslararası iş gücü piyasası verileri</li>
+            <li>Göç ve çalışma izin politikaları</li>
+            <li>Ülke bazlı iş gücü maliyetleri</li>
+            <li>Sektörel iş gücü talebi ve arzı</li>
+            <li>Endüstriyel ilişkiler ve çalışma kültürü</li>
+            <li>Uluslararası projelerde edinilen saha deneyimleri</li>
+          </ul>
+          <ul class="en">
+            <li>International labour market data</li>
+            <li>Migration and work permit policies</li>
+            <li>Country-level labour costs</li>
+            <li>Sector-level labour demand and supply</li>
+            <li>Industrial relations and work culture</li>
+            <li>Field experience gained in international projects</li>
+          </ul>
+          <p class="tr">Bu metodoloji sayesinde hazırlanan analizler yalnızca teorik değerlendirmeler değil, aynı zamanda saha deneyimine dayanan stratejik içgörüler sunmaktadır.</p>
+          <p class="en">Thanks to this methodology, the resulting analyses offer not merely theoretical assessments, but strategic insights grounded in field experience.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="tr">Özel Analiz ve Danışmanlık Talepleri</span><span class="en">Custom Analysis and Consulting Requests</span></summary>
+        <div class="acc-body">
+          <p class="tr">Küresel İş Gücü Analiz ve Strateji Platformu kapsamında hazırlanan analizler şirketlerin ihtiyaçlarına göre özelleştirilmiş çalışmalar şeklinde de sunulabilmektedir.</p>
+          <p class="en">The analyses prepared within the platform can also be delivered as customised studies tailored to companies' specific needs.</p>
+          <p class="tr">Talep edilen çalışmalar şirketlerin yatırım planları ve operasyonel ihtiyaçları doğrultusunda özel raporlar veya danışmanlık çalışmaları olarak hazırlanabilmektedir.</p>
+          <p class="en">Requested studies can be prepared as bespoke reports or consulting engagements in line with companies' investment plans and operational requirements.</p>
+          <p class="tr">Hizmetlerimizden yararlanmak için bizimle iletişime geçin.</p>
+          <p class="en">Contact us to benefit from our services.</p>
+          <div>
+            <button class="btn btn-gold btn-sm" onclick="scrollToAnalizForm()">
+              <span class="tr">Analiz Talebi →</span><span class="en">Request Analysis →</span>
+            </button>
+          </div>
+        </div>
+      </details>
+
+      <!-- Analiz contact form -->
+      <div id="analiz-form-section" style="margin-top:64px;padding-top:24px;border-top:2px solid var(--border)">
+        <div class="section-hdr" style="margin-bottom:32px">
+          <div class="s-eye"><span class="tr">ANALİZ TALEBİ</span><span class="en">ANALYSIS REQUEST</span></div>
+          <h2 class="s-title"><span class="tr">Özel Analiz ve Danışmanlık</span><span class="en">Custom Analysis and Consulting</span></h2>
+        </div>
+        <div class="form-wrap">
+          <div class="success-msg" id="analiz-success">
+            <div style="font-size:36px;margin-bottom:10px">✅</div>
+            <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Talebiniz Alındı!</span><span class="en">Request Received!</span></h3>
+            <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
+          </div>
+          <form id="analizForm" action="https://formsubmit.co/info@milenyumik.com" method="POST">
+            <input type="hidden" name="_subject" value="Analiz/Danışmanlık Talebi - Milenyum İK">
+            <input type="hidden" name="_captcha" value="false">
             <div class="fg">
-              <label><span class="tr">Ad Soyad</span><span class="en">Full Name</span> <span class="req">*</span></label>
-              <input type="text" name="Ad_Soyad" required>
+              <label><span class="tr">Şirket İsmi</span><span class="en">Company Name</span> <span class="req">*</span></label>
+              <input type="text" name="Sirket" required>
             </div>
             <div class="fg">
-              <label><span class="tr">Şirket</span><span class="en">Company</span></label>
-              <input type="text" name="Sirket">
+              <label><span class="tr">Sektör</span><span class="en">Sector</span></label>
+              <select name="Sektor">
+                <option value="" data-tr="Sektör Seçiniz" data-en="Select Sector">Sektör Seçiniz</option>
+                <option value="Enerji" data-tr="Enerji" data-en="Energy">Enerji</option>
+                <option value="Altyapi_Insaat" data-tr="Altyapı ve İnşaat" data-en="Infrastructure and Construction">Altyapı ve İnşaat</option>
+                <option value="Sanayi_Uretim" data-tr="Sanayi ve Üretim" data-en="Manufacturing and Industry">Sanayi ve Üretim</option>
+                <option value="Saglik" data-tr="Sağlık" data-en="Healthcare">Sağlık</option>
+                <option value="Turizm_Konaklama" data-tr="Turizm ve Konaklama" data-en="Tourism and Hospitality">Turizm ve Konaklama</option>
+                <option value="Diger" data-tr="Diğer" data-en="Other">Diğer</option>
+              </select>
             </div>
-          </div>
-          <div class="fg">
-            <label>E-posta <span class="req">*</span></label>
-            <input type="email" name="Email" required>
-          </div>
-          <div class="fg">
-            <label><span class="tr">Konu</span><span class="en">Subject</span></label>
-            <select name="Konu">
-              <option value="Kariyer" data-tr="Kariyer Fırsatları" data-en="Career Opportunities">Kariyer Fırsatları</option>
-              <option value="Danışmanlık" data-tr="Danışmanlık Hizmetleri" data-en="Consulting Services">Danışmanlık Hizmetleri</option>
-              <option value="Diger" data-tr="Diğer" data-en="Other">Diğer</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label><span class="tr">Mesajınız</span><span class="en">Your Message</span> <span class="req">*</span></label>
-            <textarea name="Mesaj" required style="min-height:130px"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
-            <span class="tr">Gönder →</span><span class="en">Send →</span>
-          </button>
-        </form>
+            <div class="fg">
+              <label><span class="tr">İletişim Bilgileri (Ad, E-posta, Telefon)</span><span class="en">Contact Information (Name, Email, Phone)</span> <span class="req">*</span></label>
+              <input type="text" name="Iletisim" required>
+            </div>
+            <div class="fg">
+              <label><span class="tr">Danışmanlık talebinizi kısaca yazınız</span><span class="en">Briefly describe your consulting request</span> <span class="req">*</span></label>
+              <textarea name="Talep" required style="min-height:150px"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
+              <span class="tr">Talebi Gönder →</span><span class="en">Submit Request →</span>
+            </button>
+          </form>
+        </div>
       </div>
+
     </div>
   </div>
-</div>
+</div><!-- /page-analizler -->
 
-<!-- ═══════════════ PAGE: İLETİŞİM ═══════════════ -->
+<!-- ══════════════════════════════════════
+     PAGE: İLETİŞİM
+══════════════════════════════════════ -->
 <div class="page" id="page-iletisim">
   <div class="ph">
-    <h1><span class="tr">Bize Ulaşın</span><span class="en">Contact Us</span></h1>
+    <h1><span class="tr">İletişim</span><span class="en">Contact</span></h1>
     <p><span class="tr">Sorularınız için bizimle iletişime geçin</span><span class="en">Get in touch with us for your questions</span></p>
   </div>
   <div class="section">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <div class="s-eye"><span class="tr">İLETİŞİM BİLGİLERİ</span><span class="en">CONTACT INFORMATION</span></div>
+          <div class="s-eye" style="display:inline-block;margin-bottom:12px"><span class="tr">İLETİŞİM BİLGİLERİ</span><span class="en">CONTACT INFORMATION</span></div>
           <h2><span class="tr">Sizinle Konuşmayı Bekliyoruz</span><span class="en">We Look Forward to Speaking with You</span></h2>
-          <p><span class="tr">İnsan kaynakları ihtiyaçlarınız veya kariyer fırsatları hakkında sorularınız için ekibimize ulaşın.</span><span class="en">Contact our team for questions about your human resources needs or career opportunities.</span></p>
+          <p><span class="tr">Uluslararası projeleriniz için iş gücü ihtiyaçlarınızı görüşmek üzere ekibimize ulaşın.</span><span class="en">Reach out to our team to discuss your workforce requirements for your international projects.</span></p>
           <div class="c-items">
+            <div class="c-item">
+              <div class="c-icon">🏢</div>
+              <div class="c-item-text">
+                <h4><span class="tr">Şirket</span><span class="en">Company</span></h4>
+                <p>Milenyum İnsan Kaynakları Ltd. Şti.</p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">🔢</div>
+              <div class="c-item-text">
+                <h4>Mersis No</h4>
+                <p>0621123259500001</p>
+              </div>
+            </div>
             <div class="c-item">
               <div class="c-icon">📍</div>
               <div class="c-item-text">
                 <h4><span class="tr">Adres</span><span class="en">Address</span></h4>
-                <p><span class="tr">İstanbul, Türkiye</span><span class="en">Istanbul, Turkey</span></p>
-              </div>
-            </div>
-            <div class="c-item">
-              <div class="c-icon">📞</div>
-              <div class="c-item-text">
-                <h4><span class="tr">Telefon</span><span class="en">Phone</span></h4>
-                <p>+90 (212) ___ __ __</p>
+                <p>Mahmutbey Mh. Halkalı Cd. No: 3/11<br>Bağcılar / İstanbul</p>
               </div>
             </div>
             <div class="c-item">
               <div class="c-icon">✉️</div>
               <div class="c-item-text">
                 <h4>E-posta / Email</h4>
-                <p>info@milenyumik.com</p>
+                <p><a href="mailto:info@milenyumik.com" style="color:var(--navy);text-decoration:none">info@milenyumik.com</a></p>
               </div>
             </div>
             <div class="c-item">
@@ -620,16 +1173,23 @@ textarea{resize:vertical;min-height:110px}
               </div>
             </div>
           </div>
+          <div style="margin-top:24px">
+            <a href="https://www.linkedin.com/company/milenyum-ik" target="_blank" rel="noopener" class="li-link">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span style="color:var(--navy);font-weight:600">LinkedIn — Milenyum İK</span>
+            </a>
+          </div>
         </div>
         <div>
           <div class="form-wrap" style="padding:36px 30px">
-            <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:24px"><span class="tr">Mesaj Gönderin</span><span class="en">Send a Message</span></h3>
+            <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:24px">
+              <span class="tr">Mesaj Gönderin</span><span class="en">Send a Message</span>
+            </h3>
             <div class="success-msg" id="contact-success">
               <div style="font-size:36px;margin-bottom:10px">✅</div>
               <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Mesajınız Alındı!</span><span class="en">Message Received!</span></h3>
               <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
             </div>
-            <!-- ⚠️ Replace YOUR_EMAIL@example.com with your real email address -->
             <form id="contactForm" action="https://formsubmit.co/info@milenyumik.com" method="POST">
               <input type="hidden" name="_subject" value="Web İletişim Formu - Milenyum İK">
               <input type="hidden" name="_captcha" value="false">
@@ -650,9 +1210,10 @@ textarea{resize:vertical;min-height:110px}
               <div class="fg">
                 <label><span class="tr">Konu</span><span class="en">Subject</span></label>
                 <select name="Konu">
-                  <option value="Işe Alım" data-tr="İşe Alım Talebi" data-en="Recruitment Request">İşe Alım Talebi</option>
-                  <option value="Kariyer" data-tr="Kariyer Fırsatları" data-en="Career Opportunities">Kariyer Fırsatları</option>
-                  <option value="Danışmanlık" data-tr="Danışmanlık Hizmetleri" data-en="Consulting Services">Danışmanlık Hizmetleri</option>
+                  <option value="Is_Gucu_Planlama" data-tr="İş Gücü Planlama" data-en="Workforce Planning">İş Gücü Planlama</option>
+                  <option value="Teknik_Ise_Alim" data-tr="Teknik İşe Alım" data-en="Technical Recruitment">Teknik İşe Alım</option>
+                  <option value="Mobilite" data-tr="Uluslararası Mobilite" data-en="International Mobility">Uluslararası Mobilite</option>
+                  <option value="Analiz" data-tr="İş Gücü Analizi" data-en="Workforce Analysis">İş Gücü Analizi</option>
                   <option value="Diger" data-tr="Diğer" data-en="Other">Diğer</option>
                 </select>
               </div>
@@ -669,257 +1230,666 @@ textarea{resize:vertical;min-height:110px}
       </div>
     </div>
   </div>
-</div>
+</div><!-- /page-iletisim -->
 
-
-<!-- ═══════════════ PAGE: KVKK ═══════════════ -->
+<!-- ══════════════════════════════════════
+     PAGE: KVKK
+══════════════════════════════════════ -->
 <div class="page" id="page-kvkk">
   <div class="ph">
     <h1><span class="tr">Kişisel Verilerin Korunması</span><span class="en">Personal Data Protection</span></h1>
-    <p><span class="tr">KVKK Aydınlatma Metni</span><span class="en">GDPR / KVKK Disclosure Text</span></p>
+    <p><span class="tr">KVKK Aydınlatma Metni</span><span class="en">KVKK Disclosure Text</span></p>
   </div>
   <div class="section">
     <div class="container">
       <div class="legal-c">
         <div class="tr">
-          <h2>1. Veri Sorumlusu</h2>
-          <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, kişisel verileriniz; veri sorumlusu sıfatıyla Milenyum İnsan Kaynakları Danışmanlık ("Şirket") tarafından aşağıda açıklanan kapsamda işlenebilecektir.</p>
-          <h2>2. Kişisel Verilerin İşlenme Amacı</h2>
-          <p>Kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
+          <p>Milenyum İnsan Kaynakları Limited Şirketi ("Şirket"), 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca veri sorumlusu sıfatıyla, iş başvurusu süreçleri kapsamında elde ettiği kişisel verileri aşağıda açıklanan kapsamda işlemektedir.</p>
+          <h2>1. İşlenen Kişisel Veri Kategorileri</h2>
+          <p>İş başvurusu sürecinde aşağıdaki kişisel veri kategorileri işlenebilmektedir:</p>
           <ul>
-            <li>İşe alım süreçlerinin yürütülmesi</li>
-            <li>Kariyer başvurularının değerlendirilmesi</li>
-            <li>İş sözleşmelerinin kurulması ve ifası</li>
-            <li>Yasal yükümlülüklerin yerine getirilmesi</li>
-            <li>İş gücü analizi ve planlaması</li>
-            <li>Müşteri ve iş ortakları ile iletişim</li>
+            <li>Kimlik bilgileri (ad, soyad)</li>
+            <li>İletişim bilgileri (telefon numarası, e-posta adresi; paylaşılması halinde adres)</li>
+            <li>Özgeçmiş (CV) bilgileri</li>
+            <li>Eğitim ve mesleki deneyim bilgileri</li>
+            <li>Referans bilgileri</li>
+            <li>Yabancı dil, sertifika ve mesleki yeterlilik bilgileri</li>
+            <li>Fotoğraf (yüklenmesi halinde)</li>
+            <li>Aday tarafından paylaşılması halinde özel nitelikli kişisel veriler (örneğin sağlık veya engellilik bilgileri)</li>
           </ul>
-          <h2>3. İşlenen Kişisel Veriler</h2>
-          <p>Kimlik bilgileri (ad, soyad, TC kimlik no), iletişim bilgileri (telefon, e-posta, adres), özgeçmiş bilgileri (eğitim, iş deneyimi, yetkinlikler), yabancı dil bilgisi, referans bilgileri.</p>
+          <h2>2. Kişisel Verilerin İşlenme Amaçları</h2>
+          <p>Kişisel verileriniz;</p>
+          <ul>
+            <li>İş başvuru ve aday değerlendirme süreçlerinin yürütülmesi,</li>
+            <li>Pozisyon uygunluğunun analiz edilmesi ve eşleştirme yapılması,</li>
+            <li>Mülakat ve referans kontrol süreçlerinin gerçekleştirilmesi,</li>
+            <li>İnsan kaynakları planlama faaliyetlerinin yürütülmesi,</li>
+            <li>İlgili mevzuattan doğan yükümlülüklerin yerine getirilmesi</li>
+          </ul>
+          <p>amaçlarıyla işlenmektedir.</p>
+          <h2>3. Hukuki Sebepler</h2>
+          <p>Kişisel verileriniz;</p>
+          <ul>
+            <li>KVKK m.5/2-c kapsamında bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması,</li>
+            <li>KVKK m.5/2-ç kapsamında hukuki yükümlülüklerin yerine getirilmesi,</li>
+            <li>KVKK m.5/2-f kapsamında veri sorumlusunun meşru menfaati,</li>
+            <li>Özel nitelikli kişisel veriler ve yurt dışı veri aktarımı bakımından açık rızanız</li>
+          </ul>
+          <p>hukuki sebeplerine dayanılarak işlenmektedir.</p>
           <h2>4. Kişisel Verilerin Aktarılması</h2>
-          <p>Kişisel verileriniz; işe alım sürecinde ilgili iş ortaklarımıza, kanunen yetkili kamu kurumlarına ve hizmet sağlayıcılara aktarılabilmektedir. Yurt dışına aktarım KVKK'nın 9. maddesi kapsamında gerçekleştirilmektedir.</p>
-          <h2>5. Haklarınız</h2>
-          <p>KVKK'nın 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:</p>
+          <p>Kişisel verileriniz, işleme amaçlarıyla sınırlı ve ölçülü olmak üzere;</p>
+          <ul>
+            <li>Yurt içindeki iş ortaklarına ve potansiyel işveren firmalara,</li>
+            <li>Yurt dışındaki işveren firmalara ve iş ortaklarına (açık rızanız bulunması halinde),</li>
+            <li>Kanunen yetkili kamu kurum ve kuruluşlarına</li>
+          </ul>
+          <p>aktarılabilecektir. Yurt dışı veri aktarımı, KVKK'nın 9. maddesi uyarınca açık rızaya dayanılarak gerçekleştirilmektedir.</p>
+          <h2>5. Toplama Yöntemi ve İşleme Şekli</h2>
+          <p>Kişisel verileriniz;</p>
+          <ul>
+            <li>İnternet sitesi başvuru formları,</li>
+            <li>E-posta yoluyla iletilen özgeçmişler,</li>
+            <li>Fiziki başvuru formları,</li>
+            <li>Mülakat ve değerlendirme süreçleri</li>
+          </ul>
+          <p>aracılığıyla otomatik veya kısmen otomatik yöntemlerle toplanmakta ve işlenmektedir.</p>
+          <h2>6. Saklama Süresi</h2>
+          <p>Kişisel verileriniz, iş başvuru sürecinin sonuçlanmasından itibaren en fazla 2 yıl süreyle saklanmakta; ilgili mevzuatta daha uzun süre öngörülmesi halinde mevzuatta belirtilen süre boyunca muhafaza edilmektedir. Saklama süresi sona eren kişisel veriler, KVKK ve ilgili mevzuat uyarınca silinir, yok edilir veya anonim hale getirilir.</p>
+          <h2>7. İlgili Kişi Hakları</h2>
+          <p>KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
           <ul>
             <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
             <li>İşlenmişse buna ilişkin bilgi talep etme</li>
-            <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>İşleme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
             <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
-            <li>Eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
-            <li>Kişisel verilerin silinmesini veya yok edilmesini isteme</li>
-            <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
+            <li>Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme</li>
+            <li>Şartları oluştuğu takdirde verilerin silinmesini veya yok edilmesini talep etme</li>
+            <li>İşlemenin hukuka aykırı olması halinde zararın giderilmesini talep etme</li>
           </ul>
-          <h2>6. İletişim</h2>
-          <p>KVKK kapsamındaki taleplerinizi <strong>info@milenyumik.com</strong> adresine iletebilirsiniz.</p>
+          <p>Haklarınıza ilişkin başvurularınızı <strong>info@milenyumik.com</strong> adresi üzerinden iletebilirsiniz.</p>
           <p style="color:var(--gray);font-size:13px;margin-top:30px"><em>Son güncelleme: Mart 2025</em></p>
         </div>
-        <div class="en" style="display:none">
-          <h2>1. Data Controller</h2>
-          <p>Pursuant to the Law on Protection of Personal Data No. 6698 ("KVKK"), your personal data may be processed by Milenyum Human Resources Consulting ("Company") as the data controller, within the scope described below.</p>
-          <h2>2. Purpose of Processing Personal Data</h2>
-          <p>Your personal data is processed for the following purposes:</p>
+        <div class="en">
+          <p>Milenyum İnsan Kaynakları Limited Şirketi ("Company"), as a data controller pursuant to the Law on Protection of Personal Data No. 6698 ("KVKK"), processes personal data obtained within the scope of job application processes as described below.</p>
+          <h2>1. Categories of Personal Data Processed</h2>
           <ul>
-            <li>Conducting recruitment processes</li>
-            <li>Evaluating job applications</li>
-            <li>Establishing and performing employment contracts</li>
-            <li>Fulfilling legal obligations</li>
-            <li>Workforce analysis and planning</li>
-            <li>Communication with clients and business partners</li>
+            <li>Identity information (name, surname)</li>
+            <li>Contact information (phone number, email address; home address if provided)</li>
+            <li>CV / résumé information</li>
+            <li>Education and professional experience information</li>
+            <li>Reference information</li>
+            <li>Foreign language, certification and professional qualification information</li>
+            <li>Photograph (if uploaded)</li>
+            <li>Special category personal data shared by the candidate (e.g. health or disability information)</li>
           </ul>
-          <h2>3. Personal Data Processed</h2>
-          <p>Identity information (name, surname, national ID), contact information (phone, email, address), CV information (education, work experience, competencies), foreign language skills, reference information.</p>
+          <h2>2. Purposes of Processing Personal Data</h2>
+          <ul>
+            <li>Conducting job application and candidate evaluation processes,</li>
+            <li>Analysing position suitability and making candidate-role matches,</li>
+            <li>Carrying out interview and reference check processes,</li>
+            <li>Conducting human resources planning activities,</li>
+            <li>Fulfilling obligations arising from applicable legislation.</li>
+          </ul>
+          <h2>3. Legal Bases</h2>
+          <ul>
+            <li>Being directly related to the establishment or performance of a contract (KVKK Art. 5/2-c),</li>
+            <li>Fulfilment of legal obligations (KVKK Art. 5/2-ç),</li>
+            <li>Legitimate interests of the data controller (KVKK Art. 5/2-f),</li>
+            <li>Your explicit consent for special category personal data and international data transfers.</li>
+          </ul>
           <h2>4. Transfer of Personal Data</h2>
-          <p>Your personal data may be transferred to our relevant business partners in the recruitment process, to legally authorized public institutions and to service providers. International transfer is carried out within the scope of Article 9 of KVKK.</p>
-          <h2>5. Your Rights</h2>
-          <p>Within the scope of Article 11 of KVKK, you have the following rights:</p>
+          <ul>
+            <li>Domestic business partners and potential employer companies,</li>
+            <li>Employer companies and business partners abroad (subject to your explicit consent),</li>
+            <li>Legally authorised public institutions and organisations.</li>
+          </ul>
+          <p>International data transfers are carried out based on explicit consent pursuant to Article 9 of KVKK.</p>
+          <h2>5. Collection Method and Processing</h2>
+          <ul>
+            <li>Online application forms on the website,</li>
+            <li>CVs submitted by email,</li>
+            <li>Physical application forms,</li>
+            <li>Interview and assessment processes.</li>
+          </ul>
+          <h2>6. Retention Period</h2>
+          <p>Your personal data is retained for a maximum of 2 years following the conclusion of the job application process; where applicable legislation requires a longer retention period, data is kept for the period specified therein. Personal data whose retention period has expired is deleted, destroyed or anonymised in accordance with KVKK and applicable legislation.</p>
+          <h2>7. Rights of the Data Subject</h2>
           <ul>
             <li>To learn whether your personal data is being processed</li>
             <li>To request information about processing if applicable</li>
             <li>To learn the purpose of processing and whether it is used accordingly</li>
             <li>To know third parties to whom data is transferred domestically or internationally</li>
             <li>To request correction of incomplete or incorrect data</li>
-            <li>To request deletion or destruction of personal data</li>
-            <li>To object to a result arising against you through analysis by automated systems</li>
+            <li>To request deletion or destruction of data where the conditions are met</li>
+            <li>To request compensation for damages where processing is unlawful</li>
           </ul>
-          <h2>6. Contact</h2>
-          <p>You may submit your requests under KVKK to <strong>info@milenyumik.com</strong>.</p>
+          <p>You may submit requests regarding your rights to <strong>info@milenyumik.com</strong>.</p>
           <p style="color:var(--gray);font-size:13px;margin-top:30px"><em>Last updated: March 2025</em></p>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div><!-- /page-kvkk -->
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
+
+<!-- ══════════════════════════════════════
+     PAGE: ÇEREZ POLİTİKASI
+══════════════════════════════════════ -->
+<div class="page" id="page-cerez">
+  <div class="ph">
+    <h1><span class="tr">Çerez Politikası</span><span class="en">Cookie Policy</span></h1>
+    <p><span class="tr">www.milenyumik.com çerez kullanım politikası</span><span class="en">Cookie usage policy for www.milenyumik.com</span></p>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="legal-c">
+        <div class="tr">
+          <h2>1. Amaç ve Kapsam</h2>
+          <p>Bu Çerez Politikası, Milenyum İnsan Kaynakları Limited Şirketi tarafından işletilen www.milenyumik.com internet sitesi ("Site") üzerinden kullanılan çerezlere ilişkin olarak ziyaretçileri bilgilendirmek amacıyla hazırlanmıştır.</p>
+          <p>Şirketimiz 6698 sayılı KVKK hükümlerine uygun olarak veri işlemektedir. Avrupa Birliği merkezli iş ortakları ve adaylar bakımından GDPR hükümleri de gözetilmektedir.</p>
+          <h2>2. Çerez (Cookie) Nedir?</h2>
+          <p>Çerezler, ziyaret ettiğiniz internet siteleri tarafından tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler sayesinde; site düzgün çalışır, tercihleriniz hatırlanır, performans analizleri yapılır ve güvenlik sağlanır.</p>
+          <h2>3. Hangi Tür Çerezleri Kullanıyoruz?</h2>
+          <h3>3.1 Zorunlu (Teknik) Çerezler</h3>
+          <p>Bu çerezler sitenin çalışması için gereklidir ve devre dışı bırakılamaz. Oturum yönetimi, güvenlik doğrulaması, form işlemleri ve site altyapısının çalışması amacıyla kullanılır.</p>
+          <p><em>Hukuki Dayanak: KVKK m.5/2 (veri sorumlusunun meşru menfaati) / GDPR Art. 6(1)(f)</em></p>
+          <h3>3.2 Analitik Çerezler (Açık Rızaya Tabi)</h3>
+          <p>Bu çerezler ziyaretçi davranışlarını analiz etmek amacıyla kullanılır (sayfa görüntüleme sayıları, ziyaret süresi, trafik kaynakları vb.). Bu çerezler yalnızca açık rızanız halinde aktif olur.</p>
+          <p><em>Hukuki Dayanak: KVKK m.5/1 (açık rıza) / GDPR Art. 6(1)(a)</em></p>
+          <h3>3.3 Performans ve Kişiselleştirme Çerezleri</h3>
+          <p>Dil tercihi, kullanıcı tercihleri ve site deneyiminin iyileştirilmesi amacıyla kullanılır.</p>
+          <h3>3.4 Üçüncü Taraf Çerezleri</h3>
+          <p>Site üzerinde üçüncü taraf hizmet sağlayıcıların çerezleri bulunabilir. Bu çerezler yalnızca açık rızanızla kullanılacaktır.</p>
+          <h2>4. Çerezlerin Saklama Süresi</h2>
+          <ul>
+            <li>Oturum Çerezleri: Tarayıcı kapatılana kadar</li>
+            <li>Kalıcı Çerezler: 6–12 ay</li>
+            <li>Analitik Çerezler: En fazla 12 ay</li>
+          </ul>
+          <h2>5. Çerezleri Nasıl Kontrol Edebilirsiniz?</h2>
+          <p>Çerez tercihlerinizi site üzerindeki "Çerez Ayarları" panelinden veya tarayıcı ayarlarınızdan istediğiniz zaman değiştirebilirsiniz. Çerezleri tamamen devre dışı bırakmanız durumunda sitenin bazı işlevleri düzgün çalışmayabilir.</p>
+          <h2>6. İletişim</h2>
+          <p>Milenyum İnsan Kaynakları Ltd. Şti.<br>Mersis No: 0621123259500001<br>Adres: Mahmutbey Mh. Halkalı Cd. No: 3/11 Bağcılar/İstanbul<br>E-posta: info@milenyumik.com</p>
+        </div>
+        <div class="en">
+          <h2>1. Purpose and Scope</h2>
+          <p>This Cookie Policy has been prepared to inform visitors about the cookies used on the www.milenyumik.com website ("Site") operated by Milenyum İnsan Kaynakları Limited Şirketi.</p>
+          <p>Our company processes data in accordance with KVKK No. 6698. GDPR provisions are also observed for EU-based business partners and candidates.</p>
+          <h2>2. What Is a Cookie?</h2>
+          <p>Cookies are small text files stored on your device via your browser by the websites you visit. They enable the site to function properly, remember your preferences, conduct performance analyses and ensure security.</p>
+          <h2>3. Types of Cookies We Use</h2>
+          <h3>3.1 Essential (Technical) Cookies</h3>
+          <p>These cookies are necessary for the site to function and cannot be disabled. They are used for session management, security verification, form processing and site infrastructure operation.</p>
+          <p><em>Legal Basis: KVKK Art. 5/2 (legitimate interest) / GDPR Art. 6(1)(f)</em></p>
+          <h3>3.2 Analytical Cookies (Subject to Explicit Consent)</h3>
+          <p>These cookies are used to analyse visitor behaviour (page views, visit duration, traffic sources, etc.) and are only activated with your explicit consent.</p>
+          <p><em>Legal Basis: KVKK Art. 5/1 (explicit consent) / GDPR Art. 6(1)(a)</em></p>
+          <h3>3.3 Performance and Personalisation Cookies</h3>
+          <p>Used for language preferences, user preferences and improvement of the site experience.</p>
+          <h3>3.4 Third-Party Cookies</h3>
+          <p>Third-party service providers' cookies may be present on the site and will only be used with your explicit consent.</p>
+          <h2>4. Cookie Retention Periods</h2>
+          <ul>
+            <li>Session Cookies: Until the browser is closed</li>
+            <li>Persistent Cookies: 6–12 months</li>
+            <li>Analytical Cookies: Maximum 12 months</li>
+          </ul>
+          <h2>5. How to Control Cookies</h2>
+          <p>You may change your cookie preferences at any time through the "Cookie Settings" panel on the site or through your browser settings. Disabling all cookies may affect certain site functions.</p>
+          <h2>6. Contact</h2>
+          <p>Milenyum İnsan Kaynakları Ltd. Şti.<br>Mersis No: 0621123259500001<br>Address: Mahmutbey Mh. Halkalı Cd. No: 3/11 Bağcılar/İstanbul<br>Email: info@milenyumik.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-cerez -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE: GİZLİLİK POLİTİKASI
+══════════════════════════════════════ -->
+<div class="page" id="page-gizlilik">
+  <div class="ph">
+    <h1><span class="tr">Gizlilik Politikası</span><span class="en">Privacy Policy</span></h1>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="legal-c">
+        <div class="tr">
+          <p>Milenyum İnsan Kaynakları Limited Şirketi ("Şirket") olarak internet sitemizi ziyaret eden kullanıcıların, iş başvurusu yapan adayların ve iş ortaklarımızın gizliliğini korumayı temel ilke olarak benimseriz.</p>
+          <h2>1. Kapsam</h2>
+          <p>Bu politika web sitesi ziyaretçileri ve iş başvurusu yapan adaylar için geçerlidir. "Kişisel veri", "özel nitelikli kişisel veri" ve "işleme" kavramları 6698 sayılı KVKK kapsamında tanımlandıkları anlamlarıyla kullanılmaktadır.</p>
+          <h2>2. Toplanan Veri Kategorileri</h2>
+          <h3>2.1 Web Sitesi Ziyaretçileri</h3>
+          <ul>
+            <li>IP adresi</li>
+            <li>Tarayıcı ve cihaz bilgileri</li>
+            <li>Site kullanım hareketleri</li>
+            <li>Çerez verileri</li>
+          </ul>
+          <h3>2.2 İş Başvurusu Yapan Adaylar</h3>
+          <ul>
+            <li>Kimlik bilgileri (ad, soyad)</li>
+            <li>İletişim bilgileri (telefon, e-posta, adres – paylaşılması halinde)</li>
+            <li>Özgeçmiş (CV) içeriği</li>
+            <li>Eğitim ve mesleki deneyim bilgileri</li>
+            <li>Referans bilgileri</li>
+            <li>Yabancı dil, sertifika ve yetkinlik bilgileri</li>
+            <li>Fotoğraf (yüklenmesi halinde)</li>
+          </ul>
+          <p>Aday tarafından paylaşılması halinde sağlık veya engellilik gibi özel nitelikli kişisel veriler yalnızca açık rıza kapsamında işlenir.</p>
+          <h2>3. Veri Güvenliği</h2>
+          <p><strong>Teknik Tedbirler:</strong> SSL/TLS ile şifreli veri iletimi, güvenli sunucu altyapısı, erişim kontrol ve yetkilendirme sistemleri, güvenlik duvarı ve zararlı yazılım koruma sistemleri, log kayıtlarının tutulması, veri yedekleme prosedürleri.</p>
+          <p><strong>İdari Tedbirler:</strong> Gizlilik ve veri koruma farkındalık çalışmaları, erişim yetkilerinin sınırlandırılması, hizmet sağlayıcılarla gizlilik sözleşmeleri, veri minimizasyonu ilkesi.</p>
+          <h2>4. Veri Paylaşımı</h2>
+          <ul>
+            <li>Uygun pozisyon bulunması halinde işveren firmalar</li>
+            <li>Yetkili kamu kurum ve kuruluşları (kanuni zorunluluk halinde)</li>
+            <li>Bilişim altyapısı, barındırma ve teknik hizmet sağlayıcılar</li>
+          </ul>
+          <h2>5. Yurt Dışı Veri Aktarımı</h2>
+          <p>Yurt dışı iş fırsatları kapsamında kişisel verilerinizin yurt dışındaki işveren firmalara aktarılması yalnızca açık rızanız bulunması halinde gerçekleştirilir.</p>
+          <h2>6. İletişim</h2>
+          <p>Milenyum İnsan Kaynakları Ltd. Şti.<br>Mersis No: 0621123259500001<br>Adres: Mahmutbey Mh. Halkalı Cd. No: 3/11 Bağcılar/İstanbul<br>E-posta: info@milenyumik.com</p>
+        </div>
+        <div class="en">
+          <p>Milenyum İnsan Kaynakları Limited Şirketi ("Company") is committed to protecting the privacy of users visiting our website, candidates applying for positions and our business partners.</p>
+          <h2>1. Scope</h2>
+          <p>This policy applies to website visitors and job applicants. The terms "personal data", "special category personal data" and "processing" are used as defined under KVKK No. 6698.</p>
+          <h2>2. Data Categories Collected</h2>
+          <h3>2.1 Website Visitors</h3>
+          <ul>
+            <li>IP address</li>
+            <li>Browser and device information</li>
+            <li>Site usage data</li>
+            <li>Cookie data</li>
+          </ul>
+          <h3>2.2 Job Applicants</h3>
+          <ul>
+            <li>Identity information (name, surname)</li>
+            <li>Contact information (phone, email, address — if provided)</li>
+            <li>CV content</li>
+            <li>Education and professional experience</li>
+            <li>Reference information</li>
+            <li>Language, certification and competency information</li>
+            <li>Photograph (if uploaded)</li>
+          </ul>
+          <p>Special category personal data such as health or disability information shared by a candidate is processed only on the basis of explicit consent.</p>
+          <h2>3. Data Security</h2>
+          <p><strong>Technical Measures:</strong> SSL/TLS encrypted data transmission, secure server infrastructure, access control and authorisation systems, firewalls and malware protection, log maintenance, data backup procedures.</p>
+          <p><strong>Administrative Measures:</strong> Privacy and data protection awareness activities, access restriction, confidentiality agreements with service providers, data minimisation principles.</p>
+          <h2>4. Data Sharing</h2>
+          <ul>
+            <li>Employer companies where suitable positions are found</li>
+            <li>Authorised public authorities (where legally required)</li>
+            <li>IT infrastructure, hosting and technical service providers</li>
+          </ul>
+          <h2>5. International Data Transfers</h2>
+          <p>The transfer of your personal data to employer companies abroad for international job opportunities is only carried out with your explicit consent.</p>
+          <h2>6. Contact</h2>
+          <p>Milenyum İnsan Kaynakları Ltd. Şti.<br>Mersis No: 0621123259500001<br>Address: Mahmutbey Mh. Halkalı Cd. No: 3/11 Bağcılar/İstanbul<br>Email: info@milenyumik.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-gizlilik -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE: KULLANIM ŞARTLARI
+══════════════════════════════════════ -->
+<div class="page" id="page-kullanim">
+  <div class="ph">
+    <h1><span class="tr">Kullanım Şartları</span><span class="en">Terms of Use</span></h1>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="legal-c">
+        <div class="tr">
+          <p>Bu web sitesine erişim sağlayan tüm kullanıcılar aşağıda belirtilen kullanım şartlarını kabul etmiş sayılır.</p>
+          <h2>1. Amaç</h2>
+          <p>Bu web sitesi, Milenyum İnsan Kaynakları Limited Şirketi tarafından iş arayanlar ile işverenleri bir araya getirmek ve insan kaynakları danışmanlığı hizmetleri sunmak amacıyla hazırlanmıştır.</p>
+          <h2>2. Hizmetlerin Niteliği</h2>
+          <p>Web sitesi üzerinden sunulan hizmetler, iş arayan adaylar ile işverenler arasında iletişim kurulmasına yardımcı olmak amacını taşımaktadır. Milenyum İK iş sözleşmelerinin tarafı değildir.</p>
+          <h2>3. Kullanıcı Sorumluluğu</h2>
+          <p>Kullanıcılar siteye sağladıkları tüm bilgilerin doğru ve güncel olduğunu kabul eder. Yanlış veya yanıltıcı bilgi verilmesinden doğabilecek sonuçlardan kullanıcı sorumludur.</p>
+          <h2>4. Fikri Mülkiyet Hakları</h2>
+          <p>Web sitesinde yer alan tüm içerikler, tasarım, logo, metin ve görseller Milenyum İnsan Kaynakları Ltd. Şti.'ne aittir ve ilgili mevzuat kapsamında korunmaktadır.</p>
+          <h2>5. Yasak Faaliyetler</h2>
+          <ul>
+            <li>Sahte kimlik veya yanıltıcı bilgi kullanılması</li>
+            <li>Site güvenliğini tehdit edecek girişimler</li>
+            <li>Sistemlere izinsiz erişim girişimleri</li>
+          </ul>
+          <h2>6. Hizmetlerde Değişiklik</h2>
+          <p>Milenyum İK, web sitesinde sunulan hizmetleri önceden bildirimde bulunmaksızın değiştirme veya sonlandırma hakkını saklı tutar.</p>
+          <h2>7. Sorumluluk Sınırı</h2>
+          <p>Milenyum İK, web sitesi üzerinden kurulan iş ilişkilerinden doğabilecek uyuşmazlıklardan sorumlu değildir.</p>
+          <h2>8. İletişim</h2>
+          <p>Milenyum İnsan Kaynakları Ltd. Şti.<br>Mersis No: 0621123259500001<br>Adres: Mahmutbey Mh. Halkalı Cd. No: 3/11 Bağcılar/İstanbul<br>E-posta: info@milenyumik.com</p>
+        </div>
+        <div class="en">
+          <p>All users accessing this website are deemed to have accepted the terms of use set out below.</p>
+          <h2>1. Purpose</h2>
+          <p>This website has been prepared by Milenyum İnsan Kaynakları Limited Şirketi to connect job seekers with employers and to provide human resources consulting services.</p>
+          <h2>2. Nature of Services</h2>
+          <p>The services provided through the website are intended to facilitate communication between job-seeking candidates and employers. Milenyum HR is not a party to employment contracts.</p>
+          <h2>3. User Responsibility</h2>
+          <p>Users accept that all information they provide to the site is accurate and up to date. Users are responsible for any consequences arising from the provision of false or misleading information.</p>
+          <h2>4. Intellectual Property Rights</h2>
+          <p>All content, designs, logos, texts and visuals on the website belong to Milenyum İnsan Kaynakları Ltd. Şti. and are protected under applicable legislation.</p>
+          <h2>5. Prohibited Activities</h2>
+          <ul>
+            <li>Use of false identity or misleading information</li>
+            <li>Attempts to threaten site security</li>
+            <li>Unauthorised access attempts to systems</li>
+          </ul>
+          <h2>6. Changes to Services</h2>
+          <p>Milenyum HR reserves the right to modify or discontinue services offered on the website without prior notice.</p>
+          <h2>7. Limitation of Liability</h2>
+          <p>Milenyum HR is not responsible for disputes arising from employment relationships established through the website.</p>
+          <h2>8. Contact</h2>
+          <p>Milenyum İnsan Kaynakları Ltd. Şti.<br>Mersis No: 0621123259500001<br>Address: Mahmutbey Mh. Halkalı Cd. No: 3/11 Bağcılar/İstanbul<br>Email: info@milenyumik.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-kullanim -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE: ETİK İLKELER
+══════════════════════════════════════ -->
+<div class="page" id="page-etik">
+  <div class="ph">
+    <h1><span class="tr">Milenyum İK Etik İlkeleri</span><span class="en">Milenyum HR Ethical Principles</span></h1>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="legal-c">
+        <div class="tr">
+          <p>Milenyum İnsan Kaynakları Limited Şirketi, işe yerleştirme ve insan kaynakları faaliyetlerini yürütürken aşağıdaki etik ilkelere bağlı kalmayı taahhüt eder.</p>
+          <h2>1. Tarafsızlık</h2>
+          <p>Adaylar yalnızca mesleki nitelikleri ve pozisyon uygunluğu temelinde değerlendirilir.</p>
+          <h2>2. Ayrımcılık Yasağı</h2>
+          <p>İşe yerleştirme süreçlerinde hiçbir aday; cinsiyet, yaş, dil, din, ırk, etnik köken gibi nedenlerle ayrımcılığa maruz bırakılmaz.</p>
+          <h2>3. Adaylardan Ücret Alınmaması</h2>
+          <p>İşe yerleştirme faaliyetleri kapsamında iş arayan adaylardan herhangi bir ücret talep edilmez.</p>
+          <h2>4. Gizlilik</h2>
+          <p>Adaylara ve işverenlere ait bilgiler gizlilik prensibi doğrultusunda korunur.</p>
+          <h2>5. Şeffaflık</h2>
+          <p>Adaylar başvuru süreçleri hakkında mümkün olan en açık şekilde bilgilendirilir.</p>
+          <h2>6. Mevzuata Uyum</h2>
+          <p>Şirket faaliyetlerini Türkiye İş Kurumu mevzuatı ve ilgili çalışma mevzuatı kapsamında yürütür.</p>
+        </div>
+        <div class="en">
+          <p>Milenyum İnsan Kaynakları Limited Şirketi is committed to upholding the following ethical principles in the conduct of its placement and human resources activities.</p>
+          <h2>1. Impartiality</h2>
+          <p>Candidates are evaluated solely on the basis of their professional qualifications and suitability for the position.</p>
+          <h2>2. Non-Discrimination</h2>
+          <p>In placement processes, no candidate is subjected to discrimination on grounds such as gender, age, language, religion, race or ethnic origin.</p>
+          <h2>3. No Fees from Candidates</h2>
+          <p>No fees are charged to job-seeking candidates in connection with placement activities.</p>
+          <h2>4. Confidentiality</h2>
+          <p>Information relating to candidates and employers is protected in accordance with the principle of confidentiality.</p>
+          <h2>5. Transparency</h2>
+          <p>Candidates are informed about application processes in the most transparent manner possible.</p>
+          <h2>6. Regulatory Compliance</h2>
+          <p>The Company conducts its activities within the framework of Turkish Employment Agency legislation and applicable labour regulations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-etik -->
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-g">
+      <!-- Brand -->
       <div class="footer-brand">
-        <span class="logo-m" style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;display:block;margin-bottom:4px">MİLENYUM</span>
-        <span class="logo-s" style="display:block;margin-bottom:14px">İnsan Kaynakları</span>
-        <p class="tr">Ulusal ve uluslararası ölçekte stratejik işe alım ve iş gücü yönetimi danışmanlığı.</p>
-        <p class="en" style="display:none">Strategic recruitment and workforce management consulting at national and international scale.</p>
+        <span style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;display:block;font-weight:700;margin-bottom:2px">MİLENYUM</span>
+        <span style="font-size:9px;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:14px">İnsan Kaynakları</span>
+        <p class="tr">Uluslararası projeler için stratejik iş gücü planlama, teknik işe alım ve küresel mobilite danışmanlığı.</p>
+        <p class="en">Strategic workforce planning, technical recruitment and global mobility consulting for international projects.</p>
+        <div style="margin-top:16px">
+          <a href="https://www.linkedin.com/company/milenyum-ik" target="_blank" rel="noopener" class="li-link">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <p style="font-size:11px;color:rgba(255,255,255,.28);margin-top:10px">Mersis No: 0621123259500001</p>
       </div>
+
+      <!-- Pages -->
       <div class="footer-col">
         <h4><span class="tr">Sayfalar</span><span class="en">Pages</span></h4>
         <ul>
-          <li><span onclick="nav('home')" class="tr">Ana Sayfa</span><span onclick="nav('home')" class="en" style="display:none">Home</span></li>
-          <li><span onclick="nav('kurumsal')" class="tr">Kurumsal</span><span onclick="nav('kurumsal')" class="en" style="display:none">Corporate</span></li>
-          <li><span onclick="nav('hizmetler')" class="tr">Hizmetlerimiz</span><span onclick="nav('hizmetler')" class="en" style="display:none">Services</span></li>
-          <li><span onclick="nav('kvkk')" class="tr">KVKK</span><span onclick="nav('kvkk')" class="en" style="display:none">Privacy</span></li>
+          <li><span onclick="nav('home')" class="tr">Ana Sayfa</span><span onclick="nav('home')" class="en">Home</span></li>
+          <li><span onclick="nav('kurumsal')" class="tr">Kurumsal</span><span onclick="nav('kurumsal')" class="en">Corporate</span></li>
+          <li><span onclick="nav('isverenler')" class="tr">İşverenler</span><span onclick="nav('isverenler')" class="en">Employers</span></li>
+          <li><span onclick="nav('isarayanlar')" class="tr">İş Arayanlar</span><span onclick="nav('isarayanlar')" class="en">Job Seekers</span></li>
+          <li><span onclick="nav('analizler')" class="tr">Analizler</span><span onclick="nav('analizler')" class="en">Analyses</span></li>
+          <li><span onclick="nav('iletisim')" class="tr">İletişim</span><span onclick="nav('iletisim')" class="en">Contact</span></li>
         </ul>
       </div>
+
+      <!-- Services -->
       <div class="footer-col">
-        <h4><span class="tr">İş Arayan</span><span class="en">Job Seekers</span></h4>
+        <h4><span class="tr">Hizmetler</span><span class="en">Services</span></h4>
         <ul>
-          <li><span onclick="nav('yurtici')" class="tr">Yurt İçi Pozisyonlar</span><span onclick="nav('yurtici')" class="en" style="display:none">Domestic Positions</span></li>
-          <li><span onclick="nav('yurtdisi')" class="tr">Yurt Dışı Pozisyonlar</span><span onclick="nav('yurtdisi')" class="en" style="display:none">International Positions</span></li>
+          <li><span onclick="navTab('kurumsal','tab-hizmetler')" class="tr">İş Gücü Stratejisi</span><span onclick="navTab('kurumsal','tab-hizmetler')" class="en">Workforce Strategy</span></li>
+          <li><span onclick="navTab('kurumsal','tab-hizmetler')" class="tr">Teknik İşe Alım</span><span onclick="navTab('kurumsal','tab-hizmetler')" class="en">Technical Recruitment</span></li>
+          <li><span onclick="navTab('kurumsal','tab-hizmetler')" class="tr">İş Gücü Mobilitesi</span><span onclick="navTab('kurumsal','tab-hizmetler')" class="en">Workforce Mobility</span></li>
+          <li><span onclick="nav('analizler')" class="tr">Küresel Analizler</span><span onclick="nav('analizler')" class="en">Global Analyses</span></li>
         </ul>
       </div>
+
+      <!-- Contact -->
       <div class="footer-col">
         <h4><span class="tr">İletişim</span><span class="en">Contact</span></h4>
         <ul>
-          <li><span>📍 İstanbul, Türkiye</span></li>
-          <li><span>✉️ info@milenyumik.com</span></li>
-          <li><span onclick="nav('iletisim')" class="tr">Bize Ulaşın</span><span onclick="nav('iletisim')" class="en" style="display:none">Contact Us</span></li>
-          <li><span onclick="nav('isveren')" class="tr">İşveren Sayfası</span><span onclick="nav('isveren')" class="en" style="display:none">Employer Page</span></li>
+          <li><span style="cursor:default;color:rgba(255,255,255,.55);font-size:13px;line-height:1.7">📍 Mahmutbey Mh. Halkalı Cd.<br>&nbsp;&nbsp;&nbsp;&nbsp;No: 3/11 Bağcılar/İstanbul</span></li>
+          <li>
+            <a href="mailto:info@milenyumik.com" style="color:rgba(255,255,255,.55);font-size:13.5px;text-decoration:none">
+              ✉️ info@milenyumik.com
+            </a>
+          </li>
         </ul>
       </div>
     </div>
+
+    <!-- Legal links -->
+    <div class="footer-legal">
+      <span class="fl tr" onclick="nav('kvkk')">KVKK Aydınlatma Metni</span>
+      <span class="fl en" onclick="nav('kvkk')">KVKK Privacy Notice</span>
+      <span class="sep">|</span>
+      <span class="fl tr" onclick="nav('cerez')">Çerez Politikası</span>
+      <span class="fl en" onclick="nav('cerez')">Cookie Policy</span>
+      <span class="sep">|</span>
+      <span class="fl tr" onclick="nav('gizlilik')">Gizlilik Politikası</span>
+      <span class="fl en" onclick="nav('gizlilik')">Privacy Policy</span>
+      <span class="sep">|</span>
+      <span class="fl tr" onclick="nav('kullanim')">Kullanım Şartları</span>
+      <span class="fl en" onclick="nav('kullanim')">Terms of Use</span>
+      <span class="sep">|</span>
+      <span class="fl tr" onclick="nav('etik')">Milenyum İK Etik İlkeleri</span>
+      <span class="fl en" onclick="nav('etik')">Milenyum HR Ethical Principles</span>
+    </div>
+
+    <!-- Bottom bar -->
     <div class="footer-bot">
-      <p>© 2025 Milenyum İnsan Kaynakları. <span class="tr">Tüm hakları saklıdır.</span><span class="en">All rights reserved.</span></p>
-      <p><span onclick="nav('kvkk')" style="cursor:pointer;color:rgba(255,255,255,.4)" class="tr">Kişisel Verilerin Korunması</span><span onclick="nav('kvkk')" style="cursor:pointer;color:rgba(255,255,255,.4)" class="en" style="display:none">Privacy Policy</span></p>
+      <p>© 2026 Milenyum İnsan Kaynakları Ltd. Şti. <span class="tr">Tüm hakları saklıdır.</span><span class="en">All rights reserved.</span></p>
+      <a href="https://www.linkedin.com/company/milenyum-ik" target="_blank" rel="noopener" class="li-link">
+        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
     </div>
   </div>
 </footer>
 
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
 <script>
-// ─── DATA ───────────────────────────────────────────────
-const jobsYurtici = [];
-const jobsYurtdisi = [];
+'use strict';
 
-function renderJobs(list, containerId) {
-  const c = document.getElementById(containerId);
-  if(!c) return;
-  const isEn = currentLang === 'en';
-  c.innerHTML = list.map(j => {
-    const title = isEn ? j.en : j.tr;
-    const loc = j.loc || (isEn ? j.loc_en : j.loc_tr);
-    const dept = isEn ? j.dept_en : j.dept_tr;
-    const type = isEn ? j.type_en : j.type_tr;
-    const applyLabel = isEn ? 'Apply →' : 'Başvur →';
-    return `
-    <div class="job-card">
-      <div class="job-info">
-        <h3>${title}</h3>
-        <div class="job-meta">
-          <span class="jtag">📍 ${loc}</span>
-          <span class="jtag">🏢 ${dept}</span>
-          <span class="badge ${j.badge}">${type}</span>
-        </div>
-      </div>
-      <button class="btn btn-primary" style="white-space:nowrap;padding:10px 22px;font-size:13.5px"
-        onclick="applyFor('${j.val}')">${applyLabel}</button>
-    </div>`;
-  }).join('');
-}
-
-// ─── LANGUAGE ────────────────────────────────────────────
+/* ── Language ─────────────────────────────────── */
 let currentLang = 'tr';
 
 function toggleLang() {
-  currentLang = currentLang === 'tr' ? 'en' : 'tr';
+  currentLang = (currentLang === 'tr') ? 'en' : 'tr';
   applyLang();
 }
 
 function applyLang() {
-  const isEn = currentLang === 'en';
+  const isEn = (currentLang === 'en');
   document.body.dataset.lang = currentLang;
-  document.getElementById('langBtn').textContent = isEn ? '🌐 TR' : '🌐 EN';
   document.documentElement.lang = currentLang;
-  // Update <option> text
+  const btn = document.getElementById('langBtn');
+  if (btn) btn.textContent = isEn ? '🌐 TR' : '🌐 EN';
+  // Update <option> text for all selects
   document.querySelectorAll('option[data-tr]').forEach(el => {
     el.textContent = isEn ? el.dataset.en : el.dataset.tr;
   });
-  // Update <optgroup> labels
   document.querySelectorAll('optgroup[data-tr]').forEach(el => {
     el.label = isEn ? el.dataset.en : el.dataset.tr;
   });
-  // Update input/textarea placeholders
   document.querySelectorAll('[data-ph-tr]').forEach(el => {
     el.placeholder = isEn ? el.dataset.phEn : el.dataset.phTr;
   });
-  // Re-render jobs so titles, locations, dept are in correct language
-  renderJobs(jobsYurtici,'jobs-yurtici');
-  renderJobs(jobsYurtdisi,'jobs-yurtdisi');
 }
 
-// ─── NAVIGATION ──────────────────────────────────────────
+/* ── Navigation ───────────────────────────────── */
 let currentPage = 'home';
 
 function nav(pageId) {
-  // hide all
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  // show target
   const target = document.getElementById('page-' + pageId);
-  if(target) {
+  if (target) {
     target.classList.add('active');
     currentPage = pageId;
   }
-  // scroll top
-  window.scrollTo({top:0,behavior:'smooth'});
-  // close mobile menu
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   document.getElementById('mainNav').classList.remove('open');
-  // render jobs if needed
-  if(pageId === 'yurtici') renderJobs(jobsYurtici,'jobs-yurtici');
-  if(pageId === 'yurtdisi') renderJobs(jobsYurtdisi,'jobs-yurtdisi');
-  // update nav active states
-  document.querySelectorAll('.nl').forEach(l => l.classList.remove('active'));
 }
 
+/* Navigate to a page AND show a specific tab */
+function navTab(pageId, tabId) {
+  nav(pageId);
+  showTab(tabId);
+}
 
-// ─── HAMBURGER ───────────────────────────────────────────
+/* Navigate to employers page and pre-select a sector */
+function navSector(sectorKey) {
+  nav('isverenler');
+  const map = {
+    enerji: 'Enerji',
+    altyapi: 'Altyapi_Insaat',
+    sanayi: 'Sanayi_Uretim',
+    saglik: 'Saglik',
+    turizm: 'Turizm_Konaklama'
+  };
+  const val = map[sectorKey];
+  if (!val) return;
+  const sel = document.getElementById('sektorSelect');
+  if (!sel) return;
+  for (let i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].value === val) { sel.selectedIndex = i; break; }
+  }
+}
+
+/* Scroll to the analysis request form within the analizler page */
+function scrollToAnalizForm() {
+  if (currentPage !== 'analizler') nav('analizler');
+  setTimeout(() => {
+    const el = document.getElementById('analiz-form-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 120);
+}
+
+/* ── Tabs (Kurumsal) ──────────────────────────── */
+function showTab(tabId) {
+  const page = document.getElementById('page-kurumsal');
+  if (!page) return;
+  page.querySelectorAll('.tab-c').forEach(t => t.classList.remove('active'));
+  page.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  const tc = document.getElementById(tabId);
+  if (tc) tc.classList.add('active');
+  const btn = document.getElementById('btn-' + tabId);
+  if (btn) btn.classList.add('active');
+}
+
+/* ── Mobile hamburger ─────────────────────────── */
 function toggleMenu() {
   document.getElementById('mainNav').classList.toggle('open');
 }
 
-// ─── FILE UPLOAD ─────────────────────────────────────────
+/* ── File upload ──────────────────────────────── */
 function handleFile(input) {
   const fname = document.getElementById('fname');
-  if(input.files && input.files[0]) {
-    const f = input.files[0];
-    if(f.type !== 'application/pdf'){
-      alert(currentLang==='tr' ? 'Lütfen yalnızca PDF dosyası yükleyin.' : 'Please upload a PDF file only.');
-      input.value = '';
-      fname.style.display = 'none';
-      return;
-    }
-    if(f.size > 10*1024*1024){
-      alert(currentLang==='tr' ? 'Dosya boyutu 10 MB\'ı geçemez.' : 'File size cannot exceed 10 MB.');
-      input.value = '';
-      fname.style.display = 'none';
-      return;
-    }
-    fname.textContent = '✓ ' + f.name;
-    fname.style.display = 'block';
+  if (!input.files || !input.files[0]) return;
+  const f = input.files[0];
+  if (f.type !== 'application/pdf') {
+    alert(currentLang === 'tr'
+      ? 'Lütfen yalnızca PDF dosyası yükleyin.'
+      : 'Please upload a PDF file only.');
+    input.value = '';
+    if (fname) { fname.textContent = ''; fname.style.display = 'none'; }
+    return;
   }
+  if (f.size > 10 * 1024 * 1024) {
+    alert(currentLang === 'tr'
+      ? "Dosya boyutu 10 MB'ı geçemez."
+      : 'File size cannot exceed 10 MB.');
+    input.value = '';
+    if (fname) { fname.textContent = ''; fname.style.display = 'none'; }
+    return;
+  }
+  if (fname) { fname.textContent = '✓ ' + f.name; fname.style.display = 'block'; }
 }
 
-// drag-and-drop visuals
-document.addEventListener('DOMContentLoaded', () => {
-  // Strip legacy inline display:none from .en elements — CSS handles visibility now
+/* ── Form AJAX submission ─────────────────────── */
+function setupForm(formId, successId) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, { method: 'POST', body: data })
+      .then(() => {
+        form.style.display = 'none';
+        const msg = document.getElementById(successId);
+        if (msg) { msg.style.display = 'block'; }
+      })
+      .catch(() => {
+        // Fallback: native submit
+        form.submit();
+      });
+  });
+}
+
+/* ── Init ─────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function () {
+  // Remove any leftover inline display:none from .en elements — CSS handles visibility
   document.querySelectorAll('.en').forEach(el => el.style.removeProperty('display'));
 
+  // File drop zone
   const zone = document.getElementById('fileZone');
-  if(zone){
+  if (zone) {
     zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('over'); });
     zone.addEventListener('dragleave', () => zone.classList.remove('over'));
     zone.addEventListener('drop', () => zone.classList.remove('over'));
   }
 
-  // Init jobs on first load (in case user navigates to those pages)
-  renderJobs(jobsYurtici,'jobs-yurtici');
-  renderJobs(jobsYurtdisi,'jobs-yurtdisi');
+  // Wire up all forms
+  setupForm('cvForm', 'cv-success');
+  setupForm('isverenForm', 'isveren-success');
+  setupForm('contactForm', 'contact-success');
+  setupForm('analizForm', 'analiz-success');
 });
 </script>
 </body>
