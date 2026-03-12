@@ -340,7 +340,7 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
       <p class="tr">Milenyum İnsan Kaynakları, insan kaynağını yalnızca operasyonel bir ihtiyaç olarak değil, maliyet yönetimi, regülasyonlara uyum ve sürdürülebilir operasyonel performansın temel unsurlarından biri olarak ele almaktadır.</p>
       <p class="en">Milenyum Human Resources treats human capital not merely as an operational necessity, but as a core element of cost management, regulatory compliance and sustainable operational performance.</p>
       <div class="hero-btns">
-        <button class="btn btn-primary" onclick="nav('kurumsal')">
+        <button class="btn btn-primary" onclick="navTab('kurumsal', 'tab-hizmetler')">
           <span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span>
         </button>
       </div>
@@ -904,6 +904,21 @@ Before attending the interview, you should have at least one of these applicatio
               <div class="fg">
                 <label><span class="tr">Toplam Deneyim (yıl)</span><span class="en">Total Experience (years)</span></label>
                 <input type="text" name="Deneyim">
+              </div>
+              <div class="fg">
+                <label><span class="tr">Çalışmak İstediğiniz Proje Türü</span><span class="en">Preferred Project Type</span></label>
+                <select name="Proje_Turu" class="tr">
+                  <option value="" disabled selected>Seçiniz</option>
+                  <option value="Yerel projeler">Yerel projeler</option>
+                  <option value="Uluslararası projeler">Uluslararası projeler</option>
+                  <option value="Her ikisi">Her ikisi</option>
+                </select>
+                <select name="Proje_Turu" class="en">
+                  <option value="" disabled selected>Select</option>
+                  <option value="Local projects">Local projects</option>
+                  <option value="International projects">International projects</option>
+                  <option value="Both">Both</option>
+                </select>
               </div>
               <div class="fg">
                 <label><span class="tr">CV (PDF, maks. 10 MB)</span><span class="en">CV (PDF, max. 10 MB)</span> <span class="req">*</span></label>
