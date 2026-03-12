@@ -311,12 +311,6 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
           <span class="tr">ANALİZLER</span><span class="en">ANALYSES</span>
         </button>
       </div>
-      <!-- İLETİŞİM -->
-      <div class="nav-item">
-        <button class="nl" onclick="nav('iletisim')">
-          <span class="tr">İLETİŞİM</span><span class="en">CONTACT</span>
-        </button>
-      </div>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">🌐 EN</button>
     </nav>
     <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menu">
@@ -1217,96 +1211,6 @@ Before attending the interview, you should have at least one of these applicatio
   </div>
 </div><!-- /page-analizler -->
 
-<!-- ══════════════════════════════════════
-     PAGE: İLETİŞİM
-══════════════════════════════════════ -->
-<div class="page" id="page-iletisim">
-  <div class="ph">
-    <h1><span class="tr">İletişim</span><span class="en">Contact</span></h1>
-    <p><span class="tr">Sorularınız için bizimle iletişime geçin</span><span class="en">Get in touch with us for your questions</span></p>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="s-eye" style="display:inline-block;margin-bottom:12px"><span class="tr">İLETİŞİM BİLGİLERİ</span><span class="en">CONTACT INFORMATION</span></div>
-          <h2><span class="tr">Sizinle Konuşmayı Bekliyoruz</span><span class="en">We Look Forward to Speaking with You</span></h2>
-          <p class="tr">Milenyum İnsan Kaynakları ile gerçekleştirilecek iş görüşmeleri çevrim içi olarak yapılmaktadır. Görüşmeler Microsoft Teams veya Zoom üzerinden organize edilir.
-Görüşmeye katılmadan önce bu uygulamalardan birinin cihazınızda hazır bulunması gerekmektedir. Görüşme bağlantısı, iletişim formunda belirttiğiniz e-posta adresine görüşme öncesinde iletilecektir.</p>
-          <p class="en">Meetings conducted with Milenyum Human Resources are held online. Interviews are organized via Microsoft Teams or Zoom.
-
-          <div style="margin-top:24px">
-            <!-- <a href="https://www.linkedin.com/company/milenyum-ik" target="_blank" rel="noopener" class="li-link">
-              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              <span style="color:var(--navy);font-weight:600">LinkedIn — Milenyum İK</span>
-            </a> -->
-          </div>
-        </div>
-        <div>
-          <div class="form-wrap" style="padding:36px 30px">
-            <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:24px">
-              <span class="tr">Mesaj Gönderin</span><span class="en">Send a Message</span>
-            </h3>
-            <div class="success-msg" id="contact-success">
-              <div style="font-size:36px;margin-bottom:10px">✅</div>
-              <h3 style="color:var(--navy);margin-bottom:6px"><span class="tr">Mesajınız Alındı!</span><span class="en">Message Received!</span></h3>
-              <p style="color:var(--gray)"><span class="tr">En kısa sürede dönüş yapacağız.</span><span class="en">We will get back to you shortly.</span></p>
-            </div>
-            <form id="contactForm" action="https://getform.io/f/GETFORM_CONTACT_ID" method="POST">
-              <div class="frow">
-                <div class="fg">
-                  <label><span class="tr">Ad Soyad</span><span class="en">Full Name</span> <span class="req">*</span></label>
-                  <input type="text" name="Ad_Soyad" required>
-                </div>
-                <div class="fg">
-                  <label><span class="tr">Şirket</span><span class="en">Company</span></label>
-                  <input type="text" name="Sirket">
-                </div>
-              </div>
-              <div class="fg">
-                <label>E-posta <span class="req">*</span></label>
-                <input type="email" name="Email" required>
-              </div>
-              <div class="fg">
-                <label><span class="tr">Konu</span><span class="en">Subject</span></label>
-                <select name="Konu">
-                  <option value="Is_Gucu_Planlama" data-tr="İş Gücü Planlama" data-en="Workforce Planning">İş Gücü Planlama</option>
-                  <option value="Teknik_Ise_Alim" data-tr="Teknik İşe Alım" data-en="Technical Recruitment">Teknik İşe Alım</option>
-                  <option value="Mobilite" data-tr="Uluslararası Mobilite" data-en="International Mobility">Uluslararası Mobilite</option>
-                  <option value="Analiz" data-tr="İş Gücü Analizi" data-en="Workforce Analysis">İş Gücü Analizi</option>
-                  <option value="Diger" data-tr="Diğer" data-en="Other">Diğer</option>
-                </select>
-              </div>
-              <div class="fg">
-                <label><span class="tr">Mesajınız</span><span class="en">Your Message</span> <span class="req">*</span></label>
-                <textarea name="Mesaj" required style="min-height:130px"></textarea>
-              </div>
-              <div class="consent-checks">
-                <label class="consent-label">
-                  <input type="checkbox" name="kvkk_onay" required>
-                  <span>
-                    <span class="tr"><span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Aydınlatma Metni</span>'ni okudum ve kabul ediyorum.</span><span class="en">I have read and accept the <span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Privacy Notice</span>.</span>
-                    <span class="req">*</span>
-                  </span>
-                </label>
-                <label class="consent-label">
-                  <input type="checkbox" name="gizlilik_onay" required>
-                  <span>
-                    <span class="tr"><span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Gizlilik Politikası</span>'nı kabul ediyorum.</span><span class="en">I accept the <span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Privacy Policy</span>.</span>
-                    <span class="req">*</span>
-                  </span>
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
-                <span class="tr">Gönder →</span><span class="en">Send →</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!-- /page-iletisim -->
 
 <!-- ══════════════════════════════════════
      PAGE: KVKK
