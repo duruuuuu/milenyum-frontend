@@ -217,7 +217,7 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 @media(max-width:768px){
   .hero{padding:60px 20px 70px}
   .section{padding:60px 0}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
   .frow{grid-template-columns:1fr}
   .form-wrap{padding:30px 22px}
   .ph{padding:40px 20px}
@@ -226,7 +226,13 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
   .form-wrap{max-width:100%}
 }
 @media(max-width:480px){
-  .container{padding:0 16px}
+  .container{padding:0 14px}
+  .hdr-in{padding:0 14px}
+  .hero{padding:44px 16px 52px}
+  .hero p{font-size:14px}
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .hero-btns .btn{width:100%;justify-content:center}
+  .section{padding:40px 0}
   .footer-g{grid-template-columns:1fr}
   .grid-3,.grid-2{grid-template-columns:1fr}
   .stats-inner{gap:16px;flex-wrap:wrap;justify-content:center}
@@ -240,6 +246,10 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
   .acc summary{padding:16px 18px;font-size:14px}
   .acc-body{padding:4px 18px 20px}
   .btn{padding:11px 22px;font-size:14px}
+  .form-wrap{padding:20px 14px}
+  .ph{padding:28px 16px}
+  .frow{gap:12px}
+  .lang-btn{padding:5px 10px;font-size:12px}
 }
 </style>
 </head>
