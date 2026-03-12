@@ -107,6 +107,10 @@ textarea{resize:vertical;min-height:110px}
 .file-zone{border:2px dashed var(--border);border-radius:8px;padding:30px;text-align:center;cursor:pointer;transition:var(--tr);position:relative}
 .file-zone:hover,.file-zone.over{border-color:var(--gold);background:rgba(201,164,71,.04)}
 .file-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;border:none;padding:0}
+input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:none;background:none;box-shadow:none;flex-shrink:0;accent-color:var(--navy);cursor:pointer}
+.consent-checks{margin-bottom:18px;display:flex;flex-direction:column;gap:10px}
+.consent-label{display:flex;align-items:flex-start;gap:10px;font-size:13px;font-weight:500;color:var(--dark);cursor:pointer;line-height:1.6}
+.consent-label input[type=checkbox]{margin-top:3px;width:15px;height:15px}
 .file-zone .fz-icon{font-size:36px;margin-bottom:10px}
 .file-zone p{font-size:13.5px;color:var(--gray)}
 .file-zone strong{color:var(--navy)}
@@ -799,6 +803,22 @@ textarea{resize:vertical;min-height:110px}
                 <label><span class="tr">Mesajınız</span><span class="en">Your Message</span> <span class="req">*</span></label>
                 <textarea name="Mesaj" required style="min-height:130px"></textarea>
               </div>
+              <div class="consent-checks">
+                <label class="consent-label">
+                  <input type="checkbox" name="kvkk_onay" required>
+                  <span>
+                    <span class="tr"><span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Aydınlatma Metni</span>'ni okudum ve kabul ediyorum.</span><span class="en">I have read and accept the <span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Privacy Notice</span>.</span>
+                    <span class="req">*</span>
+                  </span>
+                </label>
+                <label class="consent-label">
+                  <input type="checkbox" name="gizlilik_onay" required>
+                  <span>
+                    <span class="tr"><span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Gizlilik Politikası</span>'nı kabul ediyorum.</span><span class="en">I accept the <span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Privacy Policy</span>.</span>
+                    <span class="req">*</span>
+                  </span>
+                </label>
+              </div>
               <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
                 <span class="tr">Gönder →</span><span class="en">Send →</span>
               </button>
@@ -897,12 +917,21 @@ textarea{resize:vertical;min-height:110px}
                 <label><span class="tr">Ek Bilgi</span><span class="en">Additional Information</span></label>
                 <textarea name="Ek_Bilgi" style="min-height:90px"></textarea>
               </div>
-              <div style="background:var(--light);border-radius:8px;padding:14px;margin-bottom:20px;font-size:12.5px;color:var(--gray);line-height:1.8">
-                <span class="tr">Başvuruyu göndererek </span><span class="en">By submitting you confirm you have read the </span>
-                <span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">
-                  <span class="tr">KVKK Aydınlatma Metni</span><span class="en">KVKK Privacy Notice</span>
-                </span>
-                <span class="tr">'ni okuduğunuzu beyan etmiş olursunuz.</span><span class="en">.</span>
+              <div class="consent-checks">
+                <label class="consent-label">
+                  <input type="checkbox" name="kvkk_onay" required>
+                  <span>
+                    <span class="tr"><span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Aydınlatma Metni</span>'ni okudum ve kabul ediyorum.</span><span class="en">I have read and accept the <span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Privacy Notice</span>.</span>
+                    <span class="req">*</span>
+                  </span>
+                </label>
+                <label class="consent-label">
+                  <input type="checkbox" name="gizlilik_onay" required>
+                  <span>
+                    <span class="tr"><span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Gizlilik Politikası</span>'nı kabul ediyorum.</span><span class="en">I accept the <span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Privacy Policy</span>.</span>
+                    <span class="req">*</span>
+                  </span>
+                </label>
               </div>
               <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
                 <span class="tr">Başvuruyu Gönder →</span><span class="en">Submit Application →</span>
@@ -1141,6 +1170,22 @@ textarea{resize:vertical;min-height:110px}
               <label><span class="tr">Danışmanlık talebinizi kısaca yazınız</span><span class="en">Briefly describe your consulting request</span> <span class="req">*</span></label>
               <textarea name="Talep" required style="min-height:150px"></textarea>
             </div>
+            <div class="consent-checks">
+              <label class="consent-label">
+                <input type="checkbox" name="kvkk_onay" required>
+                <span>
+                  <span class="tr"><span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Aydınlatma Metni</span>'ni okudum ve kabul ediyorum.</span><span class="en">I have read and accept the <span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Privacy Notice</span>.</span>
+                  <span class="req">*</span>
+                </span>
+              </label>
+              <label class="consent-label">
+                <input type="checkbox" name="gizlilik_onay" required>
+                <span>
+                  <span class="tr"><span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Gizlilik Politikası</span>'nı kabul ediyorum.</span><span class="en">I accept the <span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Privacy Policy</span>.</span>
+                  <span class="req">*</span>
+                </span>
+              </label>
+            </div>
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
               <span class="tr">Talebi Gönder →</span><span class="en">Submit Request →</span>
             </button>
@@ -1257,6 +1302,22 @@ textarea{resize:vertical;min-height:110px}
               <div class="fg">
                 <label><span class="tr">Mesajınız</span><span class="en">Your Message</span> <span class="req">*</span></label>
                 <textarea name="Mesaj" required style="min-height:130px"></textarea>
+              </div>
+              <div class="consent-checks">
+                <label class="consent-label">
+                  <input type="checkbox" name="kvkk_onay" required>
+                  <span>
+                    <span class="tr"><span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Aydınlatma Metni</span>'ni okudum ve kabul ediyorum.</span><span class="en">I have read and accept the <span onclick="nav('kvkk')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">KVKK Privacy Notice</span>.</span>
+                    <span class="req">*</span>
+                  </span>
+                </label>
+                <label class="consent-label">
+                  <input type="checkbox" name="gizlilik_onay" required>
+                  <span>
+                    <span class="tr"><span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Gizlilik Politikası</span>'nı kabul ediyorum.</span><span class="en">I accept the <span onclick="nav('gizlilik')" style="color:var(--navy);cursor:pointer;font-weight:600;text-decoration:underline">Privacy Policy</span>.</span>
+                    <span class="req">*</span>
+                  </span>
+                </label>
               </div>
               <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">
                 <span class="tr">Gönder →</span><span class="en">Send →</span>
