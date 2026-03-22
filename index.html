@@ -46,7 +46,7 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;z-index:0}
 .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,55,.88) 0%,rgba(13,33,55,.65) 100%);z-index:1;pointer-events:none}
 .hero-c{position:relative;max-width:760px;margin:0 auto;z-index:2}
-.eyebrow{display:inline-block;background:rgba(201,164,71,.15);color:var(--gold);border:1px solid rgba(201,164,71,.35);padding:5px 18px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px}
+.eyebrow{display:inline-block;background:rgba(201,164,71,.15);color:var(--gold);border:1px solid rgba(201,164,71,.35);padding:6px 20px;border-radius:20px;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
 .hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,56px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:22px}
 .hero h1 span{color:var(--gold)}
 .hero p{font-size:16px;color:rgba(255,255,255,.78);max-width:none;margin:0 0 16px;line-height:1.9}
@@ -78,7 +78,7 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 
 /* ── PAGE HEADER ── */
 .ph{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:55px 24px;text-align:center}
-.ph h1{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,44px);font-weight:700;color:#fff;margin-bottom:12px}
+.ph h1{font-family:'Playfair Display',serif;font-size:clamp(16px,1vw,30px);font-weight:700;color:#fff;margin-bottom:12px}
 .ph p{font-size:15.5px;color:rgba(255,255,255,.72);max-width:640px;margin:0 auto}
 
 /* ── CARDS ── */
@@ -261,8 +261,8 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 
 
 /* ── SECTION VISUAL ── */
-.section-visual{overflow:hidden;height:380px}
-.section-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.section-visual{overflow:hidden;height:500px}
+.section-visual img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .section-visual-ph{width:100%;height:100%;background:var(--light);border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:13px;font-weight:500;letter-spacing:.5px}
 
 /* ── SECTOR GRID ── */
@@ -286,9 +286,9 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
   .sector-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:600px){
-  .hero{min-height:320px}
+  .hero{min-height:500px}
   .sector-grid{grid-template-columns:repeat(2,1fr)}
-  .section-visual{height:240px}
+  .section-visual{height:300px}
 }
 </style>
 </head>
@@ -365,21 +365,21 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 
   <!-- Hero -->
   <div class="hero">
-    <img class="hero-bg-img" src="Main_Page_1.png" alt="Milenyum İnsan Kaynakları">
+    <img class="hero-bg-img" src="maincollage.jpeg" alt="Milenyum İnsan Kaynakları">
     <div class="hero-c">
       <div class="eyebrow">
         <span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span>
         <span class="en">Strategic Human Resources Consulting</span>
       </div>
       <h1 class="tr">Doğru Strateji<br>Doğru Yetenek<br><span>Sürdürülebilir Performans</span></h1>
-      <h1 class="en">Right Strategy<br>Right Talent<br><span>Sustainable Performance</span></h1>
+      <h1 class="en">Right Strategy, Right Talent<br><span>Sustainable Performance</span></h1>
       <p class="tr">Organizasyonlar için iş gücü planlama, teknik işe alım ve uluslararası iş gücü mobilitesi çözümleri.</p>
       <p class="en">Workforce planning, technical recruitment and international workforce mobility solutions for organisations.</p>
-      <div class="hero-btns">
+      <!-- <div class="hero-btns">
         <button class="btn btn-primary" onclick="nav('hizmetler')">
           <span class="tr">Hizmetlerimizi Keşfedin</span><span class="en">Explore Our Services</span>
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -429,7 +429,7 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 
   <!-- Visual between services and sectors — replace with <img> -->
   <div class="section-visual">
-    <img src="consultancy_1.png" alt="Milenyum İnsan Kaynakları">
+    <img src="SOLUTIONS.jpg" alt="Milenyum İnsan Kaynakları">
   </div>
 
   <!-- SEKTÖRLERİ KEŞFEDİN -->
@@ -455,7 +455,7 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
         </div>
         <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
           <!-- Replace placeholder below with: <img class="sector-img" src="industry.png" alt="Sanayi"> -->
-          <img class="sector-img" src="industry.png" alt="Sanayi">
+          <img class="sector-img" src="sanayi.jpeg" alt="Sanayi">
           <div class="sector-label"><span class="tr">Sanayi</span><span class="en">Industry</span></div>
         </div>
         <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
@@ -465,8 +465,8 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
         </div>
         <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
           <!-- Replace placeholder below with: <img class="sector-img" src="housekeeping.png" alt="Turizm"> -->
-          <img class="sector-img" src="railway.png" alt="Demiryolu">
-          <div class="sector-label"><span class="tr">Demiryolu</span><span class="en">Railway</span></div>
+          <img class="sector-img" src="Housekeeping_1.png" alt="Turizm">
+          <div class="sector-label"><span class="tr">Turizm</span><span class="en">Tourism</span></div>
         </div>
       </div>
     </div>
@@ -1743,7 +1743,7 @@ Before attending the interview, you should have at least one of these applicatio
           <span class="en">No Open Positions at This Time</span>
         </h2>
         <p style="color:var(--gray);font-size:15px;line-height:1.9;margin-bottom:32px">
-          <span class="tr">Şu anda ilan edilmiş açık bir pozisyonumuz bulunmamaktadır. Yeni pozisyonlardan haberdar olmak için başvurunuzu bırakabilirsiniz; uygun bir fırsat çıktığında sizinle iletişime geçeriz.</span>
+          <span class="tr">Şu an için açık bir pozisyonumuz bulunmamaktadır. Ancak, başvurunuzu iletmeniz halinde yeni fırsatlar oluştuğunda sizinle iletişime geçmekten memnuniyet duyarız.</span>
           <span class="en">There are currently no open positions listed. You can leave your application and we will get in touch when a suitable opportunity arises.</span>
         </p>
         <button class="btn btn-primary" onclick="nav('isarayanlar')">
@@ -1857,9 +1857,8 @@ Before attending the interview, you should have at least one of these applicatio
   <a href="https://www.iskur.gov.tr/" target="_blank" rel="noopener" style="flex-shrink:0;margin-top:2px"><img src="iskurlogo.png" alt="İŞKUR Özel İstihdam Bürosu" style="height:32px;width:auto;display:block"></a>
   <div style="font-size:11px;color:rgba(0,0,0,.45);line-height:1.8">
     <span>Milenyum İnsan Kaynakları Ltd. Şti. olarak Türkiye İş Kurumu'ndan (İŞKUR) Özel İstihdam Bürosu faaliyet izni için başvuru sürecimiz devam etmektedir.</span><br>
-    <span>4904 sayılı Türkiye İş Kurumu Kanunu uyarınca iş arayanlardan herhangi bir ücret alınması yasaktır.</span><br>
-    <span>Bilgi için: Türkiye İş Kurumu İstanbul İl Müdürlüğü Tel: 0 212 249 29 87</span><br>
-    <span>Başakşehir Hizmet Merkezi Tel: 0 212 407 07 98</span>
+    <strong>4904 sayılı Türkiye İş Kurumu Kanunu uyarınca iş arayanlardan herhangi bir ücret alınması yasaktır.</strong><br>
+    <span>Bilgi için: <a href="https://www.iskur.gov.tr/" target="_blank" rel="noopener">https://www.iskur.gov.tr/</a> veya İŞKUR İstanbul İl Müdürlüğü Tel: 0 212 249 29 87 / Başakşehir Hizmet Merkezi Tel: 0 212 407 07 98</span><br>
   </div>
 </div>
 
