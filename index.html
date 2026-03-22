@@ -42,9 +42,10 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 .page.active{display:block}
 
 /* ── HERO ── */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e4080 100%);padding:0;text-align:center;position:relative;overflow:hidden;min-height:580px;display:flex;align-items:stretch}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,164,71,.1) 0%,transparent 65%);pointer-events:none}
-.hero-c{position:relative;max-width:860px;margin:0 auto}
+.hero{background:var(--navy);padding:100px 24px 110px;text-align:center;position:relative;overflow:hidden;min-height:580px;display:flex;align-items:center}
+.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;z-index:0}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,55,.88) 0%,rgba(13,33,55,.65) 100%);z-index:1;pointer-events:none}
+.hero-c{position:relative;max-width:760px;margin:0 auto;z-index:2}
 .eyebrow{display:inline-block;background:rgba(201,164,71,.15);color:var(--gold);border:1px solid rgba(201,164,71,.35);padding:5px 18px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px}
 .hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,56px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:22px}
 .hero h1 span{color:var(--gold)}
@@ -257,16 +258,7 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
   .lang-btn{padding:5px 10px;font-size:12px}
 }
 
-/* ── HERO SPLIT ── */
-.hero-split{display:flex;align-items:stretch;width:100%;gap:0;max-width:none;margin:0}
-.hero-text{flex:0 0 50%;display:flex;flex-direction:column;justify-content:center;padding:80px 56px 80px max(24px,calc((100vw - 1200px)/2 + 24px));text-align:left;position:relative;z-index:2}
-.hero-text .eyebrow{display:inline-block}
-.hero-text h1{text-align:left}
-.hero-text p{max-width:none;margin:0 0 16px;text-align:left}
-.hero-text .hero-btns{justify-content:flex-start}
-.hero-img{flex:0 0 calc(50% + 100px);margin-left:-100px;position:relative;overflow:hidden;z-index:1}
-.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--navy) 0%,var(--navy) 12%,rgba(13,33,55,.5) 40%,transparent 65%);pointer-events:none;z-index:1}
-.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:0}
+
 
 /* ── SECTION VISUAL ── */
 .section-visual{overflow:hidden;height:380px}
@@ -290,16 +282,11 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 .career-cta .hero-btns{margin-top:0;justify-content:center}
 
 @media(max-width:960px){
-  .hero{min-height:auto;display:block}
-  .hero-split{flex-direction:column}
-  .hero-text{flex:none;width:100%;padding:56px 24px 48px;text-align:center}
-  .hero-text h1,.hero-text p{text-align:center}
-  .hero-text .hero-btns{justify-content:center}
-  .hero-img{flex:none;width:100%;height:320px;position:relative}
+  .hero{min-height:420px}
   .sector-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:600px){
-  .hero-img{height:220px}
+  .hero{min-height:320px}
   .sector-grid{grid-template-columns:repeat(2,1fr)}
   .section-visual{height:240px}
 }
@@ -378,37 +365,28 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 
   <!-- Hero -->
   <div class="hero">
-    <div class="hero-split">
-      <div class="hero-text">
-        <div class="eyebrow">
-          <span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span>
-          <span class="en">Strategic Human Resources Consulting</span>
-        </div>
-        <h1 class="tr">Doğru Strateji | Doğru Yetenek |<br><span>Sürdürülebilir Performans</span></h1>
-        <h1 class="en">Right Strategy | Right Talent |<br><span>Sustainable Performance</span></h1>
-        <p class="tr">Organizasyonlar için iş gücü planlama, teknik işe alım ve uluslararası iş gücü mobilitesi çözümleri.</p>
-        <p class="en">Workforce planning, technical recruitment and international workforce mobility solutions for organisations.</p>
-        <div class="hero-btns">
-          <button class="btn btn-primary" onclick="nav('hizmetler')">
-            <span class="tr">Hizmetlerimizi Keşfedin</span><span class="en">Explore Our Services</span>
-          </button>
-        </div>
+    <img class="hero-bg-img" src="Main_Page_1.png" alt="Milenyum İnsan Kaynakları">
+    <div class="hero-c">
+      <div class="eyebrow">
+        <span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span>
+        <span class="en">Strategic Human Resources Consulting</span>
       </div>
-      <div class="hero-img">
-        <!-- Replace the placeholder div below with: <img src="your-image.png" alt="..."> -->
-        <!-- <div class="hero-img-ph">
-          <span class="tr">Görsel Eklenecek</span>
-          <span class="en">Image Placeholder</span>
-        </div> -->
-        <img src="Main_Page_1.png" alt="Milenyum İnsan Kaynakları">
+      <h1 class="tr">Doğru Strateji<br>Doğru Yetenek<br><span>Sürdürülebilir Performans</span></h1>
+      <h1 class="en">Right Strategy<br>Right Talent<br><span>Sustainable Performance</span></h1>
+      <p class="tr">Organizasyonlar için iş gücü planlama, teknik işe alım ve uluslararası iş gücü mobilitesi çözümleri.</p>
+      <p class="en">Workforce planning, technical recruitment and international workforce mobility solutions for organisations.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="nav('hizmetler')">
+          <span class="tr">Hizmetlerimizi Keşfedin</span><span class="en">Explore Our Services</span>
+        </button>
       </div>
     </div>
   </div>
 
   <!-- Visual between hero and services — replace with <img> -->
-  <div class="section-visual">
+  <!-- <div class="section-visual">
     <img src="consultancy_1.png" alt="Milenyum İnsan Kaynakları">
-  </div>
+  </div> -->
 
   <!-- HİZMETLERİMİZİ KEŞFEDİN -->
   <div class="section">
@@ -451,7 +429,7 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 
   <!-- Visual between services and sectors — replace with <img> -->
   <div class="section-visual">
-    <img src="production.png" alt="Milenyum İnsan Kaynakları">
+    <img src="consultancy_1.png" alt="Milenyum İnsan Kaynakları">
   </div>
 
   <!-- SEKTÖRLERİ KEŞFEDİN -->
