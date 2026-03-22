@@ -42,13 +42,13 @@ body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;overflow-x
 .page.active{display:block}
 
 /* ── HERO ── */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e4080 100%);padding:90px 24px 100px;text-align:center;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e4080 100%);padding:0;text-align:center;position:relative;overflow:hidden;min-height:580px;display:flex;align-items:stretch}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,164,71,.1) 0%,transparent 65%);pointer-events:none}
 .hero-c{position:relative;max-width:860px;margin:0 auto}
 .eyebrow{display:inline-block;background:rgba(201,164,71,.15);color:var(--gold);border:1px solid rgba(201,164,71,.35);padding:5px 18px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:22px}
 .hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,56px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:22px}
 .hero h1 span{color:var(--gold)}
-.hero p{font-size:16px;color:rgba(255,255,255,.78);max-width:720px;margin:0 auto 16px;line-height:1.9}
+.hero p{font-size:16px;color:rgba(255,255,255,.78);max-width:none;margin:0 0 16px;line-height:1.9}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
 
 /* ── BUTTONS ── */
@@ -256,6 +256,53 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
   .frow{gap:12px}
   .lang-btn{padding:5px 10px;font-size:12px}
 }
+
+/* ── HERO SPLIT ── */
+.hero-split{display:flex;align-items:stretch;width:100%;gap:0;max-width:none;margin:0}
+.hero-text{flex:0 0 50%;display:flex;flex-direction:column;justify-content:center;padding:80px 56px 80px max(24px,calc((100vw - 1200px)/2 + 24px));text-align:left;position:relative;z-index:2}
+.hero-text .eyebrow{display:inline-block}
+.hero-text h1{text-align:left}
+.hero-text p{max-width:none;margin:0 0 16px;text-align:left}
+.hero-text .hero-btns{justify-content:flex-start}
+.hero-img{flex:0 0 calc(50% + 100px);margin-left:-100px;position:relative;overflow:hidden;z-index:1}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--navy) 0%,var(--navy) 12%,rgba(13,33,55,.5) 40%,transparent 65%);pointer-events:none;z-index:1}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:0}
+
+/* ── SECTION VISUAL ── */
+.section-visual{overflow:hidden;height:380px}
+.section-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.section-visual-ph{width:100%;height:100%;background:var(--light);border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:13px;font-weight:500;letter-spacing:.5px}
+
+/* ── SECTOR GRID ── */
+.sector-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.sector-card{border-radius:var(--r);overflow:hidden;cursor:pointer;transition:var(--tr);box-shadow:var(--shadow);position:relative;background:var(--light)}
+.sector-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-h)}
+.sector-img{width:100%;height:180px;object-fit:cover;object-position:center;display:block}
+.sector-img-ph{width:100%;aspect-ratio:3/2;background:var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:12px;text-align:center;padding:12px}
+.sector-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,33,55,.95) 0%,rgba(13,33,55,.3) 60%,transparent 100%);padding:24px 14px 12px;color:#fff;font-weight:700;font-size:13px;line-height:1.3}
+
+/* ── CAREER CTA ── */
+.career-cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:90px 24px;text-align:center;position:relative;overflow:hidden}
+.career-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(201,164,71,.12) 0%,transparent 65%);pointer-events:none}
+.career-cta-inner{position:relative;max-width:720px;margin:0 auto}
+.career-cta h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);color:#fff;margin-bottom:20px;line-height:1.3}
+.career-cta p{font-size:16px;color:rgba(255,255,255,.78);margin-bottom:36px;line-height:1.9}
+.career-cta .hero-btns{margin-top:0;justify-content:center}
+
+@media(max-width:960px){
+  .hero{min-height:auto;display:block}
+  .hero-split{flex-direction:column}
+  .hero-text{flex:none;width:100%;padding:56px 24px 48px;text-align:center}
+  .hero-text h1,.hero-text p{text-align:center}
+  .hero-text .hero-btns{justify-content:center}
+  .hero-img{flex:none;width:100%;height:320px;position:relative}
+  .sector-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  .hero-img{height:220px}
+  .sector-grid{grid-template-columns:repeat(2,1fr)}
+  .section-visual{height:240px}
+}
 </style>
 </head>
 <body data-lang="tr">
@@ -331,34 +378,43 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
 
   <!-- Hero -->
   <div class="hero">
-    <div class="hero-c">
-      <div class="eyebrow">
-        <span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span>
-        <span class="en">Strategic Human Resources Consulting</span>
+    <div class="hero-split">
+      <div class="hero-text">
+        <div class="eyebrow">
+          <span class="tr">Stratejik İnsan Kaynakları Danışmanlığı</span>
+          <span class="en">Strategic Human Resources Consulting</span>
+        </div>
+        <h1 class="tr">Doğru Strateji | Doğru Yetenek |<br><span>Sürdürülebilir Performans</span></h1>
+        <h1 class="en">Right Strategy | Right Talent |<br><span>Sustainable Performance</span></h1>
+        <p class="tr">Organizasyonlar için iş gücü planlama, teknik işe alım ve uluslararası iş gücü mobilitesi çözümleri.</p>
+        <p class="en">Workforce planning, technical recruitment and international workforce mobility solutions for organisations.</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" onclick="nav('hizmetler')">
+            <span class="tr">Hizmetlerimizi Keşfedin</span><span class="en">Explore Our Services</span>
+          </button>
+        </div>
       </div>
-      <h1 class="tr">Uluslararası Projeler İçin<br><span>Stratejik İş Gücü Çözümleri</span></h1>
-      <h1 class="en">Strategic Workforce Solutions<br><span>for International Projects</span></h1>
-      <p class="tr">Milenyum İnsan Kaynakları, yerel ve uluslararası faaliyet gösteren şirketlere stratejik iş gücü planlama, teknik işe alım ve iş gücü mobilitesi alanlarında danışmanlık hizmetleri sunar.</p>
-      <p class="en">Milenyum Human Resources provides consulting services to companies operating in both local and international markets in the areas of strategic workforce planning, technical recruitment, and workforce mobility.</p>
-      <p class="tr">Yerel ve küresel iş gücü piyasalarına ilişkin veri temelli analizler ve stratejik değerlendirmeler üreterek organizasyonların doğru insan kaynağına ulaşmasına destek olur.</p>
-      <p class="en">It supports qualified candidates seeking roles in international projects to access career opportunities aligned with their professional experience and competencies.</p>
-      <p class="tr">Yerel ve uluslararası projelerde görev almak isteyen nitelikli profesyonellerin, mesleki deneyimleri ve yetkinlikleri ile uyumlu kariyer fırsatlarına erişmesine katkı sağlar.</p>
-      <p class="en">By producing data-driven analyses and strategic assessments of local and global labour markets, it supports organizations in accessing the right talent. The company also supports qualified professionals seeking opportunities in local and international projects by helping them connect with career opportunities aligned with their professional experience and competencies.</p>
-      <p class="tr">Milenyum İnsan Kaynakları, insan kaynağını yalnızca operasyonel bir ihtiyaç olarak değil; maliyet yönetimi, regülasyonlara uyum ve sürdürülebilir operasyonel performansın temel unsurlarından biri olarak ele almaktadır.</p>
-      <p class="en">Milenyum Human Resources views human capital not merely as an operational requirement, but as a fundamental element of cost management, regulatory compliance, and sustainable operational performance.</p>
-      <div class="hero-btns">
-        <!-- <button class="btn btn-primary" onclick="navTab('kurumsal', 'tab-hizmetler')">
-          <span class="tr">Hizmetlerimiz</span><span class="en">Our Services</span>
-        </button> -->
+      <div class="hero-img">
+        <!-- Replace the placeholder div below with: <img src="your-image.png" alt="..."> -->
+        <!-- <div class="hero-img-ph">
+          <span class="tr">Görsel Eklenecek</span>
+          <span class="en">Image Placeholder</span>
+        </div> -->
+        <img src="Main_Page_1.png" alt="Milenyum İnsan Kaynakları">
       </div>
     </div>
   </div>
 
-  <!-- HİZMET ALANLARIMIZ -->
+  <!-- Visual between hero and services — replace with <img> -->
+  <div class="section-visual">
+    <img src="consultancy_1.png" alt="Milenyum İnsan Kaynakları">
+  </div>
+
+  <!-- HİZMETLERİMİZİ KEŞFEDİN -->
   <div class="section">
     <div class="container">
       <div class="section-hdr">
-        <h2 class="s-title"><span class="tr">Hizmet Alanlarımız</span><span class="en">Strategic Workforce Solutions</span></h2>
+        <h2 class="s-title"><span class="tr">Hizmetlerimizi Keşfedin</span><span class="en">Explore Our Services</span></h2>
         <p class="s-sub">
           <span class="tr">Uluslararası projelerin operasyonel ihtiyaçları doğrultusunda yapılandırılmış danışmanlık hizmetleri.</span>
           <span class="en">Consulting services structured around the operational requirements of international projects.</span>
@@ -368,38 +424,90 @@ input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;border:n
         <div class="card" onclick="navToService('acc-is-gucu-stratejisi')">
           <div class="card-icon">🎯</div>
           <h3><span class="tr">İş Gücü Stratejisi</span><span class="en">Workforce Strategy</span></h3>
-          <!-- <p><span class="tr">Proje bazlı iş gücü planlama, organizasyon tasarımı ve maliyet yapılarının stratejik analizi.</span><span class="en">Project-based workforce planning, organisational design and strategic analysis of cost structures.</span></p> -->
         </div>
         <div class="card" onclick="navToService('acc-teknik-ise-alim')">
           <div class="card-icon">🔧</div>
           <h3><span class="tr">Teknik İşe Alım ve Personel Temini</span><span class="en">Technical Recruitment and Workforce Mobility</span></h3>
-          <!-- <p><span class="tr">Uerel ve uluslararası projelerde ihtiyaç duyulan teknik ve operasyonel personelin belirlenmesi ve temini ile çalışma izinleri, göç mevzuatı ve sosyal güvenlik düzenlemeleri çerçevesinde iş gücü mobilizasyon süreçlerinin planlanması ve yönetilmesi.</span><span class="en">Identification and sourcing of technical and operational personnel required for local and international projects, as well as the planning and management of workforce mobilisation processes in accordance with work permits, immigration regulations, and social security frameworks.</span></p> -->
         </div>
         <div class="card" onclick="navToService('acc-yabanci-uyruklu')">
           <div class="card-icon">👷</div>
           <h3><span class="tr">Yabancı Uyruklu İş Gücü Danışmanlığı</span><span class="en">Foreign Workforce Advisory</span></h3>
-          <!-- <p><span class="tr">Yerel ve uluslararası projelerde kariyer fırsatları arayan profesyonellere, yetkinliklerine uygun pozisyonların belirlenmesi ve işe yerleştirme süreçlerinde destek sağlanması.</span><span class="en">Supporting professionals seeking career opportunities in local and international projects by identifying positions aligned with their skills and assisting them throughout the placement process.</span></p> -->
         </div>
         <div class="card" onclick="navToService('acc-turkiye-uyruklu')">
           <div class="card-icon">📄</div>
           <h3><span class="tr">Türkiye Uyruklu İş Gücü Danışmanlığı</span><span class="en">Turkish Workforce Advisory</span></h3>
-          <!-- <p><span class="tr">SGK, İŞKUR ve ilgili mevzuat kapsamında yurt dışı görevlendirme süreçlerinin yönetimi.</span><span class="en">Management of overseas assignment processes under SGK, İŞKUR and related regulations.</span></p> -->
         </div>
         <div class="card" onclick="navToService('acc-uluslararasi-mobilite')">
           <div class="card-icon">📊</div>
           <h3><span class="tr">Uluslararası İş Gücü Mobilitesi</span><span class="en">Global Workforce Mobility</span></h3>
-          <!-- <p><span class="tr">Ülke bazlı iş gücü maliyetleri, regülasyon ortamı ve mobilizasyon imkânlarının karşılaştırmalı analizi.</span><span class="en">Comparative analysis of country-level labour costs, regulatory environments and mobilisation opportunities.</span></p> -->
         </div>
         <div class="card" onclick="nav('analizler')">
-          <div class="card-icon">🏗️</div>
+          <div class="card-icon">📈</div>
           <h3><span class="tr">Analizler</span><span class="en">Analyses</span></h3>
-          <!-- <p><span class="tr">Enerji, altyapı, sanayi, sağlık ve turizm sektörlerine yönelik özelleştirilmiş iş gücü çözümleri.</span><span class="en">Tailored workforce solutions for the energy, infrastructure, manufacturing, healthcare and tourism sectors.</span></p> -->
         </div>
-        <div class="card" onclick="navToService('acc-kariyer')">
-          <div class="card-icon">🏗️</div>
-          <h3><span class="tr">Kariyer Danışmanlığı ve İş Olanakları</span><span class="en">Career Advisory and Job Opportunities</span></h3>
-          <!-- <p><span class="tr">Enerji, altyapı, sanayi, sağlık ve turizm sektörlerine yönelik özelleştirilmiş iş gücü çözümleri.</span><span class="en">Tailored workforce solutions for the energy, infrastructure, manufacturing, healthcare and tourism sectors.</span></p> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Visual between services and sectors — replace with <img> -->
+  <div class="section-visual">
+    <img src="production.png" alt="Milenyum İnsan Kaynakları">
+  </div>
+
+  <!-- SEKTÖRLERİ KEŞFEDİN -->
+  <div class="section section-alt">
+    <div class="container">
+      <div class="section-hdr">
+        <h2 class="s-title"><span class="tr">Sektörleri Keşfedin</span><span class="en">Explore Sectors</span></h2>
+        <p class="s-sub">
+          <span class="tr">Milenyum İnsan Kaynakları, yerel ve uluslararası faaliyet gösteren şirketlere stratejik iş gücü planlama, teknik işe alım ve iş gücü mobilitesi alanlarında danışmanlık hizmetleri sunar.</span>
+          <span class="en">Milenyum Human Resources provides strategic workforce planning, technical recruitment and workforce mobility consulting services to companies operating locally and internationally.</span>
+        </p>
+      </div>
+      <div class="sector-grid">
+        <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
+          <!-- Replace placeholder below with: <img class="sector-img" src="energy.png" alt="Enerji"> -->
+          <img class="sector-img" src="energy.png" alt="Enerji">
+          <div class="sector-label"><span class="tr">Enerji</span><span class="en">Energy</span></div>
         </div>
+        <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
+          <!-- Replace placeholder below with: <img class="sector-img" src="construction.png" alt="Altyapı ve İnşaat"> -->
+          <img class="sector-img" src="construction.png" alt="Altyapı ve İnşaat">
+          <div class="sector-label"><span class="tr">Altyapı ve İnşaat</span><span class="en">Infrastructure & Construction</span></div>
+        </div>
+        <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
+          <!-- Replace placeholder below with: <img class="sector-img" src="industry.png" alt="Sanayi"> -->
+          <img class="sector-img" src="industry.png" alt="Sanayi">
+          <div class="sector-label"><span class="tr">Sanayi</span><span class="en">Industry</span></div>
+        </div>
+        <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
+          <!-- Replace placeholder below with: <img class="sector-img" src="health.png" alt="Sağlık"> -->
+          <img class="sector-img" src="health.png" alt="Sağlık">
+          <div class="sector-label"><span class="tr">Sağlık</span><span class="en">Healthcare</span></div>
+        </div>
+        <div class="sector-card" onclick="navTab('kurumsal','tab-sektorler')">
+          <!-- Replace placeholder below with: <img class="sector-img" src="housekeeping.png" alt="Turizm"> -->
+          <img class="sector-img" src="railway.png" alt="Demiryolu">
+          <div class="sector-label"><span class="tr">Demiryolu</span><span class="en">Railway</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KARİYER FIRSATLARINI KEŞFEDİN -->
+  <div class="career-cta">
+    <div class="career-cta-inner">
+      <h2 class="tr">Kariyer Fırsatlarını Keşfedin</h2>
+      <h2 class="en">Explore Career Opportunities</h2>
+      <p class="tr">Milenyum İnsan Kaynakları, yerel ve uluslararası projelerde görev almak isteyen profesyonellerin mesleki deneyimleri ve yetkinlikleri ile uyumlu kariyer fırsatlarına erişmesine katkı sağlar.</p>
+      <p class="en">Milenyum Human Resources helps professionals seeking roles in local and international projects to access career opportunities aligned with their professional experience and competencies.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="nav('isarayanlar')">
+          <span class="tr">Başvuru Yapın</span><span class="en">Apply Now</span>
+        </button>
+        <button class="btn btn-secondary" onclick="nav('pozisyonlar')">
+          <span class="tr">Açık Pozisyonları İnceleyin</span><span class="en">View Open Positions</span>
+        </button>
       </div>
     </div>
   </div>
@@ -1637,16 +1745,38 @@ Before attending the interview, you should have at least one of these applicatio
   </div>
 </div><!-- /page-etik -->
 
-<!-- İŞKUR STRIP -->
-<div style="background:#fff;border-top:1px solid rgba(0,0,0,.08);padding:10px 24px;display:flex;align-items:center;gap:12px;flex-wrap:nowrap">
-  <a href="https://www.iskur.gov.tr/" target="_blank" rel="noopener" style="flex-shrink:0"><img src="iskurlogo.png" alt="İŞKUR Özel İstihdam Bürosu" style="height:32px;width:auto;display:block"></a>
-  <div style="font-size:11px;color:rgba(0,0,0,.45);line-height:1.7">
-    <span>Milenyum İnsan Kaynakları Ltd. Şti. olarak Türkiye İş Kurumu'ndan (İŞKUR) Özel İstihdam Bürosu faaliyet izni için başvuru sürecimiz devam etmektedir.</span>
-    <span>4904 sayılı Türkiye İş Kurumu Kanunu uyarınca iş arayanlardan herhangi bir ücret alınması yasaktır.</span>
-    <br>
-    <span>Şikâyetleriniz için: Türkiye İş Kurumu İstanbul İl Müdürlüğü Tel: 0 212 249 29 87 &nbsp;|&nbsp; Başakşehir Hizmet Merkezi Tel: 0 212 407 07 98</span>
+<!-- ══════════════════════════════════════
+     PAGE: AÇIK POZİSYONLAR
+══════════════════════════════════════ -->
+<div class="page" id="page-pozisyonlar">
+  <div class="ph">
+    <h1><span class="tr">Açık Pozisyonlar</span><span class="en">Open Positions</span></h1>
+    <p><span class="tr">Milenyum İnsan Kaynakları bünyesinde aktif iş fırsatları</span><span class="en">Active career opportunities at Milenyum Human Resources</span></p>
   </div>
-</div>
+
+  <div class="section">
+    <div class="container">
+
+      <!-- Empty state -->
+      <div style="text-align:center;padding:80px 24px;max-width:560px;margin:0 auto">
+        <div style="width:72px;height:72px;background:var(--light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:32px">📋</div>
+        <h2 style="font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);margin-bottom:14px">
+          <span class="tr">Şu An Açık Pozisyon Bulunmamaktadır</span>
+          <span class="en">No Open Positions at This Time</span>
+        </h2>
+        <p style="color:var(--gray);font-size:15px;line-height:1.9;margin-bottom:32px">
+          <span class="tr">Şu anda ilan edilmiş açık bir pozisyonumuz bulunmamaktadır. Yeni pozisyonlardan haberdar olmak için başvurunuzu bırakabilirsiniz; uygun bir fırsat çıktığında sizinle iletişime geçeriz.</span>
+          <span class="en">There are currently no open positions listed. You can leave your application and we will get in touch when a suitable opportunity arises.</span>
+        </p>
+        <button class="btn btn-primary" onclick="nav('isarayanlar')">
+          <span class="tr">Ön Başvuru Bırakın</span>
+          <span class="en">Leave a Pre-Application</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /page-pozisyonlar -->
 
 <!-- ══════════════════════════════════════
      FOOTER
@@ -1738,6 +1868,17 @@ Before attending the interview, you should have at least one of these applicatio
     </div>
   </div>
 </footer>
+
+<!-- İŞKUR STRIP -->
+<div style="background:#fff;border-top:1px solid rgba(0,0,0,.08);padding:12px 24px;display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap">
+  <a href="https://www.iskur.gov.tr/" target="_blank" rel="noopener" style="flex-shrink:0;margin-top:2px"><img src="iskurlogo.png" alt="İŞKUR Özel İstihdam Bürosu" style="height:32px;width:auto;display:block"></a>
+  <div style="font-size:11px;color:rgba(0,0,0,.45);line-height:1.8">
+    <span>Milenyum İnsan Kaynakları Ltd. Şti. olarak Türkiye İş Kurumu'ndan (İŞKUR) Özel İstihdam Bürosu faaliyet izni için başvuru sürecimiz devam etmektedir.</span><br>
+    <span>4904 sayılı Türkiye İş Kurumu Kanunu uyarınca iş arayanlardan herhangi bir ücret alınması yasaktır.</span><br>
+    <span>Bilgi için: Türkiye İş Kurumu İstanbul İl Müdürlüğü Tel: 0 212 249 29 87</span><br>
+    <span>Başakşehir Hizmet Merkezi Tel: 0 212 407 07 98</span>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════
      JAVASCRIPT
