@@ -965,9 +965,7 @@ Before attending the interview, you should have at least one of these applicatio
                 <span class="en">Your application will be reviewed and you will be contacted for suitable positions.</span>
               </p>
             </div>
-            <form id="cvForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-              <input type="hidden" name="access_key" value="802f4478-16d3-461d-b11d-fa805b9caf40">
-              <input type="hidden" name="subject" value="Milenyum IK - Is Arayan CV Basvurusu">
+            <form id="cvForm" action="https://formspree.io/f/mvzwjdyy" method="POST" enctype="multipart/form-data">
               <div class="frow">
                 <div class="fg">
                   <label><span class="tr">Ad</span><span class="en">First Name</span> <span class="req">*</span></label>
@@ -2013,7 +2011,7 @@ function setupForm(formId, successId) {
     fetch(form.action, { method: 'POST', body: data })
       .then(res => res.json())
       .then(result => {
-        if (result.success) {
+        if (result.success || result.ok) {
           form.style.display = 'none';
           const msg = document.getElementById(successId);
           if (msg) { msg.style.display = 'block'; }
