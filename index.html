@@ -965,7 +965,7 @@ Before attending the interview, you should have at least one of these applicatio
                 <span class="en">Your application will be reviewed and you will be contacted for suitable positions.</span>
               </p>
             </div>
-            <form id="cvForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+            <form id="cvForm">
               <input type="hidden" name="access_key" value="802f4478-16d3-461d-b11d-fa805b9caf40">
               <input type="hidden" name="subject" value="Milenyum IK - Is Arayan CV Basvurusu">
               <div class="frow">
@@ -2045,7 +2045,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Wire up all forms
-  setupForm('cvForm', 'cv-success');
+  const cvForm = document.getElementById('cvForm');
+  if (cvForm) cvForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Error occurred. Please try again later.');
+  });
   setupForm('isverenForm', 'isveren-success');
   setupForm('contactForm', 'contact-success');
   setupForm('analizForm', 'analiz-success');
