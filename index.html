@@ -2020,8 +2020,8 @@ function setupForm(formId, successId) {
         } else {
           if (btn) { btn.disabled = false; btn.style.opacity = ''; }
           alert(currentLang === 'tr'
-            ? 'Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.'
-            : 'An error occurred while sending. Please try again.');
+            ? 'Gönderim hatası: ' + (result.message || 'Bilinmeyen hata')
+            : 'Submission error: ' + (result.message || 'Unknown error'));
         }
       })
       .catch(() => {
